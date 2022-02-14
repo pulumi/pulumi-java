@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.IotSecuritySolutionArgs;
 import io.pulumi.azurenative.security.outputs.AdditionalWorkspacesPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.RecommendationConfigurationPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;

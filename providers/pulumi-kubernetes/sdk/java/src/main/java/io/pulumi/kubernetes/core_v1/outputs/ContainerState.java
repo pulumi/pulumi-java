@@ -4,6 +4,9 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.core_v1.outputs.ContainerStateRunning;
+import io.pulumi.kubernetes.core_v1.outputs.ContainerStateTerminated;
+import io.pulumi.kubernetes.core_v1.outputs.ContainerStateWaiting;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

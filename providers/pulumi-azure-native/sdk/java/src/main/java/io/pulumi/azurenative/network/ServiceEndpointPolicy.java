@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ServiceEndpointPolicyArgs;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;

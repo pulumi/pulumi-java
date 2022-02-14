@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.authentication.k8s.io_v1.TokenRequestArgs;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.TokenRequestSpec;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.TokenRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

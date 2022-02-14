@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.tpu_v1.NodeArgs;
 import io.pulumi.googlenative.tpu_v1.outputs.NetworkEndpointResponse;
 import io.pulumi.googlenative.tpu_v1.outputs.SchedulingConfigResponse;
 import io.pulumi.googlenative.tpu_v1.outputs.SymptomResponse;

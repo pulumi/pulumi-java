@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.CustomDomainArgs;
 import io.pulumi.azurenative.cdn.outputs.CdnManagedHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;

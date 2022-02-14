@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.appengine_v1.AuthorizedCertificateArgs;
 import io.pulumi.googlenative.appengine_v1.outputs.CertificateRawDataResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ManagedCertificateResponse;
 import java.lang.Integer;

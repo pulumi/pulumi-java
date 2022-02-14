@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dialogflow_v2beta1.DocumentArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;

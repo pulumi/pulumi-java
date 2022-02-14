@@ -15,7 +15,7 @@ public final class GetAttestorResult {
  */
     private final String description;
 /**
- * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+ * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
  */
     private final String name;
 /**
@@ -46,7 +46,7 @@ public final class GetAttestorResult {
         return this.description;
     }
 /**
- * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+ * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
  */
     public String getName() {
         return this.name;

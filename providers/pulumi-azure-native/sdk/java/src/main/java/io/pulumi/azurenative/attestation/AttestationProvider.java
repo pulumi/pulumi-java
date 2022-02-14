@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.attestation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.attestation.AttestationProviderArgs;
 import io.pulumi.azurenative.attestation.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.attestation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

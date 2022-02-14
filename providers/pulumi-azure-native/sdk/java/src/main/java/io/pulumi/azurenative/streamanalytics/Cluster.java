@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.streamanalytics.ClusterArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.ClusterPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ClusterSkuResponse;
 import io.pulumi.core.Alias;

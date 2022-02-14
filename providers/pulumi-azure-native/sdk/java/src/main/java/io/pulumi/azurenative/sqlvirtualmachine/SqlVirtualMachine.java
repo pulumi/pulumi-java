@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.AutoBackupSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.AutoPatchingSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.KeyVaultCredentialSettingsResponse;

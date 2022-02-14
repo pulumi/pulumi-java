@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
+import io.pulumi.azurenative.kusto.outputs.IdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;

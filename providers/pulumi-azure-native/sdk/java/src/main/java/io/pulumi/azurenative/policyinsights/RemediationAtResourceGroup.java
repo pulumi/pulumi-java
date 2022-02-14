@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.policyinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.policyinsights.RemediationAtResourceGroupArgs;
 import io.pulumi.azurenative.policyinsights.outputs.RemediationDeploymentSummaryResponse;
 import io.pulumi.azurenative.policyinsights.outputs.RemediationFiltersResponse;
 import io.pulumi.core.Alias;

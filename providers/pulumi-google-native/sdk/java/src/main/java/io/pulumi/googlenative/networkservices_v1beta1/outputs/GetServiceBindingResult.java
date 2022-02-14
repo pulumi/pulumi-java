@@ -27,11 +27,11 @@ public final class GetServiceBindingResult {
  */
     private final Map<String,String> labels;
 /**
- * Name of the ServiceBinding resource. It matches pattern `projects//{@literal /}locations/global/serviceBindings/service_binding_name>`.
+ * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
  */
     private final String name;
 /**
- * The full service directory service name of the format /projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*
+ * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
  */
     private final String service;
 /**
@@ -82,13 +82,13 @@ public final class GetServiceBindingResult {
         return this.labels;
     }
 /**
- * Name of the ServiceBinding resource. It matches pattern `projects//{@literal /}locations/global/serviceBindings/service_binding_name>`.
+ * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
  */
     public String getName() {
         return this.name;
     }
 /**
- * The full service directory service name of the format /projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*
+ * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
  */
     public String getService() {
         return this.service;

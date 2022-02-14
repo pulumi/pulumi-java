@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
+import io.pulumi.azurenative.hybridcompute.inputs.MachineExtensionInstanceViewResponseStatus;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

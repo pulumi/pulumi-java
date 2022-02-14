@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.providerhub.OperationByProviderRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.OperationsDefinitionResponseDisplay;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudfunctions_v1.FunctionArgs;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.HttpsTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretEnvVarResponse;
@@ -217,13 +218,13 @@ public class Function extends io.pulumi.resources.CustomResource {
         return this.minInstances;
     }
     /**
-     * A user-defined name of the function. Function names must be unique globally and match pattern `projects//{@literal /}locations//{@literal /}functions/*`
+     * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return A user-defined name of the function. Function names must be unique globally and match pattern `projects//{@literal /}locations//{@literal /}functions/*`
+     * @return A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      */
     public Output<String> getName() {
         return this.name;
@@ -385,13 +386,13 @@ public class Function extends io.pulumi.resources.CustomResource {
         return this.versionId;
     }
     /**
-     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects//{@literal /}locations//{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      */
     @OutputExport(name="vpcConnector", type=String.class, parameters={})
     private Output<String> vpcConnector;
 
     /**
-     * @return The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects//{@literal /}locations//{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * @return The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      */
     public Output<String> getVpcConnector() {
         return this.vpcConnector;

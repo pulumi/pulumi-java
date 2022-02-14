@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbforpostgresql.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.dbforpostgresql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;

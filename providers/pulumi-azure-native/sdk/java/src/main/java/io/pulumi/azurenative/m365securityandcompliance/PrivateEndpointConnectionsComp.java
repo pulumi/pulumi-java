@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.m365securityandcompliance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.m365securityandcompliance.PrivateEndpointConnectionsCompArgs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;

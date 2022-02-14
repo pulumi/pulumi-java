@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.migrate.AssessmentArgs;
 import io.pulumi.azurenative.migrate.outputs.AssessmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.MongoDBResourceMongoUserDefinitionArgs;
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

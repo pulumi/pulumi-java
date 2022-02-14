@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.containerregistry.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;

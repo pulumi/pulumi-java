@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v3.UptimeCheckConfigArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.ContentMatcherResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.HttpCheckResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.InternalCheckerResponse;

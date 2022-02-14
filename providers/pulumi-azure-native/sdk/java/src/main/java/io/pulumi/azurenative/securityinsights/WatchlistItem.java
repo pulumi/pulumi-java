@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.WatchlistItemArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
 import io.pulumi.core.Alias;

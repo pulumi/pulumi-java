@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.ApiOperationArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RequestContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ResponseContractResponse;

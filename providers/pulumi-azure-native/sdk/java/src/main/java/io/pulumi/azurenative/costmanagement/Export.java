@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.costmanagement.ExportArgs;
 import io.pulumi.azurenative.costmanagement.outputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionListResultResponse;

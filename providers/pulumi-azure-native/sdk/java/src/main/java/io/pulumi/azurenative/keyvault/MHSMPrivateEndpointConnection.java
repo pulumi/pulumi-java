@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.keyvault.MHSMPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.VirtualNetworkArgs;
 import io.pulumi.azurenative.devtestlab.outputs.ExternalSubnetResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;

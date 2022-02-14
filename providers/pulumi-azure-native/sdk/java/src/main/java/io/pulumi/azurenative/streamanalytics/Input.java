@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.streamanalytics.InputArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Alias;

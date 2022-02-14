@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.netapp.VolumeArgs;
 import io.pulumi.azurenative.netapp.outputs.MountTargetPropertiesResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseDataProtection;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseExportPolicy;

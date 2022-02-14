@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.orbital.SpacecraftArgs;
 import io.pulumi.azurenative.orbital.outputs.SpacecraftLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

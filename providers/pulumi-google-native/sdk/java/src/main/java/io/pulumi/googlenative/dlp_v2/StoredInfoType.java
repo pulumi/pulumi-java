@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeVersionResponse;
 import java.lang.String;
 import java.util.List;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.PrivateCloudArgs;
 import io.pulumi.azurenative.avs.outputs.CircuitResponse;
 import io.pulumi.azurenative.avs.outputs.EndpointsResponse;
 import io.pulumi.azurenative.avs.outputs.IdentitySourceResponse;

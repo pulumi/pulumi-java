@@ -14,7 +14,7 @@ public final class GetKeyRingResult {
  */
     private final String createTime;
 /**
- * The resource name for the KeyRing in the format `projects//{@literal /}locations//{@literal /}keyRings/*`.
+ * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
  */
     private final String name;
 
@@ -33,7 +33,7 @@ public final class GetKeyRingResult {
         return this.createTime;
     }
 /**
- * The resource name for the KeyRing in the format `projects//{@literal /}locations//{@literal /}keyRings/*`.
+ * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
  */
     public String getName() {
         return this.name;

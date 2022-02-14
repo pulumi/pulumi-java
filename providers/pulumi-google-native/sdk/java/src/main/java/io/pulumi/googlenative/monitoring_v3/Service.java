@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v3.ServiceArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.AppEngineResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.CloudEndpointsResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ClusterIstioResponse;

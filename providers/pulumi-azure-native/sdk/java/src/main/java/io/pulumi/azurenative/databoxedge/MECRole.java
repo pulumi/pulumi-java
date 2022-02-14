@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.MECRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

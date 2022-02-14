@@ -72,7 +72,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}controls/*
+     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

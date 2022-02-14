@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.batch.BatchAccountArgs;
 import io.pulumi.azurenative.batch.outputs.AutoStoragePropertiesResponse;
 import io.pulumi.azurenative.batch.outputs.BatchAccountIdentityResponse;
 import io.pulumi.azurenative.batch.outputs.EncryptionPropertiesResponse;

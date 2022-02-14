@@ -72,7 +72,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Name of the ClientTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+     * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

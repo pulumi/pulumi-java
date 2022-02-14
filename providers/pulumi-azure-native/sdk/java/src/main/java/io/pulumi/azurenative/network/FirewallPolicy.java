@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.FirewallPolicyArgs;
 import io.pulumi.azurenative.network.outputs.DnsSettingsResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyInsightsResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyIntrusionDetectionResponse;

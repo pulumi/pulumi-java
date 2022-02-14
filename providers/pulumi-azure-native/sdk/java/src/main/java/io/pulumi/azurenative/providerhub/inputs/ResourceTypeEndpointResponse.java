@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
+import io.pulumi.azurenative.providerhub.inputs.ResourceTypeEndpointResponseFeaturesRule;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;

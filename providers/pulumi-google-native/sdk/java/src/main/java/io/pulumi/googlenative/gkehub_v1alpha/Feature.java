@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.gkehub_v1alpha.FeatureArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.CommonFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.CommonFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.FeatureResourceStateResponse;
@@ -82,13 +83,13 @@ public class Feature extends io.pulumi.resources.CustomResource {
         return this.membershipStates;
     }
     /**
-     * The full, unique name of this Feature resource in the format `projects//{@literal /}locations//{@literal /}features/*`.
+     * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The full, unique name of this Feature resource in the format `projects//{@literal /}locations//{@literal /}features/*`.
+     * @return The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
      */
     public Output<String> getName() {
         return this.name;

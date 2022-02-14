@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.HybridRunbookWorkerGroupArgs;
 import io.pulumi.azurenative.automation.outputs.HybridRunbookWorkerLegacyResponse;
 import io.pulumi.azurenative.automation.outputs.RunAsCredentialAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByHostPoolArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.SystemDataResponse;

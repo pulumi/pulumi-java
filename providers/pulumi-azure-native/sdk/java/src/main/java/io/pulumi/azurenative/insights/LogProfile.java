@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.LogProfileArgs;
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
+import io.pulumi.azurenative.customerinsights.outputs.PredictionDistributionDefinitionResponseDistributions;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.List;

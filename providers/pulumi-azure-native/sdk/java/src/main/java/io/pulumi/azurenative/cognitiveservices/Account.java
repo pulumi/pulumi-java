@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cognitiveservices.AccountArgs;
 import io.pulumi.azurenative.cognitiveservices.outputs.CognitiveServicesAccountPropertiesResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SkuResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.core_v1.ServiceArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ServiceSpec;
 import io.pulumi.kubernetes.core_v1.outputs.ServiceStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

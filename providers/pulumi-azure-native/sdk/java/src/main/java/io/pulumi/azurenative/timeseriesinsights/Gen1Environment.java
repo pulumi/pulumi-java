@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.timeseriesinsights.Gen1EnvironmentArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.EnvironmentStatusResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResponse;

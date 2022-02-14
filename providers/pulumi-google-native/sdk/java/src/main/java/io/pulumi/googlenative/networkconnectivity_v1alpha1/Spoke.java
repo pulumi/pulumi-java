@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networkconnectivity_v1alpha1.SpokeArgs;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.RouterApplianceInstanceResponse;
 import java.lang.String;
 import java.util.List;

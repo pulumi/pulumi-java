@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.managedservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.managedservices.RegistrationAssignmentArgs;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

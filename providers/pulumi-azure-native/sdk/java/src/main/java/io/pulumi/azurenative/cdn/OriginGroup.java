@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.OriginGroupArgs;
 import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;

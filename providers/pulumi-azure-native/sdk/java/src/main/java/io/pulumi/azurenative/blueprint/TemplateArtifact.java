@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blueprint.TemplateArtifactArgs;
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

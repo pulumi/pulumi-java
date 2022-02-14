@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.AutomationRuleArgs;
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleModifyPropertiesActionResponse;
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleRunPlaybookActionResponse;
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleTriggeringLogicResponse;

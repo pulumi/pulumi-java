@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.firebaserules_v1.RulesetArgs;
 import io.pulumi.googlenative.firebaserules_v1.outputs.MetadataResponse;
 import io.pulumi.googlenative.firebaserules_v1.outputs.SourceResponse;
 import java.lang.String;

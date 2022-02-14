@@ -4,6 +4,8 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.WebhookClientConfig;
+import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.WebhookThrottleConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

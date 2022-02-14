@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudchannel_v1.EntitlementArgs;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1AssociationInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CommitmentSettingsResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ParameterResponse;

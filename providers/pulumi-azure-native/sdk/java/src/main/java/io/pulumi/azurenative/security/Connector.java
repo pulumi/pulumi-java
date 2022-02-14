@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.ConnectorArgs;
 import io.pulumi.azurenative.security.outputs.AwAssumeRoleAuthenticationDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.AwsCredsAuthenticationDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.GcpCredentialsDetailsPropertiesResponse;

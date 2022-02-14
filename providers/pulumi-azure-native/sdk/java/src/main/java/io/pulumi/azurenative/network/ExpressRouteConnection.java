@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ExpressRouteConnectionArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringIdResponse;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.VirtualNetworkArgs;
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.DhcpOptionsResponse;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;

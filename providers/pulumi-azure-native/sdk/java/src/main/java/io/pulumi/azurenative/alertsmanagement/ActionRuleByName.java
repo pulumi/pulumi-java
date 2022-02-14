@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.alertsmanagement.ActionRuleByNameArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;

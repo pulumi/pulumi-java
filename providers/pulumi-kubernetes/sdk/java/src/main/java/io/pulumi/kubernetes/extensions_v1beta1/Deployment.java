@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.extensions_v1beta1.DeploymentArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

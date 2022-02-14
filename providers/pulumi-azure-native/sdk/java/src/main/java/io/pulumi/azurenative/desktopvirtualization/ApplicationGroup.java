@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.desktopvirtualization.ApplicationGroupArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.MigrationRequestPropertiesResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;

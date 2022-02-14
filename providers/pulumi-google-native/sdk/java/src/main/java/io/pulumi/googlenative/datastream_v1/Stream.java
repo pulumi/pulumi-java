@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.datastream_v1.StreamArgs;
 import io.pulumi.googlenative.datastream_v1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.DestinationConfigResponse;

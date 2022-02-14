@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.netapp.AccountArgs;
 import io.pulumi.azurenative.netapp.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.netapp.outputs.ActiveDirectoryResponse;
 import io.pulumi.azurenative.netapp.outputs.SystemDataResponse;

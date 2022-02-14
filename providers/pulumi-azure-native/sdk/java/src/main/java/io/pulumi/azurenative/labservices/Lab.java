@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.labservices.LabArgs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

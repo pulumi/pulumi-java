@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.ImageArgs;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.DeprecationStatusResponse;
 import io.pulumi.googlenative.compute_beta.outputs.GuestOsFeatureResponse;

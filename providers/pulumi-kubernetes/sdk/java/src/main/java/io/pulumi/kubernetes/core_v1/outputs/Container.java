@@ -4,6 +4,7 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.core_v1.outputs.ContainerPort;
 import io.pulumi.kubernetes.core_v1.outputs.EnvFromSource;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVar;
 import io.pulumi.kubernetes.core_v1.outputs.Lifecycle;

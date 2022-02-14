@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicebus.NamespaceArgs;
 import io.pulumi.azurenative.servicebus.outputs.SBSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

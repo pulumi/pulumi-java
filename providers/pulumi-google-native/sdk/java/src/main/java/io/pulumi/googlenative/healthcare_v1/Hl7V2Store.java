@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1.Hl7V2StoreArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.Hl7V2NotificationConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ParserConfigResponse;
 import java.lang.Boolean;

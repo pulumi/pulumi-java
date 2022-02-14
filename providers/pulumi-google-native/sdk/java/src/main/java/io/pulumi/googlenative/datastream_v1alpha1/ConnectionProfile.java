@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.datastream_v1alpha1.ConnectionProfileArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ForwardSshTunnelConnectivityResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.GcsProfileResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlProfileResponse;

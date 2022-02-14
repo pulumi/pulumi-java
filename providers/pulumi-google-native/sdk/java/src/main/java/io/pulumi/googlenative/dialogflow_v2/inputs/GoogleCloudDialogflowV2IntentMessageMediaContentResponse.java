@@ -4,6 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

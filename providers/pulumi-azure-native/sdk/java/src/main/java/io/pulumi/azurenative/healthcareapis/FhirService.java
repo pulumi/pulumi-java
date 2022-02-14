@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.healthcareapis.FhirServiceArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceAccessPolicyEntryResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceAcrConfigurationResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceAuthenticationConfigurationResponse;

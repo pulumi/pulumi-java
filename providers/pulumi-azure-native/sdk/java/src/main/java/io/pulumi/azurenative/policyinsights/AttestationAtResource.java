@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.policyinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.policyinsights.AttestationAtResourceArgs;
 import io.pulumi.azurenative.policyinsights.outputs.AttestationEvidenceResponse;
 import io.pulumi.azurenative.policyinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datacatalog;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datacatalog.ADCCatalogArgs;
 import io.pulumi.azurenative.datacatalog.outputs.PrincipalsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

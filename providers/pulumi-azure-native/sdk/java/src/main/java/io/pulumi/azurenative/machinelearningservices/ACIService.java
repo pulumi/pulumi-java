@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.ACIServiceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSVariantResponseResponse;

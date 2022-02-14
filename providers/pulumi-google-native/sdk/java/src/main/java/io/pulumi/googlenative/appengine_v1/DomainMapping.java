@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.appengine_v1.DomainMappingArgs;
 import io.pulumi.googlenative.appengine_v1.outputs.ResourceRecordResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.SslSettingsResponse;
 import java.lang.String;

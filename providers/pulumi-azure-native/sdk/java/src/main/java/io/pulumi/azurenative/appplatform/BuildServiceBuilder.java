@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.BuildServiceBuilderArgs;
 import io.pulumi.azurenative.appplatform.outputs.BuilderPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.streamanalytics.StreamingJobArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.FunctionResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.InputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.OutputResponse;

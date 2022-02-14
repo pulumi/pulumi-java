@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.translate_v3beta1.GlossaryArgs;
 import io.pulumi.googlenative.translate_v3beta1.outputs.GlossaryInputConfigResponse;
 import io.pulumi.googlenative.translate_v3beta1.outputs.LanguageCodePairResponse;
 import io.pulumi.googlenative.translate_v3beta1.outputs.LanguageCodesSetResponse;

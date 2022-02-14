@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridcompute.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

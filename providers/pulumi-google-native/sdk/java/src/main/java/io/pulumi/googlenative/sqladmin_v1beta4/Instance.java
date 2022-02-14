@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.sqladmin_v1beta4.InstanceArgs;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionStatusResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.InstanceFailoverReplicaResponse;

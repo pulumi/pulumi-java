@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.search.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

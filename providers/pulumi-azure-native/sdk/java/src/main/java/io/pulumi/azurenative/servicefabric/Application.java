@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.ApplicationArgs;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationMetricDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUpgradePolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdentityResponse;

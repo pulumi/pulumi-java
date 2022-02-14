@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.CassandraResourceCassandraTableArgs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraTableGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.CassandraTableGetPropertiesResponseResource;
 import io.pulumi.core.Alias;

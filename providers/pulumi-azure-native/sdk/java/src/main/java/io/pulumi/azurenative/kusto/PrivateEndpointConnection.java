@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kusto.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.kusto.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.kusto.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;

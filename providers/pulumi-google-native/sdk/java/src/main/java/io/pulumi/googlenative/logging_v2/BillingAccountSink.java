@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.logging_v2.BillingAccountSinkArgs;
 import io.pulumi.googlenative.logging_v2.outputs.BigQueryOptionsResponse;
 import io.pulumi.googlenative.logging_v2.outputs.LogExclusionResponse;
 import java.lang.Boolean;

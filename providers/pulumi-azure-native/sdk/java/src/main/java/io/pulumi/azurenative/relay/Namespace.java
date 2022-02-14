@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.relay.NamespaceArgs;
 import io.pulumi.azurenative.relay.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

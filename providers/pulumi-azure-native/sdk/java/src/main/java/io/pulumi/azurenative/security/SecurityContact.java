@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.SecurityContactArgs;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseAlertNotifications;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseNotificationsByRole;
 import io.pulumi.core.Alias;

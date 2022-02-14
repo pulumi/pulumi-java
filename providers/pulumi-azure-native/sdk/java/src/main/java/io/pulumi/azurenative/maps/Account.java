@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.maps;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.maps.AccountArgs;
 import io.pulumi.azurenative.maps.outputs.MapsAccountPropertiesResponse;
 import io.pulumi.azurenative.maps.outputs.SkuResponse;
 import io.pulumi.core.Alias;

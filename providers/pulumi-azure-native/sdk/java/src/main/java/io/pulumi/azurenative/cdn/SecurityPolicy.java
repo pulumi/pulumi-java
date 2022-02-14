@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.SecurityPolicyArgs;
 import io.pulumi.azurenative.cdn.outputs.SecurityPolicyWebApplicationFirewallParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

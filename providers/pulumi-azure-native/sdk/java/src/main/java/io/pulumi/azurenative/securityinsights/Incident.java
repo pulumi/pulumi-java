@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.IncidentArgs;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentAdditionalDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;

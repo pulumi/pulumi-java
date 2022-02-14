@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerbidedicated;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerbidedicated.CapacityDetailsArgs;
 import io.pulumi.azurenative.powerbidedicated.outputs.CapacitySkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.DedicatedCapacityAdministratorsResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;

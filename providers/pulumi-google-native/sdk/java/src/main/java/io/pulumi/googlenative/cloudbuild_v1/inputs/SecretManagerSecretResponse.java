@@ -26,7 +26,7 @@ public final class SecretManagerSecretResponse extends io.pulumi.resources.Invok
     }
 
     /**
-     * Resource name of the SecretVersion. In format: projects//{@literal /}secrets//{@literal /}versions/*
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      */
     @InputImport(name="versionName", required=true)
     private final String versionName;

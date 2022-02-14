@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.videoanalyzer.VideoAnalyzerArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.EndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.StorageAccountResponse;

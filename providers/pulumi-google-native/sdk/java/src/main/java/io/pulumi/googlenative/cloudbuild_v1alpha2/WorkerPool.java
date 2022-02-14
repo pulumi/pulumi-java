@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudbuild_v1alpha2.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.WorkerConfigResponse;
 import java.lang.String;

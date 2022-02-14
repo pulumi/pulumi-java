@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.CassandraResourceCassandraKeyspaceArgs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraKeyspaceGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.CassandraKeyspaceGetPropertiesResponseResource;
 import io.pulumi.core.Alias;

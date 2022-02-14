@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.KpiArgs;
 import io.pulumi.azurenative.customerinsights.outputs.KpiAliasResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiExtractResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiGroupByMetadataResponse;

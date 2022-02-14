@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.solutions;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.solutions.JitRequestArgs;
 import io.pulumi.azurenative.solutions.outputs.ApplicationClientDetailsResponse;
 import io.pulumi.azurenative.solutions.outputs.JitAuthorizationPoliciesResponse;
 import io.pulumi.azurenative.solutions.outputs.JitSchedulingPolicyResponse;

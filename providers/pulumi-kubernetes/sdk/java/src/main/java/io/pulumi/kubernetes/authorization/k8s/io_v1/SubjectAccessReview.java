@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.authorization.k8s.io_v1.SubjectAccessReviewArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.SubjectAccessReviewSpec;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.SubjectAccessReviewStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

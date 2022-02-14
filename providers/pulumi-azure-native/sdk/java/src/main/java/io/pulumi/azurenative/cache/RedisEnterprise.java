@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cache.RedisEnterpriseArgs;
 import io.pulumi.azurenative.cache.outputs.EnterpriseSkuResponse;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;

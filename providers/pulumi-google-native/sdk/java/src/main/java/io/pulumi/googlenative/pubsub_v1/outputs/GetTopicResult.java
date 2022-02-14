@@ -14,7 +14,7 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetTopicResult {
 /**
- * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+ * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
  */
     private final String kmsKeyName;
 /**
@@ -61,7 +61,7 @@ public final class GetTopicResult {
     }
 
 /**
- * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+ * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
  */
     public String getKmsKeyName() {
         return this.kmsKeyName;

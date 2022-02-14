@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudkms_v1.ImportJobArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.WrappingPublicKeyResponse;
 import java.lang.String;
@@ -94,13 +95,13 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
         return this.importMethod;
     }
     /**
-     * The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+     * The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+     * @return The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
      */
     public Output<String> getName() {
         return this.name;

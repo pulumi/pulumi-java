@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.DatabaseAccountArgs;
 import io.pulumi.azurenative.documentdb.outputs.ApiPropertiesResponse;
 import io.pulumi.azurenative.documentdb.outputs.CapabilityResponse;
 import io.pulumi.azurenative.documentdb.outputs.ConsistencyPolicyResponse;

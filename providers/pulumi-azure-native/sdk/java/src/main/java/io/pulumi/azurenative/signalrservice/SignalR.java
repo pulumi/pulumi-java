@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.signalrservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.signalrservice.SignalRArgs;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.signalrservice.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.signalrservice.outputs.ServerlessUpstreamSettingsResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cache.RedisArgs;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.cache.outputs.RedisAccessKeysResponse;
 import io.pulumi.azurenative.cache.outputs.RedisCommonPropertiesResponseRedisConfiguration;

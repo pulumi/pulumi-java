@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1beta1.UserDataMappingArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AttributeResponse;
 import java.lang.Boolean;
 import java.lang.String;

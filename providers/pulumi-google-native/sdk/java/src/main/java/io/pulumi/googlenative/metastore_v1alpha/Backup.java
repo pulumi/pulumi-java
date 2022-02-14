@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.metastore_v1alpha.BackupArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.ServiceResponse;
 import java.lang.String;
 import java.util.List;

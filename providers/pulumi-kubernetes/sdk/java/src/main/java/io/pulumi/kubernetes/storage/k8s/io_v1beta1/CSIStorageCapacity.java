@@ -11,6 +11,7 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSIStorageCapacityArgs;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;

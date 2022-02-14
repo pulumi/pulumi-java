@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.synapse.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.synapse.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.synapse.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

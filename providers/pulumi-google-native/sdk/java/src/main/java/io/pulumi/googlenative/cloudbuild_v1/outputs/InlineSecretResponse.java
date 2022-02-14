@@ -15,7 +15,7 @@ public final class InlineSecretResponse {
  */
     private final Map<String,String> envMap;
 /**
- * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*
+ * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
  */
     private final String kmsKeyName;
 
@@ -34,7 +34,7 @@ public final class InlineSecretResponse {
         return this.envMap;
     }
 /**
- * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*
+ * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
  */
     public String getKmsKeyName() {
         return this.kmsKeyName;

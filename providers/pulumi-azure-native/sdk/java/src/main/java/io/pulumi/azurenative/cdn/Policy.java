@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.PolicyArgs;
 import io.pulumi.azurenative.cdn.outputs.CdnEndpointResponse;
 import io.pulumi.azurenative.cdn.outputs.CustomRuleListResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleSetListResponse;

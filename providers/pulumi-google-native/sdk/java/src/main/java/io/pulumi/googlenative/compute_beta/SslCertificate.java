@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.SslCertificateArgs;
 import io.pulumi.googlenative.compute_beta.outputs.SslCertificateManagedSslCertificateResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SslCertificateSelfManagedSslCertificateResponse;
 import java.lang.String;

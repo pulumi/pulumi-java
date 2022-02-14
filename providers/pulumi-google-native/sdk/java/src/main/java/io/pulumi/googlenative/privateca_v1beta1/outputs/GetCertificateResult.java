@@ -35,7 +35,7 @@ public final class GetCertificateResult {
  */
     private final String lifetime;
 /**
- * The resource path for this Certificate in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities//{@literal /}certificates/*`.
+ * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
  */
     private final String name;
 /**
@@ -116,7 +116,7 @@ public final class GetCertificateResult {
         return this.lifetime;
     }
 /**
- * The resource path for this Certificate in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities//{@literal /}certificates/*`.
+ * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
  */
     public String getName() {
         return this.name;

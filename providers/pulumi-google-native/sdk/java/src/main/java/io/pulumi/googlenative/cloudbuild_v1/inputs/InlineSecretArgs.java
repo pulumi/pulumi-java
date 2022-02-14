@@ -29,7 +29,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*
+     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
      */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;

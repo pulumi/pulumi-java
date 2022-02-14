@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.AppServiceEnvironmentArgs;
 import io.pulumi.azurenative.web.outputs.NameValuePairResponse;
 import io.pulumi.azurenative.web.outputs.VirtualNetworkProfileResponse;
 import io.pulumi.core.Alias;

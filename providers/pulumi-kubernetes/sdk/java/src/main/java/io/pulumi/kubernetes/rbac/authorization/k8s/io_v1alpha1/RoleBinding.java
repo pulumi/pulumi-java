@@ -10,6 +10,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.RoleBindingArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.outputs.RoleRef;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.outputs.Subject;
 import java.lang.String;

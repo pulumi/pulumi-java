@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.migrate.VMwareCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.CollectorPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

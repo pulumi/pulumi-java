@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.CertificateArgs;
 import io.pulumi.azurenative.appplatform.outputs.CertificatePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

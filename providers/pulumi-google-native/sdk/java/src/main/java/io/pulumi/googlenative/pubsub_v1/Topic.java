@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.pubsub_v1.TopicArgs;
 import io.pulumi.googlenative.pubsub_v1.outputs.MessageStoragePolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.SchemaSettingsResponse;
 import java.lang.Boolean;
@@ -21,13 +22,13 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:pubsub/v1:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
     /**
-     * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     @OutputExport(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
-     * @return The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * @return The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     public Output<String> getKmsKeyName() {
         return this.kmsKeyName;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dataprotection.BackupInstanceArgs;
 import io.pulumi.azurenative.dataprotection.outputs.BackupInstanceResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

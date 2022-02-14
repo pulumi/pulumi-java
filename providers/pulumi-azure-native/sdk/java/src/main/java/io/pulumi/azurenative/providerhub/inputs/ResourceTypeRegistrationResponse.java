@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
+import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationResponseProperties;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

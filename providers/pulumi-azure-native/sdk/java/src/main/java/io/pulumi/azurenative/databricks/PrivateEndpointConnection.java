@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databricks;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databricks.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.databricks.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

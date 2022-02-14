@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.ModelVersionArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelVersionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

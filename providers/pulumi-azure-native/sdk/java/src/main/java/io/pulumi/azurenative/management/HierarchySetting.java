@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.management;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.management.HierarchySettingArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

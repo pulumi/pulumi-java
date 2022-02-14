@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.AFDOriginArgs;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;

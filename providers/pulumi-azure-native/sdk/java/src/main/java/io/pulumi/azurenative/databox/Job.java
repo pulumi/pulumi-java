@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databox;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databox.JobArgs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxDiskJobDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavyJobDetailsResponse;

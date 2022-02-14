@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventhub.NamespaceArgs;
 import io.pulumi.azurenative.eventhub.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

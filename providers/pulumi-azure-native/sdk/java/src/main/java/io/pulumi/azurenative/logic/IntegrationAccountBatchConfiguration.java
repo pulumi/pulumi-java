@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationAccountBatchConfigurationArgs;
 import io.pulumi.azurenative.logic.outputs.BatchConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

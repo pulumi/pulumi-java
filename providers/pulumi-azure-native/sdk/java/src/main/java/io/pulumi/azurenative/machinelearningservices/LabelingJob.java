@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.LabelingJobArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.LabelingJobPropertiesResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

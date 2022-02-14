@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs;
 import io.pulumi.googlenative.cloudtrace_v2beta1.outputs.OutputConfigResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

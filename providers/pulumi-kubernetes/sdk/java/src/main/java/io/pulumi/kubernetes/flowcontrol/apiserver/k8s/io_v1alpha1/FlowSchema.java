@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.FlowSchemaArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.FlowSchemaSpec;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.FlowSchemaStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

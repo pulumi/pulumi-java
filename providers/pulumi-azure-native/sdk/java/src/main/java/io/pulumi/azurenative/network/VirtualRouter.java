@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.VirtualRouterArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.ServiceFabricArgs;
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

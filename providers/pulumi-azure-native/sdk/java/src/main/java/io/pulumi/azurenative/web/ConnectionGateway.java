@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.ConnectionGatewayArgs;
 import io.pulumi.azurenative.web.outputs.ConnectionGatewayDefinitionResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

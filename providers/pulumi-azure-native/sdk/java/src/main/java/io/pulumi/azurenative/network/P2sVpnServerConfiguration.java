@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.P2sVpnServerConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigRadiusClientRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigRadiusServerRootCertificateResponse;

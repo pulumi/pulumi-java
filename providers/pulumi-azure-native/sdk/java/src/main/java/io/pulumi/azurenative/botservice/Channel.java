@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.botservice.ChannelArgs;
 import io.pulumi.azurenative.botservice.outputs.AlexaChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.DirectLineChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.DirectLineSpeechChannelResponse;

@@ -11,7 +11,7 @@ import java.util.Objects;
 @OutputCustomType
 public final class ReusableConfigWrapperResponse {
 /**
- * A resource path to a ReusableConfig in the format `projects//{@literal /}locations//{@literal /}reusableConfigs/*`.
+ * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
  */
     private final String reusableConfig;
 /**
@@ -28,7 +28,7 @@ public final class ReusableConfigWrapperResponse {
     }
 
 /**
- * A resource path to a ReusableConfig in the format `projects//{@literal /}locations//{@literal /}reusableConfigs/*`.
+ * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
  */
     public String getReusableConfig() {
         return this.reusableConfig;

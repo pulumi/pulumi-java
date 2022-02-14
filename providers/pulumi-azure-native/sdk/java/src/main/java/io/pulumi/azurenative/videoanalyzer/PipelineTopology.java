@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.videoanalyzer.PipelineTopologyArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.EncoderProcessorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDeclarationResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.RtspSourceResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.DedicatedHostGroupArgs;
 import io.pulumi.azurenative.compute.outputs.DedicatedHostGroupInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;

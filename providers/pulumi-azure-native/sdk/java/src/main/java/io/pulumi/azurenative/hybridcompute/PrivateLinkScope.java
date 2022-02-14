@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridcompute.PrivateLinkScopeArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.HybridComputePrivateLinkScopePropertiesResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

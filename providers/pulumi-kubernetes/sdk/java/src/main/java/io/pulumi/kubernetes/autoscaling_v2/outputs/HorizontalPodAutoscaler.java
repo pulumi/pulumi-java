@@ -4,6 +4,8 @@
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.autoscaling_v2.outputs.HorizontalPodAutoscalerSpec;
+import io.pulumi.kubernetes.autoscaling_v2.outputs.HorizontalPodAutoscalerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.Objects;

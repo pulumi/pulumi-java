@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.FactoryArgs;
 import io.pulumi.azurenative.datafactory.outputs.EncryptionConfigurationResponse;
 import io.pulumi.azurenative.datafactory.outputs.FactoryGitHubConfigurationResponse;
 import io.pulumi.azurenative.datafactory.outputs.FactoryIdentityResponse;

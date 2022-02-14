@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.managednetwork.ManagedNetworkGroupArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

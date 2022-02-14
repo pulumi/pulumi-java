@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.coordination.k8s.io_v1beta1.LeaseArgs;
 import io.pulumi.kubernetes.coordination.k8s.io_v1beta1.outputs.LeaseSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;

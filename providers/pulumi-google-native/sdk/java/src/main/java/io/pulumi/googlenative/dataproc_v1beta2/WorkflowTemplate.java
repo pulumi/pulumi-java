@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dataproc_v1beta2.WorkflowTemplateArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.OrderedJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.TemplateParameterResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.WorkflowTemplatePlacementResponse;

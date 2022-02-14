@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventhub.ClusterArgs;
 import io.pulumi.azurenative.eventhub.outputs.ClusterSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

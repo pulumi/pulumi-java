@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.deploymentmanager.RolloutArgs;
 import io.pulumi.azurenative.deploymentmanager.outputs.IdentityResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepGroupResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.MongoDBResourceMongoDBDatabaseArgs;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBDatabaseGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBDatabaseGetPropertiesResponseResource;
 import io.pulumi.core.Alias;

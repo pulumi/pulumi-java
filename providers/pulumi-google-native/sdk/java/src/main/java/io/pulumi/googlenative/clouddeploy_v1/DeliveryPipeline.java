@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PipelineConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.SerialPipelineResponse;
 import java.lang.String;

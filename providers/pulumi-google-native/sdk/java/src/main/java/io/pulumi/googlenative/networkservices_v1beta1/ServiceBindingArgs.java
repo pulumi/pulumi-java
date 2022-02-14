@@ -59,7 +59,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects//{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
@@ -79,7 +79,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The full service directory service name of the format /projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*
+     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      */
     @InputImport(name="service", required=true)
     private final Input<String> service;

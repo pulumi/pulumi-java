@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.SoftwareUpdateConfigurationByNameArgs;
 import io.pulumi.azurenative.automation.outputs.ErrorResponseResponse;
 import io.pulumi.azurenative.automation.outputs.SUCSchedulePropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.SoftwareUpdateConfigurationTasksResponse;

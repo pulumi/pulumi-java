@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.notificationhubs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.notificationhubs.NamespaceArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appconfiguration.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

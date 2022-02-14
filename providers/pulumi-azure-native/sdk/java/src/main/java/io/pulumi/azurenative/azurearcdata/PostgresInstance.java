@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurearcdata.PostgresInstanceArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstanceSkuResponse;

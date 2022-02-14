@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudiot_v1.DeviceArgs;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceCredentialResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceStateResponse;

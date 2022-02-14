@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.QueueServicePropertiesArgs;
 import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

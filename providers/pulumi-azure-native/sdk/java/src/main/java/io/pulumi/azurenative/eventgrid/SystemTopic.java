@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventgrid.SystemTopicArgs;
 import io.pulumi.azurenative.eventgrid.outputs.IdentityInfoResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

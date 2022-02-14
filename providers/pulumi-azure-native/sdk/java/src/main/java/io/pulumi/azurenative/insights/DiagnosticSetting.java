@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.DiagnosticSettingArgs;
 import io.pulumi.azurenative.insights.outputs.LogSettingsResponse;
 import io.pulumi.azurenative.insights.outputs.MetricSettingsResponse;
 import io.pulumi.core.Alias;

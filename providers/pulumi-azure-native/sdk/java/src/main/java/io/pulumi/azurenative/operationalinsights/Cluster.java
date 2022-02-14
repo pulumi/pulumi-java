@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.ClusterArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.AssociatedWorkspaceResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.CapacityReservationPropertiesResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.ClusterSkuResponse;

@@ -17,7 +17,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
     public static final SubordinateConfigResponse Empty = new SubordinateConfigResponse();
 
     /**
-     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      */
     @InputImport(name="certificateAuthority", required=true)
     private final String certificateAuthority;

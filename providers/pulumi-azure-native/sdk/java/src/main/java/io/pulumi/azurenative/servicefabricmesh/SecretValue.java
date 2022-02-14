@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabricmesh.SecretValueArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

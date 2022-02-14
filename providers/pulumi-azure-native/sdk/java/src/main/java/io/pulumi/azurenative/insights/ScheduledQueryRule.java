@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.ScheduledQueryRuleArgs;
 import io.pulumi.azurenative.insights.outputs.AlertingActionResponse;
 import io.pulumi.azurenative.insights.outputs.LogToMetricActionResponse;
 import io.pulumi.azurenative.insights.outputs.ScheduleResponse;

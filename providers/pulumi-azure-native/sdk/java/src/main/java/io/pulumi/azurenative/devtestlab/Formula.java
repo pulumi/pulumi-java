@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.FormulaArgs;
 import io.pulumi.azurenative.devtestlab.outputs.FormulaPropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.LabVirtualMachineCreationParameterResponse;
 import io.pulumi.core.Alias;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dataproc_v1beta2.AutoscalingPolicyArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BasicAutoscalingAlgorithmResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.InstanceGroupAutoscalingPolicyConfigResponse;
 import java.lang.String;

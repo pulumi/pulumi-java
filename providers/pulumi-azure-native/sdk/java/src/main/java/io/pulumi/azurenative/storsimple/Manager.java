@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storsimple.ManagerArgs;
 import io.pulumi.azurenative.storsimple.outputs.ManagerIntrinsicSettingsResponse;
 import io.pulumi.azurenative.storsimple.outputs.ManagerSkuResponse;
 import io.pulumi.core.Alias;

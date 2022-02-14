@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.authorization.PolicyDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

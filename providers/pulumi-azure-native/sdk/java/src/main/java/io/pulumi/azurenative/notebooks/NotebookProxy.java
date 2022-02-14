@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.notebooks;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.notebooks.NotebookProxyArgs;
 import io.pulumi.azurenative.notebooks.outputs.NotebookResourceSystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devices.IotDpsResourcePrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

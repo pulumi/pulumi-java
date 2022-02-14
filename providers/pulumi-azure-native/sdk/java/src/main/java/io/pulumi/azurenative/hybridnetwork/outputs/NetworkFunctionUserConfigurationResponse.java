@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
+import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponseOsProfile;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Object;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudchannel_v1.CustomerArgs;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ContactInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleTypePostalAddressResponse;

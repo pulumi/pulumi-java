@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.NodeTypeArgs;
 import io.pulumi.azurenative.servicefabric.outputs.EndpointRangeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VMSSExtensionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;

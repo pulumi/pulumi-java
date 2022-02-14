@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.StreamingLocatorArgs;
 import io.pulumi.azurenative.media.outputs.StreamingLocatorContentKeyResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

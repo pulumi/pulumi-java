@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.labservices.LabPlanArgs;
 import io.pulumi.azurenative.labservices.outputs.AutoShutdownProfileResponse;
 import io.pulumi.azurenative.labservices.outputs.ConnectionProfileResponse;
 import io.pulumi.azurenative.labservices.outputs.LabPlanNetworkProfileResponse;

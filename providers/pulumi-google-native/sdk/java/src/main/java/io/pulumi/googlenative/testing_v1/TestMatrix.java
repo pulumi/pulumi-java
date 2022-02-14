@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.testing_v1.TestMatrixArgs;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoResponse;
 import io.pulumi.googlenative.testing_v1.outputs.EnvironmentMatrixResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ResultStorageResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppDiagnosticLogsConfigurationArgs;
 import io.pulumi.azurenative.web.outputs.ApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.EnabledConfigResponse;
 import io.pulumi.azurenative.web.outputs.HttpLogsConfigResponse;

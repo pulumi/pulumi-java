@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ResourceGuardProxyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceGuardProxyBaseResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

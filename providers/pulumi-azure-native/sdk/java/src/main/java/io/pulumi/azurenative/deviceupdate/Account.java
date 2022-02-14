@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.deviceupdate;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.deviceupdate.AccountArgs;
 import io.pulumi.azurenative.deviceupdate.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;

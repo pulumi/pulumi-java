@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datamigration.TaskArgs;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourcePostgreSqlSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourceSqlServerSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourceSqlServerTaskPropertiesResponse;

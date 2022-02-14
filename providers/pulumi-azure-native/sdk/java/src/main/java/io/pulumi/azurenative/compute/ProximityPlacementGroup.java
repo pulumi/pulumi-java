@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.ProximityPlacementGroupArgs;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceWithColocationStatusResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.ContainerAppArgs;
 import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
 import io.pulumi.core.Alias;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1.FhirStoreArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.NotificationConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.StreamConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ValidationConfigResponse;

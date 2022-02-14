@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kubernetesconfiguration.ExtensionArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ConfigurationIdentityResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ErrorDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ExtensionStatusResponse;

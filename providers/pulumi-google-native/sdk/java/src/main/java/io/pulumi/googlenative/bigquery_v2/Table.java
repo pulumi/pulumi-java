@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigquery_v2.TableArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.ExternalDataConfigurationResponse;

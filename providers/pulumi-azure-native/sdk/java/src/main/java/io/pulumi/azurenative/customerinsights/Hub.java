@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.HubArgs;
 import io.pulumi.azurenative.customerinsights.outputs.HubBillingInfoFormatResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

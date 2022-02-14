@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicebus.NamespaceNetworkRuleSetArgs;
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetVirtualNetworkRulesResponse;
 import io.pulumi.core.Alias;

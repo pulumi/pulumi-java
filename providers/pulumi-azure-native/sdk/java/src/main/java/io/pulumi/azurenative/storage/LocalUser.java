@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.LocalUserArgs;
 import io.pulumi.azurenative.storage.outputs.PermissionScopeResponse;
 import io.pulumi.azurenative.storage.outputs.SshPublicKeyResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;

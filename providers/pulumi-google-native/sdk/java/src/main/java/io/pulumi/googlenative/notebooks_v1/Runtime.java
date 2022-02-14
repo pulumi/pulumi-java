@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.notebooks_v1.RuntimeArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeMetricsResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeSoftwareConfigResponse;

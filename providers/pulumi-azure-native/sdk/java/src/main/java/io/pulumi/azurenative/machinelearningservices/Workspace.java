@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.WorkspaceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.EncryptionPropertyResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.NotebookResourceInfoResponse;

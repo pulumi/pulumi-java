@@ -16,7 +16,7 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
     public static final CryptoKeyConfigResponse Empty = new CryptoKeyConfigResponse();
 
     /**
-     * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     @InputImport(name="keyReference", required=true)
     private final String keyReference;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.core_v1.PodArgs;
 import io.pulumi.kubernetes.core_v1.outputs.PodSpec;
 import io.pulumi.kubernetes.core_v1.outputs.PodStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

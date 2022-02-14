@@ -27,7 +27,7 @@ public final class InlineSecretResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*
+     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
      */
     @InputImport(name="kmsKeyName", required=true)
     private final String kmsKeyName;

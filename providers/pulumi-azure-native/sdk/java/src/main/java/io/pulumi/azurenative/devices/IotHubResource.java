@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devices.IotHubResourceArgs;
 import io.pulumi.azurenative.devices.outputs.IotHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.IotHubSkuInfoResponse;
 import io.pulumi.core.Alias;

@@ -20,7 +20,7 @@ public final class GetEndpointResult {
  */
     private final Map<String,String> annotations;
 /**
- * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+ * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
  */
     private final String name;
 /**
@@ -59,7 +59,7 @@ public final class GetEndpointResult {
         return this.annotations;
     }
 /**
- * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+ * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
  */
     public String getName() {
         return this.name;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationsmanagement.ManagementConfigurationArgs;
 import io.pulumi.azurenative.operationsmanagement.outputs.ManagementConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

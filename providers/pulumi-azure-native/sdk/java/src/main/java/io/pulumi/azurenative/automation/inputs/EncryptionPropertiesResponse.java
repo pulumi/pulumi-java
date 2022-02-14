@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
+import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesResponseIdentity;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;

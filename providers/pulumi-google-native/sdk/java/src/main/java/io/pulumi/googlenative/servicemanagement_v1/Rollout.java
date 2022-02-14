@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.servicemanagement_v1.RolloutArgs;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.DeleteServiceStrategyResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.TrafficPercentStrategyResponse;
 import java.lang.String;

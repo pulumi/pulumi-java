@@ -16,7 +16,7 @@ public final class CustomerManagedEncryptionResponse extends io.pulumi.resources
     public static final CustomerManagedEncryptionResponse Empty = new CustomerManagedEncryptionResponse();
 
     /**
-     * The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     @InputImport(name="kmsKeyName", required=true)
     private final String kmsKeyName;

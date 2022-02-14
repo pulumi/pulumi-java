@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kusto.ReadOnlyFollowingDatabaseArgs;
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

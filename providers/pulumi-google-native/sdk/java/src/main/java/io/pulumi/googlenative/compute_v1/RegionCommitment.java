@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.RegionCommitmentArgs;
 import io.pulumi.googlenative.compute_v1.outputs.LicenseResourceCommitmentResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ReservationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourceCommitmentResponse;

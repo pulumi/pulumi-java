@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
+import io.pulumi.azurenative.deploymentmanager.outputs.RestResponseResponseRegex;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;

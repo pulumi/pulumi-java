@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
+import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineResponseProperties;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;

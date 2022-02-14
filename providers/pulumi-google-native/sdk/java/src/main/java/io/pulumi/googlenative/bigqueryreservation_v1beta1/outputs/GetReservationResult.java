@@ -19,7 +19,7 @@ public final class GetReservationResult {
  */
     private final Boolean ignoreIdleSlots;
 /**
- * The resource name of the reservation, e.g., `projects//{@literal /}locations//{@literal /}reservations/team1-prod`.
+ * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
  */
     private final String name;
 /**
@@ -58,7 +58,7 @@ public final class GetReservationResult {
         return this.ignoreIdleSlots;
     }
 /**
- * The resource name of the reservation, e.g., `projects//{@literal /}locations//{@literal /}reservations/team1-prod`.
+ * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
  */
     public String getName() {
         return this.name;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.JitNetworkAccessPolicyArgs;
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessPolicyVirtualMachineResponse;
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestResponse;
 import io.pulumi.core.Alias;

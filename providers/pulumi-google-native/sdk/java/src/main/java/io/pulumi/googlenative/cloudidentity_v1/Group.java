@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudidentity_v1.GroupArgs;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.DynamicGroupMetadataResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
 import java.lang.String;

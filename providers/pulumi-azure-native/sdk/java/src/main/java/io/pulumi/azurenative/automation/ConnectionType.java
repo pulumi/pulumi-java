@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.ConnectionTypeArgs;
 import io.pulumi.azurenative.automation.outputs.FieldDefinitionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

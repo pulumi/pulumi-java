@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.MonitoringConfigArgs;
 import io.pulumi.azurenative.databoxedge.outputs.MetricConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

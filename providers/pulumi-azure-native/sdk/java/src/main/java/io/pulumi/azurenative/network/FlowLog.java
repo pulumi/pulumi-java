@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.FlowLogArgs;
 import io.pulumi.azurenative.network.outputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.outputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsPropertiesResponse;

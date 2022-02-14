@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicebus.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.servicebus.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.servicebus.outputs.PrivateEndpointResponse;
 import io.pulumi.core.Alias;

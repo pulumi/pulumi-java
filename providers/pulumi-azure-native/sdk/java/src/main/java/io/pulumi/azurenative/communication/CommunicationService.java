@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.communication;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.communication.CommunicationServiceArgs;
 import io.pulumi.azurenative.communication.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v3.AlertPolicyArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.AlertStrategyResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ConditionResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.DocumentationResponse;

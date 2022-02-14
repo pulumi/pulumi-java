@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devops;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devops.PipelineArgs;
 import io.pulumi.azurenative.devops.outputs.BootstrapConfigurationResponse;
 import io.pulumi.azurenative.devops.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

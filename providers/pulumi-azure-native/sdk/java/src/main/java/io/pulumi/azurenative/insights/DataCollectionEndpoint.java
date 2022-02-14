@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.DataCollectionEndpointArgs;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResourceResponseSystemData;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseConfigurationAccess;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseLogsIngestion;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.connectedvmwarevsphere.VirtualMachineTemplateArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;

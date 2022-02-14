@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
+import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseResponseRegex;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;

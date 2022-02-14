@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridnetwork.VendorSkusArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionTemplateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

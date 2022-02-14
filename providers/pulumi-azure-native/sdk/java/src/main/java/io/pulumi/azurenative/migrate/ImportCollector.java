@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.migrate.ImportCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.ImportCollectorPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

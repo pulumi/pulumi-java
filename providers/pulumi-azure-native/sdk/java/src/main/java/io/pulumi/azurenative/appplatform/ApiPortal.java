@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.ApiPortalArgs;
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;

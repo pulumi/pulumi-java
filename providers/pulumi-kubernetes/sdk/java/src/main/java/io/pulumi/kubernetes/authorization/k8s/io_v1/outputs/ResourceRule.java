@@ -21,7 +21,7 @@ public final class ResourceRule {
     private final @Nullable List<String> resourceNames;
 /**
  * Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
- "/{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
+ "*{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
  */
     private final @Nullable List<String> resources;
 /**
@@ -55,7 +55,7 @@ public final class ResourceRule {
     }
 /**
  * Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
- "/{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
+ "*{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
  */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;

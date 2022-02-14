@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.delegatednetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.delegatednetwork.DelegatedSubnetServiceDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.SubnetDetailsResponse;
 import io.pulumi.core.Alias;

@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
+import io.pulumi.azurenative.machinelearningservices.inputs.DatasetStateResponseDeprecatedBy;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

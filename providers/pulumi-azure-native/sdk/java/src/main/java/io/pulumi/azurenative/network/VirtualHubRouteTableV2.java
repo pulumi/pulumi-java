@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.VirtualHubRouteTableV2Args;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteV2Response;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

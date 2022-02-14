@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.RuleArgs;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleCacheExpirationActionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleCacheKeyQueryStringActionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleCookiesConditionResponse;

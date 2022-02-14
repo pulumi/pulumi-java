@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.StaticSiteArgs;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.outputs.ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;

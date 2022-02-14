@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.elastic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.elastic.MonitorArgs;
 import io.pulumi.azurenative.elastic.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.ResourceSkuResponse;

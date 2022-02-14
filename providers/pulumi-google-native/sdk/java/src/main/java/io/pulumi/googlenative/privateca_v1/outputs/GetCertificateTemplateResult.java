@@ -30,7 +30,7 @@ public final class GetCertificateTemplateResult {
  */
     private final Map<String,String> labels;
 /**
- * The resource name for this CertificateTemplate in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`.
+ * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
  */
     private final String name;
 /**
@@ -91,7 +91,7 @@ public final class GetCertificateTemplateResult {
         return this.labels;
     }
 /**
- * The resource name for this CertificateTemplate in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`.
+ * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
  */
     public String getName() {
         return this.name;

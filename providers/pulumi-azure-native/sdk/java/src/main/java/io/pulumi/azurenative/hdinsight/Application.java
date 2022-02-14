@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hdinsight;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hdinsight.ApplicationArgs;
 import io.pulumi.azurenative.hdinsight.outputs.ApplicationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

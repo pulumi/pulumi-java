@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_alpha.InterconnectAttachmentArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectAttachmentPartnerMetadataResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectAttachmentPrivateInfoResponse;
 import java.lang.Boolean;

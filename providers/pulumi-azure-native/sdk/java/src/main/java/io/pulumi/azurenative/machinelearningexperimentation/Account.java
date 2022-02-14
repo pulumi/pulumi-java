@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningexperimentation.AccountArgs;
 import io.pulumi.azurenative.machinelearningexperimentation.outputs.StorageAccountPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

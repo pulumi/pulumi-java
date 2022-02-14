@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.NodeGroupArgs;
 import io.pulumi.googlenative.compute_v1.outputs.NodeGroupAutoscalingPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NodeGroupMaintenanceWindowResponse;
 import java.lang.Integer;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.NetworkSecurityGroupArgs;
 import io.pulumi.azurenative.network.outputs.FlowLogResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.SecurityRuleResponse;

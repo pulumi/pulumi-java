@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.BatchEndpointArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.BatchEndpointResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;

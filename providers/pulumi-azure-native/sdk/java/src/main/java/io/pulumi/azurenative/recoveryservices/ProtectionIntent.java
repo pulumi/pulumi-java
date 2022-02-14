@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ProtectionIntentArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureRecoveryServiceVaultProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureResourceProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadAutoProtectionIntentResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.NetworkArgs;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkPeeringResponse;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkRoutingConfigResponse;
 import java.lang.Boolean;

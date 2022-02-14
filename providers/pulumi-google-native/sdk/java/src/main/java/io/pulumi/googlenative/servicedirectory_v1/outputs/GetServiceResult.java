@@ -21,7 +21,7 @@ public final class GetServiceResult {
  */
     private final List<EndpointResponse> endpoints;
 /**
- * Immutable. The resource name for the service in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+ * Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
  */
     private final String name;
 
@@ -48,7 +48,7 @@ public final class GetServiceResult {
         return this.endpoints;
     }
 /**
- * Immutable. The resource name for the service in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+ * Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
  */
     public String getName() {
         return this.name;

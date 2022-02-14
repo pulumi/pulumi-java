@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.DeviceArgs;
 import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ResourceMoveDetailsResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.core_v1.EndpointsListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.Endpoints;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import java.lang.String;

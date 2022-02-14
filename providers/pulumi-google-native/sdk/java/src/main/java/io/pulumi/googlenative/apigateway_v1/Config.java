@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.apigateway_v1.ConfigArgs;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigFileResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigGrpcServiceDefinitionResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigOpenApiDocumentResponse;

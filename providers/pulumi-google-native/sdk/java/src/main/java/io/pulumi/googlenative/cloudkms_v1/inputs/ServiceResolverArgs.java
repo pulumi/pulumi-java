@@ -50,7 +50,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      */
     @InputImport(name="serviceDirectoryService", required=true)
     private final Input<String> serviceDirectoryService;

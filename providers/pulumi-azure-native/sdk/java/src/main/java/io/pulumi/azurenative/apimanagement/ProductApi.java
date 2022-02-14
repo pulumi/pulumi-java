@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.ProductApiArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ApiVersionSetContractDetailsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.AuthenticationSettingsContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SubscriptionKeyParameterNamesContractResponse;

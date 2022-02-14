@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.osconfig_v1beta.GuestPolicyArgs;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageResponse;

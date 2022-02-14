@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.ReservationArgs;
 import io.pulumi.googlenative.compute_beta.outputs.AllocationSpecificSKUReservationResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ShareSettingsResponse;
 import java.lang.Boolean;

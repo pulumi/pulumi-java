@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.GalleryImageArgs;
 import io.pulumi.azurenative.compute.outputs.DisallowedResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageFeatureResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageIdentifierResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sqlvirtualmachine.AvailabilityGroupListenerArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

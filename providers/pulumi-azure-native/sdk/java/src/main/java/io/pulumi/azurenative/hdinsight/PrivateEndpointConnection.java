@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hdinsight;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hdinsight.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.hdinsight.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.hdinsight.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.hdinsight.outputs.SystemDataResponse;

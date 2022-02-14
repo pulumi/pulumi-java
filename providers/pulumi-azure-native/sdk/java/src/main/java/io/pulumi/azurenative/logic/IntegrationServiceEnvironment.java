@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationServiceEnvironmentArgs;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentPropertiesResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;

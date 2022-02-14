@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
+import io.pulumi.azurenative.providerhub.outputs.ResourceTypeRegistrationResponseProperties;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;

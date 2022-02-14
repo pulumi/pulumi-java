@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyGKEClusterResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyNetworkResponse;
 import java.lang.String;

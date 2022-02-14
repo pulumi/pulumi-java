@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.DatasetArgs;
 import io.pulumi.azurenative.datafactory.outputs.AmazonMWSObjectDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.AmazonRdsForOracleTableDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.AmazonRdsForSqlServerTableDatasetResponse;

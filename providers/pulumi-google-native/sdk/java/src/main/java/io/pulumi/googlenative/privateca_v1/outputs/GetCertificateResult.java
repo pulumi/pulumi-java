@@ -19,7 +19,7 @@ public final class GetCertificateResult {
  */
     private final CertificateDescriptionResponse certificateDescription;
 /**
- * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+ * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
  */
     private final String certificateTemplate;
 /**
@@ -31,7 +31,7 @@ public final class GetCertificateResult {
  */
     private final String createTime;
 /**
- * The resource name of the issuing CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+ * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
  */
     private final String issuerCertificateAuthority;
 /**
@@ -43,7 +43,7 @@ public final class GetCertificateResult {
  */
     private final String lifetime;
 /**
- * The resource name for this Certificate in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificates/*`.
+ * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
  */
     private final String name;
 /**
@@ -110,7 +110,7 @@ public final class GetCertificateResult {
         return this.certificateDescription;
     }
 /**
- * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+ * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
  */
     public String getCertificateTemplate() {
         return this.certificateTemplate;
@@ -128,7 +128,7 @@ public final class GetCertificateResult {
         return this.createTime;
     }
 /**
- * The resource name of the issuing CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+ * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
  */
     public String getIssuerCertificateAuthority() {
         return this.issuerCertificateAuthority;
@@ -146,7 +146,7 @@ public final class GetCertificateResult {
         return this.lifetime;
     }
 /**
- * The resource name for this Certificate in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificates/*`.
+ * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
  */
     public String getName() {
         return this.name;

@@ -36,7 +36,7 @@ public final class GetImportJobResult {
  */
     private final String importMethod;
 /**
- * The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+ * The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
  */
     private final String name;
 /**
@@ -113,7 +113,7 @@ public final class GetImportJobResult {
         return this.importMethod;
     }
 /**
- * The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+ * The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
  */
     public String getName() {
         return this.name;

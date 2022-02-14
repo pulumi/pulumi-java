@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.datamigration_v1beta1.ConnectionProfileArgs;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.CloudSqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.MySqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.StatusResponse;

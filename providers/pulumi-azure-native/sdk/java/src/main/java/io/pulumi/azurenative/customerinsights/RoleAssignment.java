@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.RoleAssignmentArgs;
 import io.pulumi.azurenative.customerinsights.outputs.AssignmentPrincipalResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ResourceSetDescriptionResponse;
 import io.pulumi.core.Alias;

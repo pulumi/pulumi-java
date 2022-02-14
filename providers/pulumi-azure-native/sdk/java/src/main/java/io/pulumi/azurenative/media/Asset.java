@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.AssetArgs;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.ConnectedRegistryArgs;
 import io.pulumi.azurenative.containerregistry.outputs.ActivationPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.LoggingPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.LoginServerPropertiesResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerbi.WorkspaceCollectionArgs;
 import io.pulumi.azurenative.powerbi.outputs.AzureSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

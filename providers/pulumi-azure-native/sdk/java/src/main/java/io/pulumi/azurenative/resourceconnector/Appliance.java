@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resourceconnector;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resourceconnector.ApplianceArgs;
 import io.pulumi.azurenative.resourceconnector.outputs.AppliancePropertiesResponseInfrastructureConfig;
 import io.pulumi.azurenative.resourceconnector.outputs.IdentityResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.SystemDataResponse;

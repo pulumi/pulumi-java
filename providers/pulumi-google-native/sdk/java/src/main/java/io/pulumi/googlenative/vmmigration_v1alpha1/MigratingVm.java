@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.vmmigration_v1alpha1.MigratingVmArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CloneJobResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDefaultsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CutoverJobResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.videoanalyzer.PipelineJobArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.PipelineJobErrorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;

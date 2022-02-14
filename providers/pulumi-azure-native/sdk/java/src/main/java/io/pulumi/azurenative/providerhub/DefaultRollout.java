@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.providerhub.DefaultRolloutArgs;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

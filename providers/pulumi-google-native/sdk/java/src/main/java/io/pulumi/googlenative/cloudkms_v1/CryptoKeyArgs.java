@@ -22,7 +22,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     public static final CryptoKeyArgs Empty = new CryptoKeyArgs();
 
     /**
-     * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+     * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      */
     @InputImport(name="cryptoKeyBackend")
     private final @Nullable Input<String> cryptoKeyBackend;

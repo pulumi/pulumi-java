@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicebus.TopicArgs;
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

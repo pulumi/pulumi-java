@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.MediaGraphArgs;
 import io.pulumi.azurenative.media.outputs.MediaGraphAssetSinkResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphRtspSourceResponse;
 import io.pulumi.core.Alias;

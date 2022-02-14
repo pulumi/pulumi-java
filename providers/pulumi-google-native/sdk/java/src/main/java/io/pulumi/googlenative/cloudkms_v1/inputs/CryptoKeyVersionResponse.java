@@ -119,7 +119,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
     }
 
     /**
-     * The resource name for this CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`.
+     * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      */
     @InputImport(name="name", required=true)
     private final String name;

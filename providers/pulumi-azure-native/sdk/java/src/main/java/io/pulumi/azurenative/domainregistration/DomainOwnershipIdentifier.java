@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.domainregistration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

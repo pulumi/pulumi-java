@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.CassandraClusterArgs;
 import io.pulumi.azurenative.documentdb.outputs.ClusterResourceResponseProperties;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.core.Alias;

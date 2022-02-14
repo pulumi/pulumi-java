@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
+import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceResponseKeyVault;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

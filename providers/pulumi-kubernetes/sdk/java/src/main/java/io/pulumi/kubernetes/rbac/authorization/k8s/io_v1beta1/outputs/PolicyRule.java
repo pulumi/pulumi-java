@@ -24,7 +24,7 @@ public final class PolicyRule {
  */
     private final @Nullable List<String> resourceNames;
 /**
- * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '/{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+ * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '*{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
  */
     private final @Nullable List<String> resources;
 /**
@@ -65,7 +65,7 @@ public final class PolicyRule {
         return this.resourceNames == null ? List.of() : this.resourceNames;
     }
 /**
- * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '/{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+ * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '*{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
  */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;

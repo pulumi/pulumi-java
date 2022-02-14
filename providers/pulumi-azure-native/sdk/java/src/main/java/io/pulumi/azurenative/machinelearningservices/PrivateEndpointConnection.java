@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.PrivateLinkServiceConnectionStateResponse;

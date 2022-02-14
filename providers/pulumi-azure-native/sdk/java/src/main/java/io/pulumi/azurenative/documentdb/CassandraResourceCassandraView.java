@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.CassandraResourceCassandraViewArgs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.HubRouteTableArgs;
 import io.pulumi.azurenative.network.outputs.HubRouteResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

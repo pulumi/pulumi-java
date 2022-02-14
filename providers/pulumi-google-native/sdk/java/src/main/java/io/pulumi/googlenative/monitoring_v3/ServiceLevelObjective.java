@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v3.ServiceLevelObjectiveArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.ServiceLevelIndicatorResponse;
 import java.lang.Double;
 import java.lang.String;

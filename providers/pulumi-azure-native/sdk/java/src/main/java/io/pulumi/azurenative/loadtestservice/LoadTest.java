@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.loadtestservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.loadtestservice.LoadTestArgs;
 import io.pulumi.azurenative.loadtestservice.outputs.SystemAssignedServiceIdentityResponse;
 import io.pulumi.azurenative.loadtestservice.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

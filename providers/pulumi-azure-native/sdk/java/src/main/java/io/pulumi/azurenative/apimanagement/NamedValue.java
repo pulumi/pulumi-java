@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.NamedValueArgs;
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

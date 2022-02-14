@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.ReplicationArgs;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

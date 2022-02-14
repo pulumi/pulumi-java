@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.ManagedClusterArgs;
 import io.pulumi.azurenative.servicefabric.outputs.AzureActiveDirectoryResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ClientCertificateResponse;
 import io.pulumi.azurenative.servicefabric.outputs.LoadBalancingRuleResponse;

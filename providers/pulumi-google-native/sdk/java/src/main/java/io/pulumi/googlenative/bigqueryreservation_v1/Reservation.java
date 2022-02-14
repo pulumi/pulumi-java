@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigqueryreservation_v1.ReservationArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -42,13 +43,13 @@ public class Reservation extends io.pulumi.resources.CustomResource {
         return this.ignoreIdleSlots;
     }
     /**
-     * The resource name of the reservation, e.g., `projects//{@literal /}locations//{@literal /}reservations/team1-prod`.
+     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the reservation, e.g., `projects//{@literal /}locations//{@literal /}reservations/team1-prod`.
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
      */
     public Output<String> getName() {
         return this.name;

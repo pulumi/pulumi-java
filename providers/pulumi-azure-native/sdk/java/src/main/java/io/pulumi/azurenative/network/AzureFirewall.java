@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.AzureFirewallArgs;
 import io.pulumi.azurenative.network.outputs.AzureFirewallApplicationRuleCollectionResponse;
 import io.pulumi.azurenative.network.outputs.AzureFirewallIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.AzureFirewallIpGroupsResponse;

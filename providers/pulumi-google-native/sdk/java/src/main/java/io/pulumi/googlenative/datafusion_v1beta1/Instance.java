@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.datafusion_v1beta1.InstanceArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.AcceleratorResponse;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.CryptoKeyConfigResponse;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.NetworkConfigResponse;

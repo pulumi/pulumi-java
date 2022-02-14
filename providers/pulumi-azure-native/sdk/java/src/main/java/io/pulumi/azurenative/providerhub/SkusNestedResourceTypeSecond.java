@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.providerhub.SkusNestedResourceTypeSecondArgs;
 import io.pulumi.azurenative.providerhub.outputs.SkuResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

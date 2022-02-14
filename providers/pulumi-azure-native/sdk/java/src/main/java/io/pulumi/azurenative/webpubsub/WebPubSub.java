@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.webpubsub.WebPubSubArgs;
 import io.pulumi.azurenative.webpubsub.outputs.EventHandlerSettingsResponse;
 import io.pulumi.azurenative.webpubsub.outputs.ManagedIdentityResponse;
 import io.pulumi.azurenative.webpubsub.outputs.PrivateEndpointConnectionResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1beta1.AnnotationArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageAnnotationResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ResourceAnnotationResponse;

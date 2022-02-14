@@ -25,7 +25,7 @@ public final class GetControlResult {
  */
     private final GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec;
 /**
- * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}controls/*
+ * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
  */
     private final String name;
 /**
@@ -72,7 +72,7 @@ public final class GetControlResult {
         return this.facetSpec;
     }
 /**
- * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}controls/*
+ * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
  */
     public String getName() {
         return this.name;

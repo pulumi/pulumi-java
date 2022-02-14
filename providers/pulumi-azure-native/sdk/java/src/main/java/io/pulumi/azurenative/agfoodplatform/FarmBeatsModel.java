@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.agfoodplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.agfoodplatform.FarmBeatsModelArgs;
 import io.pulumi.azurenative.agfoodplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

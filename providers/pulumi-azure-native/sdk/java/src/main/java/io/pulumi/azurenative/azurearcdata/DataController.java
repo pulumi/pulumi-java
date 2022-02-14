@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurearcdata.DataControllerArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.DataControllerPropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.marketplace.PrivateStoreCollectionArgs;
 import io.pulumi.azurenative.marketplace.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

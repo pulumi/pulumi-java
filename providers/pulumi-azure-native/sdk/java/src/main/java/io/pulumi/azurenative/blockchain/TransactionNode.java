@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blockchain;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blockchain.TransactionNodeArgs;
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

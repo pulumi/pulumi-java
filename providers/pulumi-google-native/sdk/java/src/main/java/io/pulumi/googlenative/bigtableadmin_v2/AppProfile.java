@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigtableadmin_v2.AppProfileArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.MultiClusterRoutingUseAnyResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.SingleClusterRoutingResponse;
 import java.lang.String;

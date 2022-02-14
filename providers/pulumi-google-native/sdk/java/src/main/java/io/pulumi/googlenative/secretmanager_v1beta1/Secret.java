@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.secretmanager_v1beta1.SecretArgs;
 import io.pulumi.googlenative.secretmanager_v1beta1.outputs.ReplicationResponse;
 import java.lang.String;
 import java.util.Map;
@@ -44,13 +45,13 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name of the Secret in the format `projects//{@literal /}secrets/*`.
+     * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the Secret in the format `projects//{@literal /}secrets/*`.
+     * @return The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      */
     public Output<String> getName() {
         return this.name;

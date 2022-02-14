@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningcompute.OperationalizationClusterArgs;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AcsClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AppInsightsPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPropertiesResponse;

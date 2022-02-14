@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
+import io.pulumi.azurenative.customerinsights.inputs.CanonicalProfileDefinitionResponseProperties;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;

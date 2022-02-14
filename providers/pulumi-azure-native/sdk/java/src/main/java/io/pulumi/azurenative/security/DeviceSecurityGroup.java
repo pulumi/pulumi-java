@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.DeviceSecurityGroupArgs;
 import io.pulumi.azurenative.security.outputs.AllowlistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.DenylistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.ThresholdCustomAlertRuleResponse;

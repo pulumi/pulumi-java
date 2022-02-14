@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.VirtualMachineArgs;
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ArtifactDeploymentStatusPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ArtifactInstallPropertiesResponse;

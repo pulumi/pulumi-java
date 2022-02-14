@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.VirtualMachineScaleSetVMExtensionArgs;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

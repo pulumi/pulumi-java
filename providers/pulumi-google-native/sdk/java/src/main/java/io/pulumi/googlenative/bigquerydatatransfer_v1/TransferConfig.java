@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigquerydatatransfer_v1.TransferConfigArgs;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.ScheduleOptionsResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.UserInfoResponse;

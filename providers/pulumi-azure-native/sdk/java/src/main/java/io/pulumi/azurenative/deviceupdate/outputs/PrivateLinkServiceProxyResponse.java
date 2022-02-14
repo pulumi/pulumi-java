@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 
 import io.pulumi.azurenative.deviceupdate.outputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionStateResponse;
+import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;

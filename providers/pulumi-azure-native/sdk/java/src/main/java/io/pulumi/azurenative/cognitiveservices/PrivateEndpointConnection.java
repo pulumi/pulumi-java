@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cognitiveservices.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.cognitiveservices.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

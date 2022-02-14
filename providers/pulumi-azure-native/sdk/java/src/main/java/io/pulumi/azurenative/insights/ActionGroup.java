@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.ActionGroupArgs;
 import io.pulumi.azurenative.insights.outputs.ArmRoleReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.AutomationRunbookReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.AzureAppPushReceiverResponse;

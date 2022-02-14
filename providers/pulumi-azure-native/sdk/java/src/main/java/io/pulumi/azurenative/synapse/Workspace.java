@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.synapse.WorkspaceArgs;
 import io.pulumi.azurenative.synapse.outputs.DataLakeStorageAccountDetailsResponse;
 import io.pulumi.azurenative.synapse.outputs.EncryptionDetailsResponse;
 import io.pulumi.azurenative.synapse.outputs.ManagedIdentityResponse;

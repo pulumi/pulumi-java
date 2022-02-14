@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.timeseriesinsights.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

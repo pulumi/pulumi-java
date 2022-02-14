@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityandcompliance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityandcompliance.PrivateEndpointConnectionsAdtAPIArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;

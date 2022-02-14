@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.batch.CertificateArgs;
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

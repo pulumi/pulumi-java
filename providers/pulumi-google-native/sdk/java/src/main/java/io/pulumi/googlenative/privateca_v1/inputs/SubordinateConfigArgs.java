@@ -18,7 +18,7 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     public static final SubordinateConfigArgs Empty = new SubordinateConfigArgs();
 
     /**
-     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      */
     @InputImport(name="certificateAuthority", required=true)
     private final Input<String> certificateAuthority;

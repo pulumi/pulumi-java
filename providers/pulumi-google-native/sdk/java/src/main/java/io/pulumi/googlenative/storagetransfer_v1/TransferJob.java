@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.storagetransfer_v1.TransferJobArgs;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.NotificationConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.ScheduleResponse;

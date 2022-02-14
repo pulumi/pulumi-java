@@ -4,6 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.meta_v1.outputs.LabelSelectorRequirement;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

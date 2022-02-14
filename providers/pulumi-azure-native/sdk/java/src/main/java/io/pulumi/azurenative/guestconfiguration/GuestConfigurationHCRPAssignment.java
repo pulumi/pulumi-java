@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.guestconfiguration.GuestConfigurationHCRPAssignmentArgs;
 import io.pulumi.azurenative.guestconfiguration.outputs.GuestConfigurationAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

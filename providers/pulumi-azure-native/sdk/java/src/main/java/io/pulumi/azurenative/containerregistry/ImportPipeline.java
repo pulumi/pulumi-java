@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.ImportPipelineArgs;
 import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineTriggerPropertiesResponse;

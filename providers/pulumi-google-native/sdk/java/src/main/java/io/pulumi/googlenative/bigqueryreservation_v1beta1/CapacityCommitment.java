@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigqueryreservation_v1beta1.CapacityCommitmentArgs;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.outputs.StatusResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.desktopvirtualization.MSIXPackageArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageApplicationsResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageDependenciesResponse;
 import io.pulumi.core.Alias;

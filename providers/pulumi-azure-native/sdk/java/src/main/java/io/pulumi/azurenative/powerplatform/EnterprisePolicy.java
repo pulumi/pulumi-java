@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerplatform.EnterprisePolicyArgs;
 import io.pulumi.azurenative.powerplatform.outputs.EnterprisePolicyIdentityResponse;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseEncryption;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseLockbox;

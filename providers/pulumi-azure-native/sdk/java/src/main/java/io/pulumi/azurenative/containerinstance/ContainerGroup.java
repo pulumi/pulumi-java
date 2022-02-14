@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerinstance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerinstance.ContainerGroupArgs;
 import io.pulumi.azurenative.containerinstance.outputs.ContainerGroupDiagnosticsResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ContainerGroupIdentityResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ContainerGroupNetworkProfileResponse;

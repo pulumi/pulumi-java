@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.healthcareapis.IotConnectorArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.IotEventHubIngestionEndpointConfigurationResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.IotMappingPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudscheduler_v1beta1.JobArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.HttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.PubsubTargetResponse;

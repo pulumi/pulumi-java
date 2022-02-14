@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.aad;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.aad.OuContainerArgs;
 import io.pulumi.azurenative.aad.outputs.ContainerAccountResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

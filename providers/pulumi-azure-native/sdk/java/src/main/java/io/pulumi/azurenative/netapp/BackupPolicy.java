@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.netapp.BackupPolicyArgs;
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

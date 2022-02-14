@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.EncryptionScopeArgs;
 import io.pulumi.azurenative.storage.outputs.EncryptionScopeKeyVaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

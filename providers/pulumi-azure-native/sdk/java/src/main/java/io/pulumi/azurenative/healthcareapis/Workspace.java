@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.healthcareapis.WorkspaceArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.WorkspaceResponseProperties;
 import io.pulumi.core.Alias;

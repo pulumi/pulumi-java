@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.core_v1.ReplicationControllerArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerSpec;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

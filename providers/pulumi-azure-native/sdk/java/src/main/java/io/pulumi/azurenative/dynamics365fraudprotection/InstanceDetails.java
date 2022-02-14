@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dynamics365fraudprotection;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dynamics365fraudprotection.InstanceDetailsArgs;
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.DFPInstanceAdministratorsResponse;
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

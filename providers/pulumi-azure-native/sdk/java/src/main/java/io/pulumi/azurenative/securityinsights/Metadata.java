@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.MetadataArgs;
 import io.pulumi.azurenative.securityinsights.outputs.MetadataAuthorResponse;
 import io.pulumi.azurenative.securityinsights.outputs.MetadataCategoriesResponse;
 import io.pulumi.azurenative.securityinsights.outputs.MetadataDependenciesResponse;

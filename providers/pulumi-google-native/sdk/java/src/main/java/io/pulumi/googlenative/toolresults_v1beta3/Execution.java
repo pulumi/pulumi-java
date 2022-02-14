@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.toolresults_v1beta3.ExecutionArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MatrixDimensionDefinitionResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.OutcomeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.SpecificationResponse;

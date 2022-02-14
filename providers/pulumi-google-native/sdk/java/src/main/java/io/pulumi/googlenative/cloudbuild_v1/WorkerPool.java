@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudbuild_v1.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PrivatePoolV1ConfigResponse;
 import java.lang.String;
 import java.util.Map;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.BackendArgs;
 import io.pulumi.azurenative.apimanagement.outputs.BackendCredentialsContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendProxyContractResponse;

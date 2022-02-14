@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerservice.SnapshotArgs;
 import io.pulumi.azurenative.containerservice.outputs.CreationDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.costmanagement.CostAllocationRuleArgs;
 import io.pulumi.azurenative.costmanagement.outputs.CostAllocationRulePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

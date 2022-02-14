@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
+import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueResponseMetadata;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;

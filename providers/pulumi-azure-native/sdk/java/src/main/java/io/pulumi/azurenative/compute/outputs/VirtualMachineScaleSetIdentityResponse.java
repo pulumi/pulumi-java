@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
+import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;

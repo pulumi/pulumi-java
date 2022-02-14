@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagepool;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagepool.IscsiTargetArgs;
 import io.pulumi.azurenative.storagepool.outputs.TargetPortalGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

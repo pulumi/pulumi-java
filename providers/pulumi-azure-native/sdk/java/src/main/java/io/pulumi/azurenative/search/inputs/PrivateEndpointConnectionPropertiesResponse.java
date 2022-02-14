@@ -3,6 +3,8 @@
 
 package io.pulumi.azurenative.search.inputs;
 
+import io.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesResponsePrivateEndpoint;
+import io.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;

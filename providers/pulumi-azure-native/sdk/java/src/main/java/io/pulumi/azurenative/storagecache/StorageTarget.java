@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagecache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagecache.StorageTargetArgs;
 import io.pulumi.azurenative.storagecache.outputs.BlobNfsTargetResponse;
 import io.pulumi.azurenative.storagecache.outputs.ClfsTargetResponse;
 import io.pulumi.azurenative.storagecache.outputs.NamespaceJunctionResponse;

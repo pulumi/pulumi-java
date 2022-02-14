@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.AlertsSuppressionRuleArgs;
 import io.pulumi.azurenative.security.outputs.SuppressionAlertsScopeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

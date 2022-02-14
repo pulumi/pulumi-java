@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.ApiDiagnosticArgs;
 import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
 import io.pulumi.core.Alias;

@@ -54,7 +54,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+     * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      */
     @InputImport(name="connectorVersion", required=true)
     private final Input<String> connectorVersion;

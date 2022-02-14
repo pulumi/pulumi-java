@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.spanner_v1.DatabaseArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.RestoreInfoResponse;

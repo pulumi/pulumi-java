@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.deviceupdate;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.deviceupdate.InstanceArgs;
 import io.pulumi.azurenative.deviceupdate.outputs.DiagnosticStoragePropertiesResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.IotHubSettingsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;

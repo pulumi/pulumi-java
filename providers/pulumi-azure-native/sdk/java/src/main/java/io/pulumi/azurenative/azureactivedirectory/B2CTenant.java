@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azureactivedirectory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azureactivedirectory.B2CTenantArgs;
 import io.pulumi.azurenative.azureactivedirectory.outputs.B2CResourceSKUResponse;
 import io.pulumi.azurenative.azureactivedirectory.outputs.B2CTenantResourcePropertiesResponseBillingConfig;
 import io.pulumi.core.Alias;

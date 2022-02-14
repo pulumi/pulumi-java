@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
+import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponseProperties;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;

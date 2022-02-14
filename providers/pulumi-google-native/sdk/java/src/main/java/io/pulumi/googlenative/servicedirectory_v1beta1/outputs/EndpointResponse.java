@@ -24,7 +24,7 @@ public final class EndpointResponse {
  */
     private final Map<String,String> metadata;
 /**
- * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+ * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
  */
     private final String name;
 /**
@@ -77,7 +77,7 @@ public final class EndpointResponse {
         return this.metadata;
     }
 /**
- * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+ * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
  */
     public String getName() {
         return this.name;

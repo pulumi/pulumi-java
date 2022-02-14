@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logz.MetricsSourceArgs;
 import io.pulumi.azurenative.logz.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;

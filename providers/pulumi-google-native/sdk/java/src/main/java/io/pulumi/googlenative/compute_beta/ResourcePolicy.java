@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.ResourcePolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyGroupPlacementPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyInstanceSchedulePolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyResourceStatusResponse;

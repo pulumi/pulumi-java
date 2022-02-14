@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.fluidrelay;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.fluidrelay.FluidRelayServerArgs;
 import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

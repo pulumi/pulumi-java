@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.EndpointArgs;
 import io.pulumi.azurenative.cdn.outputs.DeepCreatedOriginGroupResponse;
 import io.pulumi.azurenative.cdn.outputs.DeepCreatedOriginResponse;
 import io.pulumi.azurenative.cdn.outputs.EndpointPropertiesUpdateParametersResponseDeliveryPolicy;

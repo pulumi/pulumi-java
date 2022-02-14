@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customproviders;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customproviders.CustomResourceProviderArgs;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPActionRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPResourceTypeRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPValidationsResponse;

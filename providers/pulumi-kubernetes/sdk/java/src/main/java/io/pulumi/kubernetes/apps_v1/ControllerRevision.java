@@ -10,6 +10,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.apps_v1.ControllerRevisionArgs;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Integer;
 import java.lang.String;

@@ -57,7 +57,7 @@ public final class GetCertificateAuthorityResult {
  */
     private final String lifetime;
 /**
- * The resource name for this CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+ * The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
  */
     private final String name;
 /**
@@ -184,7 +184,7 @@ public final class GetCertificateAuthorityResult {
         return this.lifetime;
     }
 /**
- * The resource name for this CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+ * The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
  */
     public String getName() {
         return this.name;

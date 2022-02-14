@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.TriggerArgs;
 import io.pulumi.azurenative.datafactory.outputs.BlobEventsTriggerResponse;
 import io.pulumi.azurenative.datafactory.outputs.BlobTriggerResponse;
 import io.pulumi.azurenative.datafactory.outputs.ChainingTriggerResponse;

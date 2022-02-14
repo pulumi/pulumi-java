@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagesync.ServerEndpointArgs;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointCloudTieringStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusResponse;

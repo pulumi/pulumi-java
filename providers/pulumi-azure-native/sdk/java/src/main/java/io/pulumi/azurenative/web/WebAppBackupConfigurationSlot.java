@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppBackupConfigurationSlotArgs;
 import io.pulumi.azurenative.web.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
 import io.pulumi.core.Alias;

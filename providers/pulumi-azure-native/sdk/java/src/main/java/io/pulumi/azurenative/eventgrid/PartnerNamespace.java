@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventgrid.PartnerNamespaceArgs;
 import io.pulumi.azurenative.eventgrid.outputs.InboundIpRuleResponse;
 import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;

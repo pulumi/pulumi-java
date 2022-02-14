@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.LinkArgs;
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantPropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.TypePropertiesMappingResponse;
 import io.pulumi.core.Alias;

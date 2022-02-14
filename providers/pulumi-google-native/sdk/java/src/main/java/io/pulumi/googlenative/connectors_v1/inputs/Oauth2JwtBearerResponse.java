@@ -17,7 +17,7 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
     public static final Oauth2JwtBearerResponse Empty = new Oauth2JwtBearerResponse();
 
     /**
-     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects//{@literal /}secrets//{@literal /}versions/*`.
+     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      */
     @InputImport(name="clientKey", required=true)
     private final SecretResponse clientKey;

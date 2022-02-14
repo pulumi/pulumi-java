@@ -190,7 +190,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. Product identifier, which is the final component of name. For example, this field is "id_1", if name is `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [id](https://support.google.com/merchants/answer/6324405). Schema.org property [Product.sku](https://schema.org/sku).
+     * Immutable. Product identifier, which is the final component of name. For example, this field is "id_1", if name is `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [id](https://support.google.com/merchants/answer/6324405). Schema.org property [Product.sku](https://schema.org/sku).
      */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
@@ -240,7 +240,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+     * Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

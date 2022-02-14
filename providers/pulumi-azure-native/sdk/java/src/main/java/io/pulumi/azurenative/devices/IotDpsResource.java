@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devices.IotDpsResourceArgs;
 import io.pulumi.azurenative.devices.outputs.IotDpsPropertiesDescriptionResponse;
 import io.pulumi.azurenative.devices.outputs.IotDpsSkuInfoResponse;
 import io.pulumi.core.Alias;

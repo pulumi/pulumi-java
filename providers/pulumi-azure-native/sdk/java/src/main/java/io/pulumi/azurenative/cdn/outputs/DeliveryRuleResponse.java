@@ -17,6 +17,7 @@ import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestHeaderConditionRespo
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestMethodConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestSchemeConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestUriConditionResponse;
+import io.pulumi.azurenative.cdn.outputs.DeliveryRuleResponseHeaderActionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlFileExtensionConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlFileNameConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlPathConditionResponse;

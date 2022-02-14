@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.ConfigurationServiceArgs;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServicePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

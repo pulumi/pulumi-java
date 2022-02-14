@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cognitiveservices.CommitmentPlanArgs;
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentPlanPropertiesResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

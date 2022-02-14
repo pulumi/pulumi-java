@@ -28,7 +28,7 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
     }
 
     /**
-     * The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects//{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+     * The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
      */
     @InputImport(name="noteReference", required=true)
     private final String noteReference;

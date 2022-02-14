@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationAccountSchemaArgs;
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

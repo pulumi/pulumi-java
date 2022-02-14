@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ConnectionMonitorArgs;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorDestinationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorOutputResponse;

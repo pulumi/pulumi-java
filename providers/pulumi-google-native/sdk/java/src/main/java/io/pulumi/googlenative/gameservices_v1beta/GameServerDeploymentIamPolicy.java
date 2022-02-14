@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentIamPolicyArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.BindingResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.RuleResponse;

@@ -48,7 +48,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+     * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
      */
     @InputImport(name="name", required=true)
     private final String name;

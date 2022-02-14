@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.healthcareapis.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

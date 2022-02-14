@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs;
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

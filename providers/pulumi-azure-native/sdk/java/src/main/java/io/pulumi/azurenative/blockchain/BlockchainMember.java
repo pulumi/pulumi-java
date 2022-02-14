@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blockchain;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blockchain.BlockchainMemberArgs;
 import io.pulumi.azurenative.blockchain.outputs.BlockchainMemberNodesSkuResponse;
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.blockchain.outputs.SkuResponse;

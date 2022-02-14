@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.features;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.features.SubscriptionFeatureRegistrationArgs;
 import io.pulumi.azurenative.features.outputs.SubscriptionFeatureRegistrationResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

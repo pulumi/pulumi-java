@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.ElasticPoolArgs;
 import io.pulumi.azurenative.sql.outputs.ElasticPoolPerDatabaseSettingsResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;

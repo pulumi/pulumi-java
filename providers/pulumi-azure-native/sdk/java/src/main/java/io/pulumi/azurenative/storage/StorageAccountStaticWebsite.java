@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;

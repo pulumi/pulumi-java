@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
+import io.pulumi.azurenative.securityinsights.inputs.InsightsTableResultResponseColumns;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;

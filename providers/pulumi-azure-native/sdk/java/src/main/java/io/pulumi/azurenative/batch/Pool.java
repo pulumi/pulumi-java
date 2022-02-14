@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.batch.PoolArgs;
 import io.pulumi.azurenative.batch.outputs.ApplicationPackageReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.AutoScaleRunResponse;
 import io.pulumi.azurenative.batch.outputs.BatchPoolIdentityResponse;

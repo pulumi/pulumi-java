@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storsimple.BandwidthSettingArgs;
 import io.pulumi.azurenative.storsimple.outputs.BandwidthScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

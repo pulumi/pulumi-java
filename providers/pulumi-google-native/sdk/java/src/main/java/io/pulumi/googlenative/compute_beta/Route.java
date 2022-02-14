@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.RouteArgs;
 import io.pulumi.googlenative.compute_beta.outputs.RouteAsPathResponse;
 import io.pulumi.googlenative.compute_beta.outputs.RouteWarningsItemResponse;
 import java.lang.Integer;

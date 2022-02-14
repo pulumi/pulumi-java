@@ -31,7 +31,7 @@ public final class GetSecretResult {
  */
     private final Map<String,String> labels;
 /**
- * The resource name of the Secret in the format `projects//{@literal /}secrets/*`.
+ * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
  */
     private final String name;
 /**
@@ -98,7 +98,7 @@ public final class GetSecretResult {
         return this.labels;
     }
 /**
- * The resource name of the Secret in the format `projects//{@literal /}secrets/*`.
+ * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
  */
     public String getName() {
         return this.name;

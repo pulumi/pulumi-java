@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.TableResourceTableArgs;
 import io.pulumi.azurenative.documentdb.outputs.TableGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.TableGetPropertiesResponseResource;
 import io.pulumi.core.Alias;

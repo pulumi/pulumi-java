@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.run_v2.ServiceArgs;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;

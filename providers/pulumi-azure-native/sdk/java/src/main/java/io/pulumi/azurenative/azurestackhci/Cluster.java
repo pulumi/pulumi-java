@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurestackhci;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurestackhci.ClusterArgs;
 import io.pulumi.azurenative.azurestackhci.outputs.ClusterReportedPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionTemplateResponse;
 import java.lang.Boolean;
@@ -36,13 +37,13 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+     * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      */
     @OutputExport(name="cryptoKeyBackend", type=String.class, parameters={})
     private Output<String> cryptoKeyBackend;
 
     /**
-     * @return Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+     * @return Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      */
     public Output<String> getCryptoKeyBackend() {
         return this.cryptoKeyBackend;
@@ -84,13 +85,13 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name for this CryptoKey in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this CryptoKey in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * @return The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     public Output<String> getName() {
         return this.name;

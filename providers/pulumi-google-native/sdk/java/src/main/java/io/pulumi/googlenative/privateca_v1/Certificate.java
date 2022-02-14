@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.privateca_v1.CertificateArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.RevocationDetailsResponse;
@@ -37,13 +38,13 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.certificateDescription;
     }
     /**
-     * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+     * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      */
     @OutputExport(name="certificateTemplate", type=String.class, parameters={})
     private Output<String> certificateTemplate;
 
     /**
-     * @return Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+     * @return Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      */
     public Output<String> getCertificateTemplate() {
         return this.certificateTemplate;
@@ -73,13 +74,13 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The resource name of the issuing CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+     * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      */
     @OutputExport(name="issuerCertificateAuthority", type=String.class, parameters={})
     private Output<String> issuerCertificateAuthority;
 
     /**
-     * @return The resource name of the issuing CertificateAuthority in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificateAuthorities/*`.
+     * @return The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      */
     public Output<String> getIssuerCertificateAuthority() {
         return this.issuerCertificateAuthority;
@@ -109,13 +110,13 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.lifetime;
     }
     /**
-     * The resource name for this Certificate in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificates/*`.
+     * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this Certificate in the format `projects//{@literal /}locations//{@literal /}caPools//{@literal /}certificates/*`.
+     * @return The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
      */
     public Output<String> getName() {
         return this.name;

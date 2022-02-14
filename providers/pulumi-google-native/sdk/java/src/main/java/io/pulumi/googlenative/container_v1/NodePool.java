@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.container_v1.NodePoolArgs;
 import io.pulumi.googlenative.container_v1.outputs.MaxPodsConstraintResponse;
 import io.pulumi.googlenative.container_v1.outputs.NodeConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.NodeManagementResponse;

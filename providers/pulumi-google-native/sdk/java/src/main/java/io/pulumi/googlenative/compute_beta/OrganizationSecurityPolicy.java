@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.OrganizationSecurityPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAssociationResponse;

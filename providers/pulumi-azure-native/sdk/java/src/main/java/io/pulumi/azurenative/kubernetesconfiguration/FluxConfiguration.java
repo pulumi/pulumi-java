@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kubernetesconfiguration.FluxConfigurationArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.GitRepositoryDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.KustomizationDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusDefinitionResponse;

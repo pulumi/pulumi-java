@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.AutomationArgs;
 import io.pulumi.azurenative.security.outputs.AutomationActionEventHubResponse;
 import io.pulumi.azurenative.security.outputs.AutomationActionLogicAppResponse;
 import io.pulumi.azurenative.security.outputs.AutomationActionWorkspaceResponse;

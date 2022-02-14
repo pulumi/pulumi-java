@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigtableadmin_v2.InstanceClusterBackupIamPolicyArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.BindingResponse;
 import java.lang.Integer;

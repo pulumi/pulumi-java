@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.PublicIPAddressArgs;
 import io.pulumi.azurenative.network.outputs.DdosSettingsResponse;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.IPConfigurationResponse;

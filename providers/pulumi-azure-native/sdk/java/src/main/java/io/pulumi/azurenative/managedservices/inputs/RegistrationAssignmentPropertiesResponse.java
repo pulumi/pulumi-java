@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
+import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseRegistrationDefinition;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

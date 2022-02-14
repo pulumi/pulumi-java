@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.CapacityReservationGroupArgs;
 import io.pulumi.azurenative.compute.outputs.CapacityReservationGroupInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;

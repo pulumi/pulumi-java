@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.ResourceArgs;
 import io.pulumi.azurenative.resources.outputs.IdentityResponse;
 import io.pulumi.azurenative.resources.outputs.PlanResponse;
 import io.pulumi.azurenative.resources.outputs.SkuResponse;

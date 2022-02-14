@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.genomics_v1alpha2.PipelineArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DockerExecutorResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineParameterResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineResourcesResponse;

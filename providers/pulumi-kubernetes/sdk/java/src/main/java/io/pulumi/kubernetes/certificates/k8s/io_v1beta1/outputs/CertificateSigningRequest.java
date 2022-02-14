@@ -4,6 +4,8 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestSpec;
+import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.Objects;

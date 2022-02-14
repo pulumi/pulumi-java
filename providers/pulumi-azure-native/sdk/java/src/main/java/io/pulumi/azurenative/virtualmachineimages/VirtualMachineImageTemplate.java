@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.virtualmachineimages.VirtualMachineImageTemplateArgs;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateFileCustomizerResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateIdentityResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateLastRunStatusResponse;

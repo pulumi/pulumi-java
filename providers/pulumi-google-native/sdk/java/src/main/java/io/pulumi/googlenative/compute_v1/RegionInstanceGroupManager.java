@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.RegionInstanceGroupManagerArgs;
 import io.pulumi.googlenative.compute_v1.outputs.DistributionPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerActionsSummaryResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerAutoHealingPolicyResponse;

@@ -10,6 +10,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.node.k8s.io_v1beta1.RuntimeClassArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs.Overhead;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs.Scheduling;
 import java.lang.String;

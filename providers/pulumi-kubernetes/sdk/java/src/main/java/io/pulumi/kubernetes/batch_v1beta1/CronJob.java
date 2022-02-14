@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.batch_v1beta1.CronJobArgs;
 import io.pulumi.kubernetes.batch_v1beta1.outputs.CronJobSpec;
 import io.pulumi.kubernetes.batch_v1beta1.outputs.CronJobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

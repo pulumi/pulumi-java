@@ -3,6 +3,8 @@
 
 package io.pulumi.azurenative.security.inputs;
 
+import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
+import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseDefenderForServers;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

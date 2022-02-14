@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_alpha.PacketMirroringArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringFilterResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringForwardingRuleInfoResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hardwaresecuritymodules;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hardwaresecuritymodules.DedicatedHsmArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.SkuResponse;
 import io.pulumi.core.Alias;

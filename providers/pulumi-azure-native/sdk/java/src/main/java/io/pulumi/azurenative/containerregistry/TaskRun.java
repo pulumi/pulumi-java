@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.TaskRunArgs;
 import io.pulumi.azurenative.containerregistry.outputs.DockerBuildRequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.EncodedTaskRunRequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.FileTaskRunRequestResponse;

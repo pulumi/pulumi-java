@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.ConnectorMappingArgs;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

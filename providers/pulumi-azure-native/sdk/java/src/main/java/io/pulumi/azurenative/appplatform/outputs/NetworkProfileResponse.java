@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
+import io.pulumi.azurenative.appplatform.outputs.NetworkProfileResponseOutboundIPs;
 import io.pulumi.azurenative.appplatform.outputs.RequiredTrafficResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;

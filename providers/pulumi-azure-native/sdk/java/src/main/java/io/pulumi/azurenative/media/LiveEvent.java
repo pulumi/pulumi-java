@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.LiveEventArgs;
 import io.pulumi.azurenative.media.outputs.CrossSiteAccessPoliciesResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventEncodingResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventInputResponse;

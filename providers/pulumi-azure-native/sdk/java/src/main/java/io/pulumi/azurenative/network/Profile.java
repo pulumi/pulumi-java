@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ProfileArgs;
 import io.pulumi.azurenative.network.outputs.DnsConfigResponse;
 import io.pulumi.azurenative.network.outputs.EndpointResponse;
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponse;

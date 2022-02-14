@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appconfiguration.ConfigurationStoreArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.EncryptionPropertiesResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointConnectionReferenceResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;

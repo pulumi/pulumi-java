@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.AppArgs;
 import io.pulumi.azurenative.appplatform.outputs.AppResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.ManagedIdentityPropertiesResponse;
 import io.pulumi.core.Alias;

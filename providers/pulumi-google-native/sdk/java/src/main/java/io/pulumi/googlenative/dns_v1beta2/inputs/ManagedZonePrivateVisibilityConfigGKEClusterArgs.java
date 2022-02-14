@@ -18,7 +18,7 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
     public static final ManagedZonePrivateVisibilityConfigGKEClusterArgs Empty = new ManagedZonePrivateVisibilityConfigGKEClusterArgs();
 
     /**
-     * The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects//{@literal /}locations//{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+     * The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
      */
     @InputImport(name="gkeClusterName")
     private final @Nullable Input<String> gkeClusterName;

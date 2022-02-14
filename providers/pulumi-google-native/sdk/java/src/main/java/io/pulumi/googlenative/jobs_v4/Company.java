@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.jobs_v4.CompanyArgs;
 import io.pulumi.googlenative.jobs_v4.outputs.CompanyDerivedInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.run_v1.ServiceArgs;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
 import io.pulumi.googlenative.run_v1.outputs.ServiceSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.ServiceStatusResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cache.DatabaseArgs;
 import io.pulumi.azurenative.cache.outputs.ModuleResponse;
 import io.pulumi.azurenative.cache.outputs.PersistenceResponse;
 import io.pulumi.core.Alias;

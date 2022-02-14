@@ -4,6 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicySpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.Objects;

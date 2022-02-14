@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
+import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;

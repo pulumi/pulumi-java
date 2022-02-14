@@ -3,6 +3,10 @@
 
 package io.pulumi.azurenative.security.inputs;
 
+import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseCloudWatchToKinesis;
+import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKinesisToS3;
+import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
+import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesService;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

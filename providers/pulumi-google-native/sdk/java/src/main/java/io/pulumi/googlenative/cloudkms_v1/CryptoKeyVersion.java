@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudkms_v1.CryptoKeyVersionArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ExternalProtectionLevelOptionsResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import java.lang.Boolean;
@@ -143,13 +144,13 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
         return this.importTime;
     }
     /**
-     * The resource name for this CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`.
+     * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`.
+     * @return The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      */
     public Output<String> getName() {
         return this.name;

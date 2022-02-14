@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.privateca_v1beta1.CertificateArgs;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.CertificateDescriptionResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.RevocationDetailsResponse;
@@ -85,13 +86,13 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.lifetime;
     }
     /**
-     * The resource path for this Certificate in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities//{@literal /}certificates/*`.
+     * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource path for this Certificate in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities//{@literal /}certificates/*`.
+     * @return The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
      */
     public Output<String> getName() {
         return this.name;

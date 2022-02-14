@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabricmesh.GatewayArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpConfigResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.TcpConfigResponse;

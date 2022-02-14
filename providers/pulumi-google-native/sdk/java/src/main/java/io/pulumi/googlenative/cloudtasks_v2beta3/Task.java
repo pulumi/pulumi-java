@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudtasks_v2beta3.TaskArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AppEngineHttpRequestResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AttemptResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.HttpRequestResponse;

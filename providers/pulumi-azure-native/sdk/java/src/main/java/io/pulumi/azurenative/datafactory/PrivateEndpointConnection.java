@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.datafactory.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

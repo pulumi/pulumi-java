@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.vmmigration_v1alpha1.SourceArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmwareSourceDetailsResponse;
 import java.lang.String;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurearcdata.SqlManagedInstanceArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstanceSkuResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.GremlinResourceGremlinGraphArgs;
 import io.pulumi.azurenative.documentdb.outputs.GremlinGraphGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GremlinGraphGetPropertiesResponseResource;
 import io.pulumi.core.Alias;

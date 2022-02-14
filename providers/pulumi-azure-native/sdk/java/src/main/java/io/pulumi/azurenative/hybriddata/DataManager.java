@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybriddata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybriddata.DataManagerArgs;
 import io.pulumi.azurenative.hybriddata.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

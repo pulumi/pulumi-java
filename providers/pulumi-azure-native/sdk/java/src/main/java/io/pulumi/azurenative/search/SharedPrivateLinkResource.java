@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.search.SharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

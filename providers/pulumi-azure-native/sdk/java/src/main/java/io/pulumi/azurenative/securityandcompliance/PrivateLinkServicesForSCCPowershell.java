@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityandcompliance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForSCCPowershellArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;

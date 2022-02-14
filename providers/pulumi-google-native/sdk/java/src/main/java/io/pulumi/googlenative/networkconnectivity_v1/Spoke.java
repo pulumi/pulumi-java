@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networkconnectivity_v1.SpokeArgs;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedInterconnectAttachmentsResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedRouterApplianceInstancesResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedVpnTunnelsResponse;

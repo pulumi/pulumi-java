@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.BookmarkArgs;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
 import io.pulumi.core.Alias;

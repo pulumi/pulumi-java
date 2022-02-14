@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridcompute.MachineExtensionArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionPropertiesResponseInstanceView;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

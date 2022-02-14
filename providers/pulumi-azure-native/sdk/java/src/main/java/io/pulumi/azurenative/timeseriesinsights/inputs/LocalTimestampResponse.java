@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
+import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampResponseTimeZoneOffset;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

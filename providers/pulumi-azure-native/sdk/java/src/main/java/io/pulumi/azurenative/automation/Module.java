@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.ModuleArgs;
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.ModuleErrorInfoResponse;
 import io.pulumi.core.Alias;

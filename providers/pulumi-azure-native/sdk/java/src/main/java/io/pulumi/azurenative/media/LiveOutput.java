@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.LiveOutputArgs;
 import io.pulumi.azurenative.media.outputs.HlsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

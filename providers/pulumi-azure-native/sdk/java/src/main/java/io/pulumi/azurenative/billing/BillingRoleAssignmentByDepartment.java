@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.billing;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.billing.BillingRoleAssignmentByDepartmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

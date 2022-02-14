@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabricmesh.ApplicationArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsDescriptionResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ServiceResourceDescriptionResponse;
 import io.pulumi.core.Alias;

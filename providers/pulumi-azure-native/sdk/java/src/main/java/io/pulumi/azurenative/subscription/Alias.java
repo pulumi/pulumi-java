@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.subscription;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.subscription.AliasArgs;
 import io.pulumi.azurenative.subscription.outputs.PutAliasResponsePropertiesResponse;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

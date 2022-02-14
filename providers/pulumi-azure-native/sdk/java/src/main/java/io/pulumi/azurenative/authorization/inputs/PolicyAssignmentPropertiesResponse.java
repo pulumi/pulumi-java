@@ -3,6 +3,9 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
+import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponsePolicy;
+import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponseRoleDefinition;
+import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponseScope;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;

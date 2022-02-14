@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1.ConsentArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.GoogleCloudHealthcareV1ConsentPolicyResponse;
 import java.lang.String;
 import java.util.List;

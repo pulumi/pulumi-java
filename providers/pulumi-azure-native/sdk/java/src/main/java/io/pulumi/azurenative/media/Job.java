@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.JobArgs;
 import io.pulumi.azurenative.media.outputs.JobInputAssetResponse;
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
 import io.pulumi.azurenative.media.outputs.JobInputHttpResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigquery_v2.JobArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatisticsResponse;

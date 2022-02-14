@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.healthcare_v1beta1.DicomStoreArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1DicomStreamConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
 import java.lang.String;

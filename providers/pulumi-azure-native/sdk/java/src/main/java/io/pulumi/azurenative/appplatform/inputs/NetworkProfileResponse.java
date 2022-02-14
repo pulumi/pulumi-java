@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
+import io.pulumi.azurenative.appplatform.inputs.NetworkProfileResponseOutboundIPs;
 import io.pulumi.azurenative.appplatform.inputs.RequiredTrafficResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;

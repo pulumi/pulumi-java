@@ -27,7 +27,7 @@ public final class RuleWithOperations {
 /**
  * Resources is a list of resources this rule applies to.
 
-For example: 'pods' means pods. 'pods/log' means the log subresource of pods. '*' means all resources, but not subresources. 'pods/*' means all subresources of pods. '/{@literal /}scale' means all scale subresources. '/{@literal /}*' means all resources and their subresources.
+For example: 'pods' means pods. 'pods/log' means the log subresource of pods. '*' means all resources, but not subresources. 'pods/*' means all subresources of pods. '*{@literal /}scale' means all scale subresources. '*{@literal /}*' means all resources and their subresources.
 
 If wildcard is present, the validation rule will ensure resources do not overlap with each other.
 
@@ -74,7 +74,7 @@ Depending on the enclosing object, subresources might not be allowed. Required.
 /**
  * Resources is a list of resources this rule applies to.
 
-For example: 'pods' means pods. 'pods/log' means the log subresource of pods. '*' means all resources, but not subresources. 'pods/*' means all subresources of pods. '/{@literal /}scale' means all scale subresources. '/{@literal /}*' means all resources and their subresources.
+For example: 'pods' means pods. 'pods/log' means the log subresource of pods. '*' means all resources, but not subresources. 'pods/*' means all subresources of pods. '*{@literal /}scale' means all scale subresources. '*{@literal /}*' means all resources and their subresources.
 
 If wildcard is present, the validation rule will ensure resources do not overlap with each other.
 

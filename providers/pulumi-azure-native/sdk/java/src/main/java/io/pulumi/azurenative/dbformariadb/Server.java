@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbformariadb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbformariadb.ServerArgs;
 import io.pulumi.azurenative.dbformariadb.outputs.ServerPrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.dbformariadb.outputs.SkuResponse;
 import io.pulumi.azurenative.dbformariadb.outputs.StorageProfileResponse;

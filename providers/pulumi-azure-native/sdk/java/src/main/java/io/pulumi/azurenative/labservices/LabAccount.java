@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.labservices.LabAccountArgs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.SizeConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;

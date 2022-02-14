@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.ClusterArgs;
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

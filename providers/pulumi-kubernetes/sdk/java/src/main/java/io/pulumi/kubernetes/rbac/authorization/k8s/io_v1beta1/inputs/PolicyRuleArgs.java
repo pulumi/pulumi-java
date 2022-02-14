@@ -49,7 +49,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '/{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+     * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '*{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
      */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.TemplateSpecVersionArgs;
 import io.pulumi.azurenative.resources.outputs.LinkedTemplateArtifactResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

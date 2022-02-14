@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.AFDCustomDomainArgs;
 import io.pulumi.azurenative.cdn.outputs.AFDDomainHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.DomainValidationPropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;

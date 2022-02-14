@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.netapp.SnapshotPolicyArgs;
 import io.pulumi.azurenative.netapp.outputs.DailyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.HourlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.MonthlyScheduleResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridcompute.MachineArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.ErrorDetailResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.LocationDataResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponse;

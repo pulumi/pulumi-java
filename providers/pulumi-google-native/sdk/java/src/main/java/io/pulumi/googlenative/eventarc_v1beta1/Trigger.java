@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.eventarc_v1beta1.TriggerArgs;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.DestinationResponse;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.MatchingCriteriaResponse;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.TransportResponse;

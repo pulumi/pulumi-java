@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventgrid.EventChannelArgs;
 import io.pulumi.azurenative.eventgrid.outputs.EventChannelDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventChannelFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventChannelSourceResponse;

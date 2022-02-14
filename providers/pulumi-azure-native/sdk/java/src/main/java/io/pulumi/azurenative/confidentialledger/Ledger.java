@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.confidentialledger;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.confidentialledger.LedgerArgs;
 import io.pulumi.azurenative.confidentialledger.outputs.LedgerPropertiesResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.alertsmanagement.HealthAlertArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertActionResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertCriteriaResponse;
 import io.pulumi.core.Alias;

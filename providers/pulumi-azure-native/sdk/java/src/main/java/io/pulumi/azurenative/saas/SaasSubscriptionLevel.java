@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.saas;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.saas.SaasSubscriptionLevelArgs;
 import io.pulumi.azurenative.saas.outputs.SaasResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

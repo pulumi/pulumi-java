@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationAccountAgreementArgs;
 import io.pulumi.azurenative.logic.outputs.AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
 import io.pulumi.core.Alias;

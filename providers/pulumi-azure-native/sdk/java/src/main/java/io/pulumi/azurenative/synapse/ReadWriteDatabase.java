@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.synapse.ReadWriteDatabaseArgs;
 import io.pulumi.azurenative.synapse.outputs.DatabaseStatisticsResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

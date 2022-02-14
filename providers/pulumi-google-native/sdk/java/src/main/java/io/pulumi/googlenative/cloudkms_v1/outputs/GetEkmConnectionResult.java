@@ -20,7 +20,7 @@ public final class GetEkmConnectionResult {
  */
     private final String etag;
 /**
- * The resource name for the EkmConnection in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`.
+ * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
  */
     private final String name;
 /**
@@ -53,7 +53,7 @@ public final class GetEkmConnectionResult {
         return this.etag;
     }
 /**
- * The resource name for the EkmConnection in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`.
+ * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
  */
     public String getName() {
         return this.name;

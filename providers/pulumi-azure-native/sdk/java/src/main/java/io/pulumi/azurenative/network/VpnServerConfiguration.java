@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.VpnServerConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.AadAuthenticationParametersResponse;
 import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnGatewayResponse;

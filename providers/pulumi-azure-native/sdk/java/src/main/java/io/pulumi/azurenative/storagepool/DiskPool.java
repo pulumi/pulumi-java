@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagepool;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagepool.DiskPoolArgs;
 import io.pulumi.azurenative.storagepool.outputs.DiskResponse;
 import io.pulumi.azurenative.storagepool.outputs.SystemMetadataResponse;
 import io.pulumi.core.Alias;

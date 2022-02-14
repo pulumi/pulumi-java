@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.AppServicePlanArgs;
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.KubeEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;

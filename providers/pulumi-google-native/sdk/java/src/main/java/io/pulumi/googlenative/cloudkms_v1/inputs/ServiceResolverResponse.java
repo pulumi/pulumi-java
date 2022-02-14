@@ -48,7 +48,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
     }
 
     /**
-     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      */
     @InputImport(name="serviceDirectoryService", required=true)
     private final String serviceDirectoryService;

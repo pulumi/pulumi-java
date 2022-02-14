@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.ServiceAttachmentArgs;
 import io.pulumi.googlenative.compute_beta.outputs.ServiceAttachmentConnectedEndpointResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ServiceAttachmentConsumerProjectLimitResponse;
 import io.pulumi.googlenative.compute_beta.outputs.Uint128Response;

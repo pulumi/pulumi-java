@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.SubnetArgs;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.DelegationResponse;
 import io.pulumi.azurenative.network.outputs.IPConfigurationProfileResponse;

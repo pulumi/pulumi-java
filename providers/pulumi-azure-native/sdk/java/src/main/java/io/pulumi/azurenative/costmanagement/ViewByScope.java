@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.costmanagement.ViewByScopeArgs;
 import io.pulumi.azurenative.costmanagement.outputs.KpiPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.PivotPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;

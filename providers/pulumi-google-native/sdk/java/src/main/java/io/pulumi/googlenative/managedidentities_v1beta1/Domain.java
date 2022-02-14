@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.managedidentities_v1beta1.DomainArgs;
 import io.pulumi.googlenative.managedidentities_v1beta1.outputs.TrustResponse;
 import java.lang.Boolean;
 import java.lang.String;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.confluent;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.confluent.OrganizationArgs;
 import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesResponseOfferDetail;
 import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesResponseUserDetail;
 import io.pulumi.core.Alias;

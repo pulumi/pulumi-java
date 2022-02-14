@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionVaultPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.UpgradeDetailsResponse;
+import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponseEncryption;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;

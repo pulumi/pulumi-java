@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.iotcentral;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.iotcentral.AppArgs;
 import io.pulumi.azurenative.iotcentral.outputs.AppSkuInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

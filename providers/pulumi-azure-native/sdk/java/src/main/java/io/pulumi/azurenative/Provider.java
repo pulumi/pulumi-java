@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative;
 
+import io.pulumi.azurenative.ProviderArgs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.core.Input;
 import io.pulumi.core.internal.annotations.ResourceType;

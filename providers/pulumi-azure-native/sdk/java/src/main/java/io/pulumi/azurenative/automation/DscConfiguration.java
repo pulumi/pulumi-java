@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.DscConfigurationArgs;
 import io.pulumi.azurenative.automation.outputs.ContentSourceResponse;
 import io.pulumi.azurenative.automation.outputs.DscConfigurationParameterResponse;
 import io.pulumi.core.Alias;

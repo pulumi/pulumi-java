@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.relay.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.relay.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.relay.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

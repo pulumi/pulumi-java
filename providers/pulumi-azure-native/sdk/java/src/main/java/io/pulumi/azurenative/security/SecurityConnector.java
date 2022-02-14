@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.SecurityConnectorArgs;
 import io.pulumi.azurenative.security.outputs.CspmMonitorAwsOfferingResponse;
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponse;
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponse;

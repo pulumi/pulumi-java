@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.labservices.EnvironmentArgs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSetResponse;

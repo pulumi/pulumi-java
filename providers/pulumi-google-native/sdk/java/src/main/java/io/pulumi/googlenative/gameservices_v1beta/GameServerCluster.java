@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.gameservices_v1beta.GameServerClusterArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.GameServerClusterConnectionInfoResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.KubernetesClusterStateResponse;
 import java.lang.String;

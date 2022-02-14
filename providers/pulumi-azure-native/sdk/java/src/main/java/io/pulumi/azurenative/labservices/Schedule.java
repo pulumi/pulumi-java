@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.labservices.ScheduleArgs;
 import io.pulumi.azurenative.labservices.outputs.RecurrencePatternResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

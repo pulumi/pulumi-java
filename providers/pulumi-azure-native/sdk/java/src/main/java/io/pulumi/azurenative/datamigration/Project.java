@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datamigration.ProjectArgs;
 import io.pulumi.azurenative.datamigration.outputs.DatabaseInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;

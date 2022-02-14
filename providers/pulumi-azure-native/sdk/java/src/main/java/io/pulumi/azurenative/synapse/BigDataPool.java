@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.synapse.BigDataPoolArgs;
 import io.pulumi.azurenative.synapse.outputs.AutoPausePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.AutoScalePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;

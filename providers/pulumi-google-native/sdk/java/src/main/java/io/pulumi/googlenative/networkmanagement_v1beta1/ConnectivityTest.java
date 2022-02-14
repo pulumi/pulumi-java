@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networkmanagement_v1beta1.ConnectivityTestArgs;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.ProbingDetailsResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.ReachabilityDetailsResponse;

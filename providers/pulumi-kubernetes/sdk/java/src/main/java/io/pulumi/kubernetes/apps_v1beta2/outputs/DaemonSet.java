@@ -4,6 +4,8 @@
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.apps_v1beta2.outputs.DaemonSetSpec;
+import io.pulumi.kubernetes.apps_v1beta2.outputs.DaemonSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.Objects;

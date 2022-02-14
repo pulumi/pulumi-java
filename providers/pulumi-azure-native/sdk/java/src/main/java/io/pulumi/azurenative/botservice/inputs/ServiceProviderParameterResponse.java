@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
+import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponseMetadata;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

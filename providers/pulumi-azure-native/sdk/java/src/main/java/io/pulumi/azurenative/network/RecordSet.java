@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.RecordSetArgs;
 import io.pulumi.azurenative.network.outputs.ARecordResponse;
 import io.pulumi.azurenative.network.outputs.AaaaRecordResponse;
 import io.pulumi.azurenative.network.outputs.CaaRecordResponse;

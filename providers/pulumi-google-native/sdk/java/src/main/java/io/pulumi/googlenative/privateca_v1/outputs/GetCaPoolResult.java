@@ -21,7 +21,7 @@ public final class GetCaPoolResult {
  */
     private final Map<String,String> labels;
 /**
- * The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+ * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
  */
     private final String name;
 /**
@@ -60,7 +60,7 @@ public final class GetCaPoolResult {
         return this.labels;
     }
 /**
- * The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+ * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
  */
     public String getName() {
         return this.name;

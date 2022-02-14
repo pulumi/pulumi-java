@@ -18,7 +18,7 @@ public final class GetCryptoKeyResult {
  */
     private final String createTime;
 /**
- * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+ * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
  */
     private final String cryptoKeyBackend;
 /**
@@ -34,7 +34,7 @@ public final class GetCryptoKeyResult {
  */
     private final Map<String,String> labels;
 /**
- * The resource name for this CryptoKey in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+ * The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
  */
     private final String name;
 /**
@@ -91,7 +91,7 @@ public final class GetCryptoKeyResult {
         return this.createTime;
     }
 /**
- * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+ * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
  */
     public String getCryptoKeyBackend() {
         return this.cryptoKeyBackend;
@@ -115,7 +115,7 @@ public final class GetCryptoKeyResult {
         return this.labels;
     }
 /**
- * The resource name for this CryptoKey in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+ * The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
  */
     public String getName() {
         return this.name;

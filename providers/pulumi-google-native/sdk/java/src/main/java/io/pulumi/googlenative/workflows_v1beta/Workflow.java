@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.workflows_v1beta.WorkflowArgs;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;

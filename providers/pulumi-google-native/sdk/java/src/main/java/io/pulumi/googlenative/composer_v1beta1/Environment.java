@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.composer_v1beta1.EnvironmentArgs;
 import io.pulumi.googlenative.composer_v1beta1.outputs.EnvironmentConfigResponse;
 import java.lang.String;
 import java.util.Map;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kubernetes;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kubernetes.ConnectedClusterArgs;
 import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse;
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

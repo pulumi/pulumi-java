@@ -52,7 +52,7 @@ public final class GetServingConfigResult {
  */
     private final String modelId;
 /**
- * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}servingConfig/*
+ * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
  */
     private final String name;
 /**
@@ -179,7 +179,7 @@ public final class GetServingConfigResult {
         return this.modelId;
     }
 /**
- * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}servingConfig/*
+ * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
  */
     public String getName() {
         return this.name;

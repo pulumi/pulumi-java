@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.consumption;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.consumption.BudgetArgs;
 import io.pulumi.azurenative.consumption.outputs.BudgetFilterResponse;
 import io.pulumi.azurenative.consumption.outputs.BudgetTimePeriodResponse;
 import io.pulumi.azurenative.consumption.outputs.CurrentSpendResponse;

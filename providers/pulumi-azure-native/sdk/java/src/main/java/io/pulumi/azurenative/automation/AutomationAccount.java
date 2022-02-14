@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.AutomationAccountArgs;
 import io.pulumi.azurenative.automation.outputs.EncryptionPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.IdentityResponse;
 import io.pulumi.azurenative.automation.outputs.PrivateEndpointConnectionResponse;

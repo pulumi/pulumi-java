@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
+import io.pulumi.azurenative.machinelearningservices.inputs.HDInsightResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;

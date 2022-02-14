@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.accesscontextmanager_v1.AccessLevelArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.BasicLevelResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.CustomLevelResponse;
 import java.lang.String;

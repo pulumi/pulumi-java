@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networkconnectivity_v1alpha1.InternalRangeIamPolicyArgs;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.BindingResponse;
 import java.lang.Integer;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.media.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.media.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

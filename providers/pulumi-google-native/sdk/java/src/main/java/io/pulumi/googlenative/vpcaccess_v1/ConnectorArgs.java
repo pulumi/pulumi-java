@@ -100,7 +100,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name in the format `projects//{@literal /}locations//{@literal /}connectors/*`.
+     * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

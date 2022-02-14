@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
+import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsResponseCredentials;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;

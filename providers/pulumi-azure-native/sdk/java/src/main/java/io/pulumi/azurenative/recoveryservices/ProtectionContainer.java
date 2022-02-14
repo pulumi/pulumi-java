@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ProtectionContainerArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureBackupServerContainerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSClassicComputeVMContainerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSComputeVMContainerResponse;

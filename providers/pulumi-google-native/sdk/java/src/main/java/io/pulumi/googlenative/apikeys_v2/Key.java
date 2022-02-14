@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.apikeys_v2.KeyArgs;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2RestrictionsResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

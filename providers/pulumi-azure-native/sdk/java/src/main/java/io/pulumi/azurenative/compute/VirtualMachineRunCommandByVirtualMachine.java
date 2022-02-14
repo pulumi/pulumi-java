@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.VirtualMachineRunCommandByVirtualMachineArgs;
 import io.pulumi.azurenative.compute.outputs.RunCommandInputParameterResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;

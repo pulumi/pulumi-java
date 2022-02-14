@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.ActivityLogAlertArgs;
 import io.pulumi.azurenative.insights.outputs.ActionListResponse;
 import io.pulumi.azurenative.insights.outputs.AlertRuleAllOfConditionResponse;
 import io.pulumi.core.Alias;

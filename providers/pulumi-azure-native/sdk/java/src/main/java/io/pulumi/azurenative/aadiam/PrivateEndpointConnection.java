@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.aadiam.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.aadiam.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.aadiam.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

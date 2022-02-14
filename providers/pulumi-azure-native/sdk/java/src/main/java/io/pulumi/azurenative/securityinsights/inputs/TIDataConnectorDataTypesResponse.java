@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
+import io.pulumi.azurenative.securityinsights.inputs.TIDataConnectorDataTypesResponseIndicators;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;

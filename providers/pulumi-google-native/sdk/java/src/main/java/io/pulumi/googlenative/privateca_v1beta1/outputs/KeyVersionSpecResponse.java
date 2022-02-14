@@ -14,7 +14,7 @@ public final class KeyVersionSpecResponse {
  */
     private final String algorithm;
 /**
- * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
+ * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
  */
     private final String cloudKmsKeyVersion;
 
@@ -33,7 +33,7 @@ public final class KeyVersionSpecResponse {
         return this.algorithm;
     }
 /**
- * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
+ * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
  */
     public String getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;

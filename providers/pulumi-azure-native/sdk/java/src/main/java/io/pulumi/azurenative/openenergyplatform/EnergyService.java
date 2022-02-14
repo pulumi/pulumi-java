@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.openenergyplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.openenergyplatform.EnergyServiceArgs;
 import io.pulumi.azurenative.openenergyplatform.outputs.EnergyServicePropertiesResponse;
 import io.pulumi.azurenative.openenergyplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

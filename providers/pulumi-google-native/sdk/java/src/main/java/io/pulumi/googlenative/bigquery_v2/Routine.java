@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigquery_v2.RoutineArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;

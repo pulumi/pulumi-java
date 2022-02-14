@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.sql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;

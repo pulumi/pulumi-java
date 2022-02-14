@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.RegistryArgs;
 import io.pulumi.azurenative.containerregistry.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PoliciesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SkuResponse;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.apigee_v1.RatePlanArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1RateRangeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1RevenueShareRangeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleTypeMoneyResponse;

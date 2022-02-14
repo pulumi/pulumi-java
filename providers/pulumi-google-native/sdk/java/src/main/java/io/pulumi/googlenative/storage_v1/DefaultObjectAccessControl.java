@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.storage_v1.DefaultObjectAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.outputs.DefaultObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

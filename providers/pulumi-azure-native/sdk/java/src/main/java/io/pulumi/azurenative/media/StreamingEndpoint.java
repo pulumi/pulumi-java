@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.StreamingEndpointArgs;
 import io.pulumi.azurenative.media.outputs.CrossSiteAccessPoliciesResponse;
 import io.pulumi.azurenative.media.outputs.StreamingEndpointAccessControlResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;

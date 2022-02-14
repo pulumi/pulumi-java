@@ -53,7 +53,7 @@ public final class GetCryptoKeyVersionResult {
  */
     private final String importTime;
 /**
- * The resource name for this CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`.
+ * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
  */
     private final String name;
 /**
@@ -162,7 +162,7 @@ public final class GetCryptoKeyVersionResult {
         return this.importTime;
     }
 /**
- * The resource name for this CryptoKeyVersion in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys//{@literal /}cryptoKeyVersions/*`.
+ * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
  */
     public String getName() {
         return this.name;

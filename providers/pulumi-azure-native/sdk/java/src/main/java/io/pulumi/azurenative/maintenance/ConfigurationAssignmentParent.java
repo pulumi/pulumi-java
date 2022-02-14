@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.maintenance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.maintenance.ConfigurationAssignmentParentArgs;
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

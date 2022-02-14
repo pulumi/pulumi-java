@@ -18,7 +18,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     public static final SecretArgs Empty = new SecretArgs();
 
     /**
-     * The resource name of the secret version in the format, format as: `projects//{@literal /}secrets//{@literal /}versions/*`.
+     * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      */
     @InputImport(name="secretVersion")
     private final @Nullable Input<String> secretVersion;

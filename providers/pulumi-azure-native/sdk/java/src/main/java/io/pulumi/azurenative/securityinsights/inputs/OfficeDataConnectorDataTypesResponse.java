@@ -3,6 +3,9 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
+import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseExchange;
+import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseSharePoint;
+import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseTeams;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;

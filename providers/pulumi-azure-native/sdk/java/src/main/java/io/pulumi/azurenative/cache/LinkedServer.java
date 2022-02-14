@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cache.LinkedServerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

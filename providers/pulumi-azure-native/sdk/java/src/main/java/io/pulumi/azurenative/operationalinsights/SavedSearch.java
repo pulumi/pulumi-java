@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.SavedSearchArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.TagResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

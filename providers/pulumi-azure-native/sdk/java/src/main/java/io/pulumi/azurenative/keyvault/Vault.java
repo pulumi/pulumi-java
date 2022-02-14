@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.keyvault.VaultArgs;
 import io.pulumi.azurenative.keyvault.outputs.VaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

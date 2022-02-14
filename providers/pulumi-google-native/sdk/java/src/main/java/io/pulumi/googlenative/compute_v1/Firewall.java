@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.FirewallArgs;
 import io.pulumi.googlenative.compute_v1.outputs.FirewallAllowedItemResponse;
 import io.pulumi.googlenative.compute_v1.outputs.FirewallDeniedItemResponse;
 import io.pulumi.googlenative.compute_v1.outputs.FirewallLogConfigResponse;

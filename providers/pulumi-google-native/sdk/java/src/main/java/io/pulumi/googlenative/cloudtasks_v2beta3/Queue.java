@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudtasks_v2beta3.QueueArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AppEngineHttpQueueResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.QueueStatsResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.RateLimitsResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.GatewayArgs;
 import io.pulumi.azurenative.appplatform.outputs.GatewayPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;

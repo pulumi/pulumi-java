@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationServiceEnvironmentManagedApiArgs;
 import io.pulumi.azurenative.logic.outputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.logic.outputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.logic.outputs.ApiResourceGeneralInformationResponse;

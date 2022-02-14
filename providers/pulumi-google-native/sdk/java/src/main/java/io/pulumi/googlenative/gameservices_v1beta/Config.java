@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.gameservices_v1beta.ConfigArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.FleetConfigResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.ScalingConfigResponse;
 import java.lang.String;

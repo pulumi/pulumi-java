@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.botservice.BotConnectionArgs;
 import io.pulumi.azurenative.botservice.outputs.ConnectionSettingPropertiesResponse;
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
 import io.pulumi.core.Alias;

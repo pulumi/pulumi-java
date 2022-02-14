@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.DeploymentScriptArgs;
 import io.pulumi.azurenative.resources.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

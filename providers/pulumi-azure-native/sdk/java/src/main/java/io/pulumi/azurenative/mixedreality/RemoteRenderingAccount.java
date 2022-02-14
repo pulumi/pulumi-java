@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.mixedreality;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.mixedreality.RemoteRenderingAccountArgs;
 import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;

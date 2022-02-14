@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.certificateregistration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.certificateregistration.AppServiceCertificateOrderCertificateArgs;
 import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

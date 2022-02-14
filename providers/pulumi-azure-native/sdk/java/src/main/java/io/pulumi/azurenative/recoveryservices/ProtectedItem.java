@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ProtectedItemArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureFileshareProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSClassicComputeVMProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSComputeVMProtectedItemResponse;

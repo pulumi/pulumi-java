@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.PeriodicTimerEventTriggerArgs;
 import io.pulumi.azurenative.databoxedge.outputs.PeriodicTimerSourceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;

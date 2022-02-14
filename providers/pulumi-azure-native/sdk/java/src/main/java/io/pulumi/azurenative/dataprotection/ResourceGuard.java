@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dataprotection.ResourceGuardArgs;
 import io.pulumi.azurenative.dataprotection.outputs.DppIdentityDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ResourceGuardResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;

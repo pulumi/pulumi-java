@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.ExportPipelineArgs;
 import io.pulumi.azurenative.containerregistry.outputs.ExportPipelineTargetPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;

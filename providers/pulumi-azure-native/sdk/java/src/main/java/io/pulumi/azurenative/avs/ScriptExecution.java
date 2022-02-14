@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.ScriptExecutionArgs;
 import io.pulumi.azurenative.avs.outputs.PSCredentialExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptSecureStringExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptStringExecutionParameterResponse;

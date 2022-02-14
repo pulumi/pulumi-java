@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.ServerArgs;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.ServerExternalAdministratorResponse;
 import io.pulumi.azurenative.sql.outputs.ServerPrivateEndpointConnectionResponse;

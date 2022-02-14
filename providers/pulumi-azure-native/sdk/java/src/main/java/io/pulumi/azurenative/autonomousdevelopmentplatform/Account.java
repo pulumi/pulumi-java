@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.autonomousdevelopmentplatform.AccountArgs;
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.VirtualMachineArgs;
 import io.pulumi.azurenative.compute.outputs.AdditionalCapabilitiesResponse;
 import io.pulumi.azurenative.compute.outputs.BillingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.DiagnosticsProfileResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.portal.UserSettingsArgs;
 import io.pulumi.azurenative.portal.outputs.UserPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

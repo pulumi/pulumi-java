@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v3.MetricDescriptorArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.LabelDescriptorResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricDescriptorMetadataResponse;
 import java.lang.String;

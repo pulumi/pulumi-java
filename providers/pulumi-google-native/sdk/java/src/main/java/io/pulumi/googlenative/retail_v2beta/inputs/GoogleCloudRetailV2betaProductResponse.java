@@ -196,7 +196,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends io.pulumi.reso
     }
 
     /**
-     * Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+     * Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
      */
     @InputImport(name="name", required=true)
     private final String name;

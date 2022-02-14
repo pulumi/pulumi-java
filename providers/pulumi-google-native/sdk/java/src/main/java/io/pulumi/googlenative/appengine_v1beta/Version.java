@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.appengine_v1beta.VersionArgs;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ApiConfigHandlerResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.AutomaticScalingResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.BasicScalingResponse;

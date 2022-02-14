@@ -39,7 +39,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name for the namespace in the format `projects//{@literal /}locations//{@literal /}namespaces/*`.
+     * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.RosettaNetProcessConfigurationArgs;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivitySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipRoleSettingsResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.LinkedWorkspaceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedWorkspacePropsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

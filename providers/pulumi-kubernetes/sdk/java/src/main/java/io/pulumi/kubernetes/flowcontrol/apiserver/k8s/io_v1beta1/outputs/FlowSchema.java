@@ -4,6 +4,8 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.FlowSchemaSpec;
+import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.FlowSchemaStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.Objects;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.RestorePointCollectionArgs;
 import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropertiesResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
 import io.pulumi.core.Alias;

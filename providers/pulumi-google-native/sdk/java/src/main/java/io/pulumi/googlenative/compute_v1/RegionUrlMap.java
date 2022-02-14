@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.RegionUrlMapArgs;
 import io.pulumi.googlenative.compute_v1.outputs.HostRuleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRedirectActionResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.PipelineArgs;
 import io.pulumi.azurenative.datafactory.outputs.AppendVariableActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.AzureDataExplorerCommandActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.AzureFunctionActivityResponse;

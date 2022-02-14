@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.speech_v1.CustomClassArgs;
 import io.pulumi.googlenative.speech_v1.outputs.ClassItemResponse;
 import java.lang.String;
 import java.util.List;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurearcdata.SqlServerInstanceArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlServerInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

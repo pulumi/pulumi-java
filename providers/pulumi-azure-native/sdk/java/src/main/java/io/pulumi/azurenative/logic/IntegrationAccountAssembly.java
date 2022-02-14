@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logic.IntegrationAccountAssemblyArgs;
 import io.pulumi.azurenative.logic.outputs.AssemblyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

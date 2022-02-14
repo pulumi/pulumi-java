@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datadog;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datadog.MonitorArgs;
 import io.pulumi.azurenative.datadog.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.ResourceSkuResponse;

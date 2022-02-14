@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.WebApplicationFirewallPolicyArgs;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayResponse;
 import io.pulumi.azurenative.network.outputs.ManagedRulesDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.PolicySettingsResponse;

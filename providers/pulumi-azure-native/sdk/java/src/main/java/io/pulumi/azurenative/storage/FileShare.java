@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.FileShareArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

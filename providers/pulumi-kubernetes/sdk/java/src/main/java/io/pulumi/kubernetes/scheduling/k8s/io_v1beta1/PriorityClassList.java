@@ -9,6 +9,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
+import io.pulumi.kubernetes.scheduling.k8s.io_v1beta1.PriorityClassListArgs;
 import io.pulumi.kubernetes.scheduling.k8s.io_v1beta1.outputs.PriorityClass;
 import java.lang.String;
 import java.util.List;

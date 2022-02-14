@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudbuild_v1.TriggerArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerTriggerConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerbidedicated;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerbidedicated.AutoScaleVCoreArgs;
 import io.pulumi.azurenative.powerbidedicated.outputs.AutoScaleVCoreSkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

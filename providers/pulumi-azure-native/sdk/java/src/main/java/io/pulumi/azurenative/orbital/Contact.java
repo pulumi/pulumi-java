@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.orbital.ContactArgs;
 import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.marketplace.PrivateStoreCollectionOfferArgs;
 import io.pulumi.azurenative.marketplace.outputs.PlanResponse;
 import io.pulumi.azurenative.marketplace.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

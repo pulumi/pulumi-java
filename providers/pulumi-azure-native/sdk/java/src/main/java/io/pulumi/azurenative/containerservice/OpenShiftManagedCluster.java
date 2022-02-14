@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerservice.OpenShiftManagedClusterArgs;
 import io.pulumi.azurenative.containerservice.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAgentPoolProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAuthProfileResponse;

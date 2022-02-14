@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.iotsecurity.OnPremiseSensorArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.DiskAccessAPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.compute.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.compute.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

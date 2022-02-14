@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.RelationshipArgs;
 import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeMappingResponse;
 import io.pulumi.core.Alias;

@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.apps_v1.StatefulSetArgs;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSetSpec;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

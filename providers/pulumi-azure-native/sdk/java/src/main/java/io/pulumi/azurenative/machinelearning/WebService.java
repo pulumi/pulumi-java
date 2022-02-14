@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearning.WebServiceArgs;
 import io.pulumi.azurenative.machinelearning.outputs.WebServicePropertiesForGraphResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

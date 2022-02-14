@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.connectors_v1.ConnectionArgs;
 import io.pulumi.googlenative.connectors_v1.outputs.AuthConfigResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConnectionStatusResponse;
@@ -49,13 +50,13 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return this.configVariables;
     }
     /**
-     * Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+     * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      */
     @OutputExport(name="connectorVersion", type=String.class, parameters={})
     private Output<String> connectorVersion;
 
     /**
-     * @return Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+     * @return Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      */
     public Output<String> getConnectorVersion() {
         return this.connectorVersion;

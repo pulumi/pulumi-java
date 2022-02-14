@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
+import io.pulumi.azurenative.storagecache.outputs.CacheUsernameDownloadSettingsResponseCredentials;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;

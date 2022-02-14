@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.managednetwork.ManagedNetworkPeeringPolicyArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkPeeringPolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

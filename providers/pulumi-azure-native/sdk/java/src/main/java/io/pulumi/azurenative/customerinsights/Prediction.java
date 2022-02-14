@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.PredictionArgs;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseGrades;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseMappings;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseSystemGeneratedEntities;

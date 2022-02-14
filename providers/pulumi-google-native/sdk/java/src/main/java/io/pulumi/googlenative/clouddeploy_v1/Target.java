@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.clouddeploy_v1.TargetArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AnthosClusterResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.GkeClusterResponse;

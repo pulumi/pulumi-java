@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventRequestMessageResponse;
+import io.pulumi.azurenative.containerregistry.outputs.EventResponseMessageResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;

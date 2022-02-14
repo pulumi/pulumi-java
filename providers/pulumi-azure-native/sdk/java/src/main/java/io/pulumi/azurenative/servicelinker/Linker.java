@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicelinker;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicelinker.LinkerArgs;
 import io.pulumi.azurenative.servicelinker.outputs.SecretAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalCertificateAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInfoResponse;

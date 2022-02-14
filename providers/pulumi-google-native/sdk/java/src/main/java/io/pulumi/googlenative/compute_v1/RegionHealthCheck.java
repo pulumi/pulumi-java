@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.RegionHealthCheckArgs;
 import io.pulumi.googlenative.compute_v1.outputs.GRPCHealthCheckResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HTTP2HealthCheckResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HTTPHealthCheckResponse;

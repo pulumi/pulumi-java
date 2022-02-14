@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.InstanceFailoverGroupArgs;
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadOnlyEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePairInfoResponse;

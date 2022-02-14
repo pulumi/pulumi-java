@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.retail_v2beta.ServingConfigArgs;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -140,13 +141,13 @@ public class ServingConfig extends io.pulumi.resources.CustomResource {
         return this.modelId;
     }
     /**
-     * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}servingConfig/*
+     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}servingConfig/*
+     * @return Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
      */
     public Output<String> getName() {
         return this.name;

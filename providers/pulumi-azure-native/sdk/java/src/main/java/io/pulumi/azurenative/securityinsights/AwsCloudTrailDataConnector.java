@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.securityinsights.AwsCloudTrailDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.iam_v1.ProviderArgs;
 import io.pulumi.googlenative.iam_v1.outputs.AwsResponse;
 import io.pulumi.googlenative.iam_v1.outputs.OidcResponse;
 import java.lang.Boolean;

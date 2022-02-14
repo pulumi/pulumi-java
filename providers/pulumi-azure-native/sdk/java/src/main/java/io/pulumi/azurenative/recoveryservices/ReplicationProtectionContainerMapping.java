@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ReplicationProtectionContainerMappingArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.ProtectionContainerMappingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.retail_v2beta.ControlArgs;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaRuleResponse;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaSearchRequestFacetSpecResponse;
 import java.lang.String;
@@ -57,13 +58,13 @@ public class Control extends io.pulumi.resources.CustomResource {
         return this.facetSpec;
     }
     /**
-     * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}controls/*
+     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}controls/*
+     * @return Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      */
     public Output<String> getName() {
         return this.name;

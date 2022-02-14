@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.ProtectionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureFileShareProtectionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMProtectionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureSqlProtectionPolicyResponse;

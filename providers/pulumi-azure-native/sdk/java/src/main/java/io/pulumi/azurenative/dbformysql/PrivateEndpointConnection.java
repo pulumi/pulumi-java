@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbformysql.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.dbformysql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformysql.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;

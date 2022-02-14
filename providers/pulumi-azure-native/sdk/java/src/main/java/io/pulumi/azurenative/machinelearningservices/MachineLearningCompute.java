@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.MachineLearningComputeArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.AmlComputeResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ComputeInstanceResponse;

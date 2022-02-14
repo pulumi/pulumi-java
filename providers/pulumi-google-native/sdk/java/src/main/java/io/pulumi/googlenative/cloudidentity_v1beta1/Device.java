@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EndpointVerificationSpecificAttributesResponse;
 import java.lang.Boolean;

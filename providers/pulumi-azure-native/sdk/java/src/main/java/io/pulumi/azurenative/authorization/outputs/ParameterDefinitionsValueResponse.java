@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
+import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponseMetadata;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;

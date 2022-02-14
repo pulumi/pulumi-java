@@ -9,6 +9,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetArgs;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs.PodPresetSpec;
 import java.lang.String;
 import javax.annotation.Nullable;

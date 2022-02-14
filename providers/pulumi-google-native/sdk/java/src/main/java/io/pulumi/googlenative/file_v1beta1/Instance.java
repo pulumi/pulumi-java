@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.file_v1beta1.InstanceArgs;
 import io.pulumi.googlenative.file_v1beta1.outputs.FileShareConfigResponse;
 import io.pulumi.googlenative.file_v1beta1.outputs.NetworkConfigResponse;
 import java.lang.Boolean;

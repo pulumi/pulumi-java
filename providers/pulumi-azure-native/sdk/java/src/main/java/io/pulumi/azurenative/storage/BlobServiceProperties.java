@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.BlobServicePropertiesArgs;
 import io.pulumi.azurenative.storage.outputs.ChangeFeedResponse;
 import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.azurenative.storage.outputs.DeleteRetentionPolicyResponse;

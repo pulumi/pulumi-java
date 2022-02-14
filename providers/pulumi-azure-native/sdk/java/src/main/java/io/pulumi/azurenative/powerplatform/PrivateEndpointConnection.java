@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerplatform.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.powerplatform.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.powerplatform.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.powerplatform.outputs.SystemDataResponse;

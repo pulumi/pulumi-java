@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudsearch_v1.SearchApplicationArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DataSourceRestrictionResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FacetOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.QueryInterpretationConfigResponse;

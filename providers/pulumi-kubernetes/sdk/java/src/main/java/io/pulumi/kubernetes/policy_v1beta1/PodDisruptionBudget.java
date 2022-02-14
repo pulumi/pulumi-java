@@ -10,6 +10,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.policy_v1beta1.PodDisruptionBudgetArgs;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.PodDisruptionBudgetSpec;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.PodDisruptionBudgetStatus;
 import java.lang.String;

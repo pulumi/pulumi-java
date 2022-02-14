@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.management;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.management.ManagementGroupArgs;
 import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse;
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
 import io.pulumi.core.Alias;

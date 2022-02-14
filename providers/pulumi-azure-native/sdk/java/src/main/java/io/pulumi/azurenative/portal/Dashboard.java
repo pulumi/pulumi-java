@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.portal.DashboardArgs;
 import io.pulumi.azurenative.portal.outputs.DashboardLensResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
+import io.pulumi.azurenative.containerservice.inputs.ManagedClusterAddonProfileResponseIdentity;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;

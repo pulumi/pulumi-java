@@ -60,7 +60,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+     * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

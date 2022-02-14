@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.digitaltwins;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.digitaltwins.DigitalTwinsEndpointArgs;
 import io.pulumi.azurenative.digitaltwins.outputs.EventGridResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.EventHubResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.ServiceBusResponse;

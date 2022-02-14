@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbformysql.ServerArgs;
 import io.pulumi.azurenative.dbformysql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.dbformysql.outputs.SkuResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventhub.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.eventhub.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.eventhub.outputs.PrivateEndpointResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.keyvault.ManagedHsmArgs;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmPropertiesResponse;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;

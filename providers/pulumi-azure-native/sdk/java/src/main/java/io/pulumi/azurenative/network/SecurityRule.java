@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.SecurityRuleArgs;
 import io.pulumi.azurenative.network.outputs.ApplicationSecurityGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

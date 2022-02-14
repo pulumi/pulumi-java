@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.TaskArgs;
 import io.pulumi.azurenative.containerregistry.outputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.outputs.DockerBuildStepResponse;

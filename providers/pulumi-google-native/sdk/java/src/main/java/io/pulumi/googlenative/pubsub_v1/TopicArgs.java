@@ -22,7 +22,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicArgs Empty = new TopicArgs();
 
     /**
-     * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}cryptoKeys/*`.
+     * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;

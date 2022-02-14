@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.WorkloadNetworkSegmentArgs;
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentPortVifResponse;
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentSubnetResponse;
 import io.pulumi.core.Alias;

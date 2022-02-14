@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.ProfileArgs;
 import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.StrongIdResponse;
 import io.pulumi.core.Alias;

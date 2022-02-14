@@ -41,7 +41,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+     * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      */
     @InputImport(name="certificateTemplate")
     private final @Nullable Input<String> certificateTemplate;

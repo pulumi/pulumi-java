@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.windowsesu;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.windowsesu.MultipleActivationKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

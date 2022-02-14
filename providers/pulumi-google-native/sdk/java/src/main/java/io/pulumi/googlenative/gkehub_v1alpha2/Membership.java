@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.gkehub_v1alpha2.MembershipArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.AuthorityResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.MembershipEndpointResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.MembershipStateResponse;
@@ -130,13 +131,13 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return this.lastConnectionTime;
     }
     /**
-     * The full, unique name of this Membership resource in the format `projects//{@literal /}locations//{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+     * The full, unique name of this Membership resource in the format `projects/*{@literal /}locations/*{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The full, unique name of this Membership resource in the format `projects//{@literal /}locations//{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+     * @return The full, unique name of this Membership resource in the format `projects/*{@literal /}locations/*{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
      */
     public Output<String> getName() {
         return this.name;

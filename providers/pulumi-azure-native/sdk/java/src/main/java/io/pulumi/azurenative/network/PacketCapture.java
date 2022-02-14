@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.PacketCaptureArgs;
 import io.pulumi.azurenative.network.outputs.PacketCaptureFilterResponse;
 import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationResponse;
 import io.pulumi.core.Alias;

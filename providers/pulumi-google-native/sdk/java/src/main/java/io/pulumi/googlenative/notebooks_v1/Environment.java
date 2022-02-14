@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.notebooks_v1.EnvironmentArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VmImageResponse;
 import java.lang.String;

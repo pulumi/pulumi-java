@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.elastic;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.elastic.TagRuleArgs;
 import io.pulumi.azurenative.elastic.outputs.MonitoringTagRulesPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

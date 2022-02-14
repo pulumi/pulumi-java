@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.NetworkManagerArgs;
 import io.pulumi.azurenative.network.outputs.NetworkManagerPropertiesResponseNetworkManagerScopes;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

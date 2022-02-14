@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.DeploymentArgs;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.core.Alias;

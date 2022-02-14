@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.apigee_v1.QueryArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AsyncQueryResultResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QueryMetadataResponse;
 import java.lang.String;

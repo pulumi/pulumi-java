@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.edgeorder;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.edgeorder.AddressByNameArgs;
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;

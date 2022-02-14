@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerservice.MaintenanceConfigurationArgs;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;

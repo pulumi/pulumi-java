@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.redhatopenshift.OpenShiftClusterArgs;
 import io.pulumi.azurenative.redhatopenshift.outputs.APIServerProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.ClusterProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.ConsoleProfileResponse;

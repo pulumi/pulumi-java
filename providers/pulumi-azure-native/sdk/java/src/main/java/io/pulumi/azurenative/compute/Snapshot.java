@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.SnapshotArgs;
 import io.pulumi.azurenative.compute.outputs.CreationDataResponse;
 import io.pulumi.azurenative.compute.outputs.EncryptionResponse;
 import io.pulumi.azurenative.compute.outputs.EncryptionSettingsCollectionResponse;

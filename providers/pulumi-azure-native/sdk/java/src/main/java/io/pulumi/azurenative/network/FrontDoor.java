@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.FrontDoorArgs;
 import io.pulumi.azurenative.network.outputs.BackendPoolResponse;
 import io.pulumi.azurenative.network.outputs.BackendPoolsSettingsResponse;
 import io.pulumi.azurenative.network.outputs.FrontendEndpointResponse;

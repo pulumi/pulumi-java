@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networkservices_v1beta1.ServiceBindingArgs;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -66,25 +67,25 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects//{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the ServiceBinding resource. It matches pattern `projects//{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
-     * The full service directory service name of the format /projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*
+     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
-     * @return The full service directory service name of the format /projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*
+     * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      */
     public Output<String> getService() {
         return this.service;

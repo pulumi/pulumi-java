@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.firebaseml_v1beta2.ModelArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.ModelStateResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.OperationResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.TfLiteModelResponse;

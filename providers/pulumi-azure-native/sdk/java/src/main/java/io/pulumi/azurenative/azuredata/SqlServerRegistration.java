@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azuredata.SqlServerRegistrationArgs;
 import io.pulumi.azurenative.azuredata.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

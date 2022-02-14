@@ -5,6 +5,8 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressSpec;
+import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressStatus;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automanage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automanage.AccountArgs;
 import io.pulumi.azurenative.automanage.outputs.AccountIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

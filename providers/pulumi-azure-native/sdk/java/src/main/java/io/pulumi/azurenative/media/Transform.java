@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.TransformArgs;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.azurenative.media.outputs.TransformOutputResponse;
 import io.pulumi.core.Alias;

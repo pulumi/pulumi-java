@@ -405,7 +405,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The parent (project and location) where the cluster will be created. Specified in the format `projects//{@literal /}locations/*`.
+     * The parent (project and location) where the cluster will be created. Specified in the format `projects/*{@literal /}locations/*`.
      */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;

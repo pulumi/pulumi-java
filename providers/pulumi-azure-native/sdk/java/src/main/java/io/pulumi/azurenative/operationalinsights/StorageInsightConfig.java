@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.StorageInsightConfigArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.StorageInsightStatusResponse;
 import io.pulumi.core.Alias;

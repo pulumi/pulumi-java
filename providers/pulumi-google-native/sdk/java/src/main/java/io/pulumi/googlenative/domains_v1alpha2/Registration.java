@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.domains_v1alpha2.RegistrationArgs;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ContactSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.DnsSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ManagementSettingsResponse;
@@ -119,13 +120,13 @@ public class Registration extends io.pulumi.resources.CustomResource {
         return this.managementSettings;
     }
     /**
-     * Name of the `Registration` resource, in the format `projects//{@literal /}locations//{@literal /}registrations/`.
+     * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the `Registration` resource, in the format `projects//{@literal /}locations//{@literal /}registrations/`.
+     * @return Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      */
     public Output<String> getName() {
         return this.name;

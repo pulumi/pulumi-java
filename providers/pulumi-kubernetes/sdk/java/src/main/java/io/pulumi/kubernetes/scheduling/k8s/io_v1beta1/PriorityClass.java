@@ -10,6 +10,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.scheduling.k8s.io_v1beta1.PriorityClassArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

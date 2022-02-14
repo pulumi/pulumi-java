@@ -34,7 +34,7 @@ public final class GetServerTlsPolicyResult {
  */
     private final MTLSPolicyResponse mtlsPolicy;
 /**
- * Name of the ServerTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+ * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
  */
     private final String name;
 /**
@@ -97,7 +97,7 @@ public final class GetServerTlsPolicyResult {
         return this.mtlsPolicy;
     }
 /**
- * Name of the ServerTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+ * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
  */
     public String getName() {
         return this.name;

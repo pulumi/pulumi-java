@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.WorkspaceArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.PrivateLinkScopedResourceResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceCappingResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesResponse;

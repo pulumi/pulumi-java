@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.azurestack.LinkedSubscriptionArgs;
 import io.pulumi.azurenative.azurestack.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

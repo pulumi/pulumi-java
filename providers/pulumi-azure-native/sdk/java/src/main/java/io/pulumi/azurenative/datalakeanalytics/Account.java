@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datalakeanalytics.AccountArgs;
 import io.pulumi.azurenative.datalakeanalytics.outputs.ComputePolicyResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.DataLakeStoreAccountInformationResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.FirewallRuleResponse;

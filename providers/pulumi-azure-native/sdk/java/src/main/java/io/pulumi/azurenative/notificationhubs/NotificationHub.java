@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.notificationhubs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.notificationhubs.NotificationHubArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.AdmCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.ApnsCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.BaiduCredentialResponse;

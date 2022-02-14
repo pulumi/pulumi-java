@@ -34,7 +34,7 @@ public final class GetFeatureResult {
  */
     private final Map<String,String> membershipStates;
 /**
- * The full, unique name of this Feature resource in the format `projects//{@literal /}locations//{@literal /}features/*`.
+ * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
  */
     private final String name;
 /**
@@ -109,7 +109,7 @@ public final class GetFeatureResult {
         return this.membershipStates;
     }
 /**
- * The full, unique name of this Feature resource in the format `projects//{@literal /}locations//{@literal /}features/*`.
+ * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
  */
     public String getName() {
         return this.name;

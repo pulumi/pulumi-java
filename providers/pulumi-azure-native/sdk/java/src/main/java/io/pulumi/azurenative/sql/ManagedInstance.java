@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.ManagedInstanceArgs;
 import io.pulumi.azurenative.sql.outputs.ManagedInstanceExternalAdministratorResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePecPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;

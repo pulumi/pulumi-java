@@ -47,7 +47,7 @@ public final class GetRegistrationResult {
  */
     private final ManagementSettingsResponse managementSettings;
 /**
- * Name of the `Registration` resource, in the format `projects//{@literal /}locations//{@literal /}registrations/`.
+ * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
  */
     private final String name;
 /**
@@ -140,7 +140,7 @@ public final class GetRegistrationResult {
         return this.managementSettings;
     }
 /**
- * Name of the `Registration` resource, in the format `projects//{@literal /}locations//{@literal /}registrations/`.
+ * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
  */
     public String getName() {
         return this.name;

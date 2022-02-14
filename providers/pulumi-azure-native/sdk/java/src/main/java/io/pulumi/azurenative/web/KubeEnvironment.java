@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.KubeEnvironmentArgs;
 import io.pulumi.azurenative.web.outputs.AppLogsConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ArcConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ExtendedLocationResponse;

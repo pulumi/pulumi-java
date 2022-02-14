@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -104,13 +105,13 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return this.minThroughput;
     }
     /**
-     * The resource name in the format `projects//{@literal /}locations//{@literal /}connectors/*`.
+     * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name in the format `projects//{@literal /}locations//{@literal /}connectors/*`.
+     * @return The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      */
     public Output<String> getName() {
         return this.name;

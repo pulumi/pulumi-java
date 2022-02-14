@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.batch_v1.JobListArgs;
 import io.pulumi.kubernetes.batch_v1.outputs.Job;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import java.lang.String;

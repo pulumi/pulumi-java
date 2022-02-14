@@ -25,7 +25,7 @@ public final class GetServiceResult {
  */
     private final Map<String,String> metadata;
 /**
- * Immutable. The resource name for the service in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+ * Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
  */
     private final String name;
 /**
@@ -66,7 +66,7 @@ public final class GetServiceResult {
         return this.metadata;
     }
 /**
- * Immutable. The resource name for the service in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+ * Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
  */
     public String getName() {
         return this.name;

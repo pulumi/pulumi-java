@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.MediaServiceArgs;
 import io.pulumi.azurenative.media.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.MediaServiceIdentityResponse;
 import io.pulumi.azurenative.media.outputs.StorageAccountResponse;

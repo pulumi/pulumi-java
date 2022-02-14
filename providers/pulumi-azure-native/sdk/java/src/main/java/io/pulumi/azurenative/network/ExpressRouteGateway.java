@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ExpressRouteGatewayArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteConnectionResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration;
 import io.pulumi.azurenative.network.outputs.VirtualHubIdResponse;

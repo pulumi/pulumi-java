@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.costmanagement.ReportByBillingAccountArgs;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportScheduleResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ExpressRouteCrossConnectionPeeringArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.Ipv6ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.core.Alias;

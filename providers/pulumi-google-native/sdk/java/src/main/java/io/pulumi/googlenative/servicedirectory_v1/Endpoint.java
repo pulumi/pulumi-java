@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.servicedirectory_v1.EndpointArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -43,13 +44,13 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
         return this.annotations;
     }
     /**
-     * Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+     * Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Immutable. The resource name for the endpoint in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services//{@literal /}endpoints/*`.
+     * @return Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
      */
     public Output<String> getName() {
         return this.name;

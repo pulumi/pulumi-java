@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.deploymentmanager_v2beta.DeploymentArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.DeploymentLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.DeploymentUpdateResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.OperationResponse;

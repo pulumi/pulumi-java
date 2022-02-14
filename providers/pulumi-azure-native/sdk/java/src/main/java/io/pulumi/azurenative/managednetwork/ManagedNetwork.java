@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.managednetwork.ManagedNetworkArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ConnectivityCollectionResponse;
 import io.pulumi.azurenative.managednetwork.outputs.ScopeResponse;
 import io.pulumi.core.Alias;

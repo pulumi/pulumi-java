@@ -3,6 +3,10 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
+import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseResponseDataCollection;
+import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseResponseEncryptionProperties;
+import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseResponseEnvironmentImageRequest;
+import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseResponseVnetConfiguration;
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;

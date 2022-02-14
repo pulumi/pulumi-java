@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.websecurityscanner_v1.ScanConfigArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.ScheduleResponse;
 import java.lang.Boolean;

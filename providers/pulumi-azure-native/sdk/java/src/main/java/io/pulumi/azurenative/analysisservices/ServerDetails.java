@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.analysisservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.analysisservices.ServerDetailsArgs;
 import io.pulumi.azurenative.analysisservices.outputs.GatewayDetailsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;

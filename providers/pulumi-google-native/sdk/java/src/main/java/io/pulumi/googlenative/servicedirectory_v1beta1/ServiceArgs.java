@@ -39,7 +39,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name for the service in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+     * Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

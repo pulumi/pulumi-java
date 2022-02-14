@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.engagementfabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.engagementfabric.AccountArgs;
 import io.pulumi.azurenative.engagementfabric.outputs.SKUResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

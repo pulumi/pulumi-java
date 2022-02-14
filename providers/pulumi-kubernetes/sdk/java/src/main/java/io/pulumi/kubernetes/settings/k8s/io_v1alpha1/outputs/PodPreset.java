@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs.PodPresetSpec;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

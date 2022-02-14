@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.StreamingPolicyArgs;
 import io.pulumi.azurenative.media.outputs.CommonEncryptionCbcsResponse;
 import io.pulumi.azurenative.media.outputs.CommonEncryptionCencResponse;
 import io.pulumi.azurenative.media.outputs.EnvelopeEncryptionResponse;

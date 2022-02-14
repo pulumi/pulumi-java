@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.testbase.TestBaseAccountArgs;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TestBaseAccountSKUResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.PolicyArgs;
 import io.pulumi.azurenative.network.outputs.CustomRuleListResponse;
 import io.pulumi.azurenative.network.outputs.FrontDoorPolicySettingsResponse;
 import io.pulumi.azurenative.network.outputs.FrontendEndpointLinkResponse;

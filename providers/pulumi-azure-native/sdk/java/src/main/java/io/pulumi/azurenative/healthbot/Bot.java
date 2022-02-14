@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.healthbot;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.healthbot.BotArgs;
 import io.pulumi.azurenative.healthbot.outputs.HealthBotPropertiesResponse;
 import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;

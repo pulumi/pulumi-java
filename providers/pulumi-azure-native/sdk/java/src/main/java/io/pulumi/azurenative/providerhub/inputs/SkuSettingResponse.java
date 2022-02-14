@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuCostResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoResponse;
+import io.pulumi.azurenative.providerhub.inputs.SkuSettingResponseCapacity;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;

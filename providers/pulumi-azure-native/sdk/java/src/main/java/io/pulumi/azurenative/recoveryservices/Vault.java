@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.recoveryservices.VaultArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.IdentityDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SkuResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;

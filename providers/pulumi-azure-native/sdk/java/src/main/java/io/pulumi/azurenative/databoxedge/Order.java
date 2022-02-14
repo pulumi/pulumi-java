@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.OrderArgs;
 import io.pulumi.azurenative.databoxedge.outputs.AddressResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.OrderStatusResponse;

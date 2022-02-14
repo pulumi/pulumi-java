@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.ManagementGroupDiagnosticSettingArgs;
 import io.pulumi.azurenative.insights.outputs.ManagementGroupLogSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

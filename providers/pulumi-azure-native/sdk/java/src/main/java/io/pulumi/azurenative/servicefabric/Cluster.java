@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.ClusterArgs;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationTypeVersionsCleanupPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.AzureActiveDirectoryResponse;
 import io.pulumi.azurenative.servicefabric.outputs.CertificateDescriptionResponse;

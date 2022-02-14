@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.mixedreality;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.mixedreality.ObjectAnchorsAccountArgs;
 import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.ObjectAnchorsAccountResponseIdentity;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;

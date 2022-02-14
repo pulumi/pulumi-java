@@ -39,7 +39,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+     * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

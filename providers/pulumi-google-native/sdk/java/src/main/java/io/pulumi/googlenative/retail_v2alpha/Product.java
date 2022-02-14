@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.retail_v2alpha.ProductArgs;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaAudienceResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaColorInfoResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaFulfillmentInfoResponse;
@@ -232,13 +233,13 @@ public class Product extends io.pulumi.resources.CustomResource {
         return this.materials;
     }
     /**
-     * Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+     * Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+     * @return Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
      */
     public Output<String> getName() {
         return this.name;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.AdaptiveApplicationControlArgs;
 import io.pulumi.azurenative.security.outputs.AdaptiveApplicationControlIssueSummaryResponse;
 import io.pulumi.azurenative.security.outputs.PathRecommendationResponse;
 import io.pulumi.azurenative.security.outputs.ProtectionModeResponse;

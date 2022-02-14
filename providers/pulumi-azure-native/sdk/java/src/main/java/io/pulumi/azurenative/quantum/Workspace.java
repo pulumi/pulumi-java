@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.quantum;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.quantum.WorkspaceArgs;
 import io.pulumi.azurenative.quantum.outputs.ProviderResponse;
 import io.pulumi.azurenative.quantum.outputs.QuantumWorkspaceResponseIdentity;
 import io.pulumi.azurenative.quantum.outputs.SystemDataResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.IoTRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.ComputeResourceResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTEdgeAgentInfoResponse;

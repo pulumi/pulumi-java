@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.AssignmentArgs;
 import io.pulumi.azurenative.security.outputs.AssignedComponentItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignedStandardItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignmentPropertiesResponseAdditionalData;

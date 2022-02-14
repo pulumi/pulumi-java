@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.UserArgs;
 import io.pulumi.azurenative.devtestlab.outputs.UserIdentityResponse;
 import io.pulumi.azurenative.devtestlab.outputs.UserSecretStoreResponse;
 import io.pulumi.core.Alias;

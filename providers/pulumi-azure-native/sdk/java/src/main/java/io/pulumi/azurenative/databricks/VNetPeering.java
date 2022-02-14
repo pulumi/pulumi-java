@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databricks;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databricks.VNetPeeringArgs;
 import io.pulumi.azurenative.databricks.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork;
 import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devices.IotHubResourceEventHubConsumerGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

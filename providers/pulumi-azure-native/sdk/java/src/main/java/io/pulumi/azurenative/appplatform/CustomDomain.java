@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.appplatform.CustomDomainArgs;
 import io.pulumi.azurenative.appplatform.outputs.CustomDomainPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

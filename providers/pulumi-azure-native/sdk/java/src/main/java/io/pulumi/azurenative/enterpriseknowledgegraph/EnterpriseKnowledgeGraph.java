@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.enterpriseknowledgegraph;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.enterpriseknowledgegraph.EnterpriseKnowledgeGraphArgs;
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.EnterpriseKnowledgeGraphPropertiesResponse;
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.SkuResponse;
 import io.pulumi.core.Alias;

@@ -88,7 +88,7 @@ public final class GoogleCloudRetailV2alphaProductResponse {
  */
     private final List<String> materials;
 /**
- * Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+ * Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
  */
     private final String name;
 /**
@@ -319,7 +319,7 @@ public final class GoogleCloudRetailV2alphaProductResponse {
         return this.materials;
     }
 /**
- * Immutable. Full resource name of the product, such as `projects//{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+ * Immutable. Full resource name of the product, such as `projects/*{@literal /}locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
  */
     public String getName() {
         return this.name;

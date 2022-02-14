@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.JobArgs;
 import io.pulumi.azurenative.sql.outputs.JobScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

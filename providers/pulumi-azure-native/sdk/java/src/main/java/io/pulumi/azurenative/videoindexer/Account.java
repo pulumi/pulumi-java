@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.videoindexer;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.videoindexer.AccountArgs;
 import io.pulumi.azurenative.videoindexer.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.videoindexer.outputs.MediaServicesForPutRequestResponse;
 import io.pulumi.azurenative.videoindexer.outputs.SystemDataResponse;

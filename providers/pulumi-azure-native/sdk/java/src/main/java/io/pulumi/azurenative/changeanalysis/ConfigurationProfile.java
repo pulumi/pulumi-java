@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.changeanalysis;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.changeanalysis.ConfigurationProfileArgs;
 import io.pulumi.azurenative.changeanalysis.outputs.ConfigurationProfileResourcePropertiesResponse;
 import io.pulumi.azurenative.changeanalysis.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.changeanalysis.outputs.SystemDataResponse;

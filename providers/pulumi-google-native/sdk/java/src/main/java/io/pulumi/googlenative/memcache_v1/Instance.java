@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.memcache_v1.InstanceArgs;
 import io.pulumi.googlenative.memcache_v1.outputs.InstanceMessageResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.NodeConfigResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.ApplicationTypeVersionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

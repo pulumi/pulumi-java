@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudkms_v1.KeyRingArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,13 +33,13 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The resource name for the KeyRing in the format `projects//{@literal /}locations//{@literal /}keyRings/*`.
+     * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for the KeyRing in the format `projects//{@literal /}locations//{@literal /}keyRings/*`.
+     * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      */
     public Output<String> getName() {
         return this.name;

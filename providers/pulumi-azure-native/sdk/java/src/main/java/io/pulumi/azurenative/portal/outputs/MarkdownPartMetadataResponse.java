@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
+import io.pulumi.azurenative.portal.outputs.MarkdownPartMetadataResponseSettings;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;

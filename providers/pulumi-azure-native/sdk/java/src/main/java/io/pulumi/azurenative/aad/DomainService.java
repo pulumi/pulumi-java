@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.aad;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.aad.DomainServiceArgs;
 import io.pulumi.azurenative.aad.outputs.DomainSecuritySettingsResponse;
 import io.pulumi.azurenative.aad.outputs.LdapsSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.MigrationPropertiesResponse;

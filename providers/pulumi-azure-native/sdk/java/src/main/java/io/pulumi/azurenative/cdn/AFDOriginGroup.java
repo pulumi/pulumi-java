@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.AFDOriginGroupArgs;
 import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.LoadBalancingSettingsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;

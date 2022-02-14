@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerplatform;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerplatform.AccountArgs;
 import io.pulumi.azurenative.powerplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

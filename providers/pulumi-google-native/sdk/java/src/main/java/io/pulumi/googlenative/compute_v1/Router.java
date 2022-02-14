@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.RouterArgs;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpPeerResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterInterfaceResponse;

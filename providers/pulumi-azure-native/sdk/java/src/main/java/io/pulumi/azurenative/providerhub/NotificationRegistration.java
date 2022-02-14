@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.providerhub.NotificationRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.NotificationRegistrationResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -37,7 +38,7 @@ class MyStack : Stack
             {
                 IncludedEvents = 
                 {
-                    "/{@literal /}write",
+                    "*{@literal /}write",
                     "Microsoft.Contoso/employees/delete",
                 },
                 MessageScope = "RegisteredSubscriptions",
@@ -85,7 +86,7 @@ func main() {
 			NotificationRegistrationName: pulumi.String("fooNotificationRegistration"),
 			Properties: &providerhub.NotificationRegistrationPropertiesArgs{
 				IncludedEvents: pulumi.StringArray{
-					pulumi.String("/{@literal /}write"),
+					pulumi.String("*{@literal /}write"),
 					pulumi.String("Microsoft.Contoso/employees/delete"),
 				},
 				MessageScope: pulumi.String("RegisteredSubscriptions"),
@@ -125,7 +126,7 @@ const notificationRegistration = new azure_native.providerhub.NotificationRegist
     notificationRegistrationName: "fooNotificationRegistration",
     properties: {
         includedEvents: [
-            "/{@literal /}write",
+            "*{@literal /}write",
             "Microsoft.Contoso/employees/delete",
         ],
         messageScope: "RegisteredSubscriptions",
@@ -157,7 +158,7 @@ notification_registration = azure_native.providerhub.NotificationRegistration("n
     notification_registration_name="fooNotificationRegistration",
     properties=azure_native.providerhub.NotificationRegistrationPropertiesArgs(
         included_events=[
-            "/{@literal /}write",
+            "*{@literal /}write",
             "Microsoft.Contoso/employees/delete",
         ],
         message_scope="RegisteredSubscriptions",

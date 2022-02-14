@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.connectedvmwarevsphere.MachineExtensionArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.MachineExtensionPropertiesResponseInstanceView;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

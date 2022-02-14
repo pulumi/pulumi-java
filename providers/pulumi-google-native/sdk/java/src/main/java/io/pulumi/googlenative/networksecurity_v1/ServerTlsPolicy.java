@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.networksecurity_v1.ServerTlsPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.MTLSPolicyResponse;
 import java.lang.Boolean;
@@ -81,13 +82,13 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
         return this.mtlsPolicy;
     }
     /**
-     * Name of the ServerTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+     * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+     * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      */
     public Output<String> getName() {
         return this.name;

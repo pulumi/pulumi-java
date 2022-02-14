@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventhub.NamespaceNetworkRuleSetArgs;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetVirtualNetworkRulesResponse;
 import io.pulumi.core.Alias;

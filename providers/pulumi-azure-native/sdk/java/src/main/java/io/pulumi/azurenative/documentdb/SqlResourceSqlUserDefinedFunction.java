@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.SqlResourceSqlUserDefinedFunctionArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlUserDefinedFunctionGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.media.AccountFilterArgs;
 import io.pulumi.azurenative.media.outputs.FilterTrackSelectionResponse;
 import io.pulumi.azurenative.media.outputs.FirstQualityResponse;
 import io.pulumi.azurenative.media.outputs.PresentationTimeRangeResponse;

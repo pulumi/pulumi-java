@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.CustomImageArgs;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesCustomResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromPlanResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromVmResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.aadiam.DiagnosticSettingArgs;
 import io.pulumi.azurenative.aadiam.outputs.LogSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

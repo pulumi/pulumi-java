@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.bigtableadmin_v2.ClusterArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionConfigResponse;
 import java.lang.Integer;

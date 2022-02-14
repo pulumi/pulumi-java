@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.datamigration_v1.MigrationJobArgs;
 import io.pulumi.googlenative.datamigration_v1.outputs.DatabaseTypeResponse;
 import io.pulumi.googlenative.datamigration_v1.outputs.ReverseSshConnectivityResponse;
 import io.pulumi.googlenative.datamigration_v1.outputs.StaticIpConnectivityResponse;

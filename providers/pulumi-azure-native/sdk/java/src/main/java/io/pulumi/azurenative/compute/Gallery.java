@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.GalleryArgs;
 import io.pulumi.azurenative.compute.outputs.GalleryIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.SharingProfileResponse;
 import io.pulumi.core.Alias;

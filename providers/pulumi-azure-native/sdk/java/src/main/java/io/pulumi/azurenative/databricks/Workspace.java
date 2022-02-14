@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databricks;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databricks.WorkspaceArgs;
 import io.pulumi.azurenative.databricks.outputs.CreatedByResponse;
 import io.pulumi.azurenative.databricks.outputs.ManagedIdentityConfigurationResponse;
 import io.pulumi.azurenative.databricks.outputs.SkuResponse;

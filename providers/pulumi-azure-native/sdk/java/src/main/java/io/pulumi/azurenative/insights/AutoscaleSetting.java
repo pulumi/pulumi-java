@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.AutoscaleSettingArgs;
 import io.pulumi.azurenative.insights.outputs.AutoscaleNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.AutoscaleProfileResponse;
 import io.pulumi.core.Alias;

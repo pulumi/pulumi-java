@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automation.JobScheduleArgs;
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.ScheduleAssociationPropertyResponse;
 import io.pulumi.core.Alias;

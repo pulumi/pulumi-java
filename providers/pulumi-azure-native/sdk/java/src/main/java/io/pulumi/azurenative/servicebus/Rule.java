@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicebus.RuleArgs;
 import io.pulumi.azurenative.servicebus.outputs.ActionResponse;
 import io.pulumi.azurenative.servicebus.outputs.CorrelationFilterResponse;
 import io.pulumi.azurenative.servicebus.outputs.SqlFilterResponse;

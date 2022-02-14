@@ -3,6 +3,10 @@
 
 package io.pulumi.azurenative.security.outputs;
 
+import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseCloudWatchToKinesis;
+import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKinesisToS3;
+import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
+import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesService;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.chaos;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.chaos.TargetArgs;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

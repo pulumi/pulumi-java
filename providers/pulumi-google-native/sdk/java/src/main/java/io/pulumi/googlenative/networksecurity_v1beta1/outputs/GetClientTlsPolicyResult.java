@@ -30,7 +30,7 @@ public final class GetClientTlsPolicyResult {
  */
     private final Map<String,String> labels;
 /**
- * Name of the ClientTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+ * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
  */
     private final String name;
 /**
@@ -91,7 +91,7 @@ public final class GetClientTlsPolicyResult {
         return this.labels;
     }
 /**
- * Name of the ClientTlsPolicy resource. It matches the pattern `projects//{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+ * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
  */
     public String getName() {
         return this.name;

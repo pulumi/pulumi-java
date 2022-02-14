@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.ids_v1.EndpointIamPolicyArgs;
 import io.pulumi.googlenative.ids_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.ids_v1.outputs.BindingResponse;
 import java.lang.Integer;

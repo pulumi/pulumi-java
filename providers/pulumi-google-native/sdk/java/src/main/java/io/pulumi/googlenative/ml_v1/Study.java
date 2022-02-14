@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.ml_v1.StudyArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__StudyConfigResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

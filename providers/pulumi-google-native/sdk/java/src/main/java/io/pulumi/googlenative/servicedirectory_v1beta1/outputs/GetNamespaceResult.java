@@ -19,7 +19,7 @@ public final class GetNamespaceResult {
  */
     private final Map<String,String> labels;
 /**
- * Immutable. The resource name for the namespace in the format `projects//{@literal /}locations//{@literal /}namespaces/*`.
+ * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
  */
     private final String name;
 /**
@@ -52,7 +52,7 @@ public final class GetNamespaceResult {
         return this.labels;
     }
 /**
- * Immutable. The resource name for the namespace in the format `projects//{@literal /}locations//{@literal /}namespaces/*`.
+ * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
  */
     public String getName() {
         return this.name;

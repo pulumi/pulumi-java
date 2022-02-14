@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.jobs_v3.JobArgs;
 import io.pulumi.googlenative.jobs_v3.outputs.ApplicationInfoResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.CompensationInfoResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.JobDerivedInfoResponse;

@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
+import io.pulumi.azurenative.containerservice.inputs.ManagedClusterPodIdentityResponseProvisioningInfo;
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;

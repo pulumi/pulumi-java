@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.ServerAdvisorArgs;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

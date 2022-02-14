@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.appengine_v1.AppArgs;
 import io.pulumi.googlenative.appengine_v1.outputs.FeatureSettingsResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.IdentityAwareProxyResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.UrlDispatchRuleResponse;

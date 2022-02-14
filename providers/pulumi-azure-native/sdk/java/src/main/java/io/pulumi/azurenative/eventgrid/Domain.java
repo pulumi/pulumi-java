@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventgrid.DomainArgs;
 import io.pulumi.azurenative.eventgrid.outputs.InboundIpRuleResponse;
 import io.pulumi.azurenative.eventgrid.outputs.JsonInputSchemaMappingResponse;
 import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointConnectionResponse;

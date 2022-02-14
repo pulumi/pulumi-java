@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.windowsiot;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.windowsiot.ServiceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.videoanalyzer.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;

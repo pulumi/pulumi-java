@@ -3,6 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
+import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponseAutoScaler;
+import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponseDataCollection;
+import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponseDeploymentStatus;
+import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponseEnvironmentImageRequest;
+import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseResponseLivenessProbeRequirements;
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;

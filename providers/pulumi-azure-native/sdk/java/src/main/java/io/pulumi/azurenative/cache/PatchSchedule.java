@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cache.PatchScheduleArgs;
 import io.pulumi.azurenative.cache.outputs.ScheduleEntryResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

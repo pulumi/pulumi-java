@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.peering.PrefixArgs;
 import io.pulumi.azurenative.peering.outputs.PeeringServicePrefixEventResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

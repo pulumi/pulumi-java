@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blueprint.AssignmentArgs;
 import io.pulumi.azurenative.blueprint.outputs.AssignmentLockSettingsResponse;
 import io.pulumi.azurenative.blueprint.outputs.AssignmentStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ManagedServiceIdentityResponse;

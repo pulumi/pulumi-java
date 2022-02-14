@@ -137,7 +137,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects//{@literal /}locations//{@literal /}clusters/*`.
+     * The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*{@literal /}locations/*{@literal /}clusters/*`.
      */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;

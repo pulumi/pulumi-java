@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dataflow_v1b3.JobArgs;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;

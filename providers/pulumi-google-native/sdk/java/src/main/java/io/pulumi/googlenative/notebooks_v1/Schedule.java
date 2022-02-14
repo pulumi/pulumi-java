@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.notebooks_v1.ScheduleArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
 import java.lang.String;

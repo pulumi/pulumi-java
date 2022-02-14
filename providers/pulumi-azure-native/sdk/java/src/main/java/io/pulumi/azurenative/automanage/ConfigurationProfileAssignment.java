@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.automanage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.automanage.ConfigurationProfileAssignmentArgs;
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfileAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearningservices.OnlineDeploymentArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.K8sOnlineDeploymentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ManagedOnlineDeploymentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdentityResponse;

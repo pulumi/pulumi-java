@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.DscpConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.QosIpRangeResponse;
 import io.pulumi.azurenative.network.outputs.QosPortRangeResponse;

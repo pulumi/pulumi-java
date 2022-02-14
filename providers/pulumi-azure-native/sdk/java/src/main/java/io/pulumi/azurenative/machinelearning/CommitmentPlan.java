@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.machinelearning.CommitmentPlanArgs;
 import io.pulumi.azurenative.machinelearning.outputs.CommitmentPlanPropertiesResponse;
 import io.pulumi.azurenative.machinelearning.outputs.ResourceSkuResponse;
 import io.pulumi.core.Alias;

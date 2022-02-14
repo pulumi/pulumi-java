@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.DiskArgs;
 import io.pulumi.azurenative.compute.outputs.CreationDataResponse;
 import io.pulumi.azurenative.compute.outputs.DiskSecurityProfileResponse;
 import io.pulumi.azurenative.compute.outputs.DiskSkuResponse;

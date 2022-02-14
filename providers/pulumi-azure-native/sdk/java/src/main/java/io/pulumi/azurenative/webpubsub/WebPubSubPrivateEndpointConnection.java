@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.webpubsub.WebPubSubPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.webpubsub.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.webpubsub.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;

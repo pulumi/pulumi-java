@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.purview;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.purview.AccountArgs;
 import io.pulumi.azurenative.purview.outputs.AccountPropertiesResponseEndpoints;
 import io.pulumi.azurenative.purview.outputs.AccountPropertiesResponseManagedResources;
 import io.pulumi.azurenative.purview.outputs.AccountPropertiesResponseSystemData;

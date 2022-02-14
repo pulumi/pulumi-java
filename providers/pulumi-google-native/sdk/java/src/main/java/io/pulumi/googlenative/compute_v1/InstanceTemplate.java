@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_v1.InstanceTemplateArgs;
 import io.pulumi.googlenative.compute_v1.outputs.InstancePropertiesResponse;
 import io.pulumi.googlenative.compute_v1.outputs.SourceInstanceParamsResponse;
 import java.lang.String;

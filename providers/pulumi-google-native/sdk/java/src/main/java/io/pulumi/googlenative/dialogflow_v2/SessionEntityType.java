@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dialogflow_v2.SessionEntityTypeArgs;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2EntityTypeEntityResponse;
 import java.lang.String;
 import java.util.List;

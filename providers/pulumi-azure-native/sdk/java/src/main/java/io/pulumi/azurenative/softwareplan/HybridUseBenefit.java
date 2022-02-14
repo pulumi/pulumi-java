@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.softwareplan;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.softwareplan.HybridUseBenefitArgs;
 import io.pulumi.azurenative.softwareplan.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

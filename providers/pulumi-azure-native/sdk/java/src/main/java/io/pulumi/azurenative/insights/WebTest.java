@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.WebTestArgs;
 import io.pulumi.azurenative.insights.outputs.WebTestGeolocationResponse;
 import io.pulumi.azurenative.insights.outputs.WebTestPropertiesResponseConfiguration;
 import io.pulumi.core.Alias;

@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestSpec;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

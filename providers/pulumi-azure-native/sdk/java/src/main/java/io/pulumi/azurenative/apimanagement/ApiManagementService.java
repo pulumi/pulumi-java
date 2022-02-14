@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.ApiManagementServiceArgs;
 import io.pulumi.azurenative.apimanagement.outputs.AdditionalLocationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ApiManagementServiceIdentityResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ApiManagementServiceSkuPropertiesResponse;

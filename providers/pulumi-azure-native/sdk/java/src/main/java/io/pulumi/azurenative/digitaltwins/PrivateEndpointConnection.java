@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.digitaltwins;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.digitaltwins.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

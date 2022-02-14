@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
+import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsResponseCredentials;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

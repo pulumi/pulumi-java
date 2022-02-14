@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.LinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.outputs.AmazonMWSLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.AmazonRdsForOracleLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.AmazonRdsForSqlServerLinkedServiceResponse;

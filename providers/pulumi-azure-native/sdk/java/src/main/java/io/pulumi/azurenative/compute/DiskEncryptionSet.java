@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.DiskEncryptionSetArgs;
 import io.pulumi.azurenative.compute.outputs.EncryptionSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.KeyForDiskEncryptionSetResponse;
 import io.pulumi.core.Alias;

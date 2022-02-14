@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devtestlab.EnvironmentArgs;
 import io.pulumi.azurenative.devtestlab.outputs.EnvironmentDeploymentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

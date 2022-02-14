@@ -17,7 +17,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
     public static final ReusableConfigWrapperResponse Empty = new ReusableConfigWrapperResponse();
 
     /**
-     * A resource path to a ReusableConfig in the format `projects//{@literal /}locations//{@literal /}reusableConfigs/*`.
+     * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
      */
     @InputImport(name="reusableConfig", required=true)
     private final String reusableConfig;

@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.autoscaling_v2.HorizontalPodAutoscalerArgs;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.HorizontalPodAutoscalerSpec;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.HorizontalPodAutoscalerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

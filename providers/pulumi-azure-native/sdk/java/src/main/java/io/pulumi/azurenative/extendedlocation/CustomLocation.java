@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.extendedlocation;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.extendedlocation.CustomLocationArgs;
 import io.pulumi.azurenative.extendedlocation.outputs.CustomLocationPropertiesResponseAuthentication;
 import io.pulumi.azurenative.extendedlocation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

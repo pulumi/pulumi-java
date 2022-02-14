@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
+import io.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingResponseNativeCloudConnection;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

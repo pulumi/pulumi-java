@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.apimanagement.GroupUserArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GroupContractPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityContractResponse;
 import io.pulumi.core.Alias;

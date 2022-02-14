@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.RegionBackendServiceArgs;
 import io.pulumi.googlenative.compute_beta.outputs.BackendResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BackendServiceCdnPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BackendServiceConnectionTrackingPolicyResponse;

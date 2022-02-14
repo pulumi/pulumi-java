@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationsmanagement.SolutionArgs;
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPlanResponse;
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPropertiesResponse;
 import io.pulumi.core.Alias;

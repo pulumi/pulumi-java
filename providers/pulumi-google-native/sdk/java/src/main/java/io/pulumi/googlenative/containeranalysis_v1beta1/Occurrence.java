@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.containeranalysis_v1beta1.OccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DetailsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DocumentOccurrenceResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.FileOccurrenceResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerservice.ManagedClusterArgs;
 import io.pulumi.azurenative.containerservice.outputs.ContainerServiceLinuxProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.ContainerServiceNetworkProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.ExtendedLocationResponse;

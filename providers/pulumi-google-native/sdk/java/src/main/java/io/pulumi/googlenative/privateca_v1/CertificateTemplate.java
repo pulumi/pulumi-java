@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.privateca_v1.CertificateTemplateArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -70,13 +71,13 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name for this CertificateTemplate in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`.
+     * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this CertificateTemplate in the format `projects//{@literal /}locations//{@literal /}certificateTemplates/*`.
+     * @return The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
      */
     public Output<String> getName() {
         return this.name;

@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
+import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;

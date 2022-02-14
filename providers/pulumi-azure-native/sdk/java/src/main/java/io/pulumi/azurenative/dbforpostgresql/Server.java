@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbforpostgresql.ServerArgs;
 import io.pulumi.azurenative.dbforpostgresql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.ServerPrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.SkuResponse;

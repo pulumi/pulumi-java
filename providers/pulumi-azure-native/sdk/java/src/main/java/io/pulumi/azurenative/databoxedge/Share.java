@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.ShareArgs;
 import io.pulumi.azurenative.databoxedge.outputs.AzureContainerInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ClientAccessRightResponse;
 import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;

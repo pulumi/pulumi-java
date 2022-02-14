@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.visualstudio;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.visualstudio.ExtensionArgs;
 import io.pulumi.azurenative.visualstudio.outputs.ExtensionResourcePlanResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

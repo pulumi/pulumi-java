@@ -11,6 +11,7 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorTerm;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import io.pulumi.kubernetes.storage.k8s.io_v1beta1.StorageClassArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

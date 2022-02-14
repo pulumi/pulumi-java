@@ -3,6 +3,9 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
+import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs;
+import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes;
+import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPs;
 import io.pulumi.azurenative.containerservice.outputs.ResourceReferenceResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Integer;

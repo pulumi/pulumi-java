@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.ExperimentArgs;
 import io.pulumi.azurenative.network.outputs.ExperimentEndpointResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

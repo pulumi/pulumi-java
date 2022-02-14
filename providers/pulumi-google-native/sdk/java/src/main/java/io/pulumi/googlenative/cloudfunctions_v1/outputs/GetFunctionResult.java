@@ -82,7 +82,7 @@ public final class GetFunctionResult {
  */
     private final Integer minInstances;
 /**
- * A user-defined name of the function. Function names must be unique globally and match pattern `projects//{@literal /}locations//{@literal /}functions/*`
+ * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
  */
     private final String name;
 /**
@@ -138,7 +138,7 @@ public final class GetFunctionResult {
  */
     private final String versionId;
 /**
- * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects//{@literal /}locations//{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+ * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
  */
     private final String vpcConnector;
 /**
@@ -311,7 +311,7 @@ public final class GetFunctionResult {
         return this.minInstances;
     }
 /**
- * A user-defined name of the function. Function names must be unique globally and match pattern `projects//{@literal /}locations//{@literal /}functions/*`
+ * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
  */
     public String getName() {
         return this.name;
@@ -395,7 +395,7 @@ public final class GetFunctionResult {
         return this.versionId;
     }
 /**
- * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects//{@literal /}locations//{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+ * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
  */
     public String getVpcConnector() {
         return this.vpcConnector;

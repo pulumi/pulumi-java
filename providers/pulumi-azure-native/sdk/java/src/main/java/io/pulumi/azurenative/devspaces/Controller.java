@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.devspaces;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.devspaces.ControllerArgs;
 import io.pulumi.azurenative.devspaces.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

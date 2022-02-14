@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hanaonazure.HanaInstanceArgs;
 import io.pulumi.azurenative.hanaonazure.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;

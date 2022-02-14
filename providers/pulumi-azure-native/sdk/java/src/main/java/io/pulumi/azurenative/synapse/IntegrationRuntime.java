@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.synapse.IntegrationRuntimeArgs;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeResponse;
 import io.pulumi.core.Alias;

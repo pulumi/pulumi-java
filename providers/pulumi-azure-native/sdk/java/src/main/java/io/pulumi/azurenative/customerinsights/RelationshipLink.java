@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.customerinsights.RelationshipLinkArgs;
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantProfilePropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipLinkFieldMappingResponse;
 import io.pulumi.core.Alias;

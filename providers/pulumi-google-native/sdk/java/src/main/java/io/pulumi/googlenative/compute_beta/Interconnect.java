@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.InterconnectArgs;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectCircuitInfoResponse;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectOutageNotificationResponse;
 import java.lang.Boolean;

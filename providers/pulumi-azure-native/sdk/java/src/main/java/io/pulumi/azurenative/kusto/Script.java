@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kusto.ScriptArgs;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

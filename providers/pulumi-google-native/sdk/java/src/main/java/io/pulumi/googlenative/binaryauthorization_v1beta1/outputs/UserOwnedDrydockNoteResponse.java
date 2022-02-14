@@ -16,7 +16,7 @@ public final class UserOwnedDrydockNoteResponse {
  */
     private final String delegationServiceAccountEmail;
 /**
- * The Drydock resource name of a ATTESTATION_AUTHORITY Note, created by the user, in the format: `projects//{@literal /}notes/*` (or the legacy `providers//{@literal /}notes/*`). This field may not be updated. An attestation by this attestor is stored as a Drydock ATTESTATION_AUTHORITY Occurrence that names a container image and that links to this Note. Drydock is an external dependency.
+ * The Drydock resource name of a ATTESTATION_AUTHORITY Note, created by the user, in the format: `projects/*{@literal /}notes/*` (or the legacy `providers/*{@literal /}notes/*`). This field may not be updated. An attestation by this attestor is stored as a Drydock ATTESTATION_AUTHORITY Occurrence that names a container image and that links to this Note. Drydock is an external dependency.
  */
     private final String noteReference;
 /**
@@ -41,7 +41,7 @@ public final class UserOwnedDrydockNoteResponse {
         return this.delegationServiceAccountEmail;
     }
 /**
- * The Drydock resource name of a ATTESTATION_AUTHORITY Note, created by the user, in the format: `projects//{@literal /}notes/*` (or the legacy `providers//{@literal /}notes/*`). This field may not be updated. An attestation by this attestor is stored as a Drydock ATTESTATION_AUTHORITY Occurrence that names a container image and that links to this Note. Drydock is an external dependency.
+ * The Drydock resource name of a ATTESTATION_AUTHORITY Note, created by the user, in the format: `projects/*{@literal /}notes/*` (or the legacy `providers/*{@literal /}notes/*`). This field may not be updated. An attestation by this attestor is stored as a Drydock ATTESTATION_AUTHORITY Occurrence that names a container image and that links to this Note. Drydock is an external dependency.
  */
     public String getNoteReference() {
         return this.noteReference;

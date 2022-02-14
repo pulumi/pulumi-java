@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagecache;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagecache.CacheArgs;
 import io.pulumi.azurenative.storagecache.outputs.CacheDirectorySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheEncryptionSettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheHealthResponse;

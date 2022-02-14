@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.vmwarecloudsimple.VirtualMachineArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.GuestOSCustomizationResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.ResourcePoolResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskControllerResponse;

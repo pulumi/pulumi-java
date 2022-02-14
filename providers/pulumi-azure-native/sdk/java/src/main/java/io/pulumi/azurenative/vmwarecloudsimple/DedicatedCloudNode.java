@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.vmwarecloudsimple.DedicatedCloudNodeArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

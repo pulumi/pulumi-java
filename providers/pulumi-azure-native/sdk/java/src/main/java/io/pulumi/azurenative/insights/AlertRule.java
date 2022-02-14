@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.AlertRuleArgs;
 import io.pulumi.azurenative.insights.outputs.LocationThresholdRuleConditionResponse;
 import io.pulumi.azurenative.insights.outputs.ManagementEventRuleConditionResponse;
 import io.pulumi.azurenative.insights.outputs.RuleEmailActionResponse;

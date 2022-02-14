@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.dataproc_v1beta2.ClusterArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterMetricsResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterStatusResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datafactory.DataFlowArgs;
 import io.pulumi.azurenative.datafactory.outputs.FlowletResponse;
 import io.pulumi.azurenative.datafactory.outputs.MappingDataFlowResponse;
 import io.pulumi.azurenative.datafactory.outputs.WranglingDataFlowResponse;

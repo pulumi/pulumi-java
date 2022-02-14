@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.hybridnetwork.NetworkFunctionArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;

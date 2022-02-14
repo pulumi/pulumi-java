@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.security.AssessmentArgs;
 import io.pulumi.azurenative.security.outputs.AssessmentLinksResponse;
 import io.pulumi.azurenative.security.outputs.AssessmentStatusResponse;
 import io.pulumi.azurenative.security.outputs.AzureResourceDetailsResponse;

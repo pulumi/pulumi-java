@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.ImageArgs;
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.ImageStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;

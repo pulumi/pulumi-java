@@ -14,7 +14,7 @@ public final class SecretManagerSecretResponse {
  */
     private final String env;
 /**
- * Resource name of the SecretVersion. In format: projects//{@literal /}secrets//{@literal /}versions/*
+ * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
  */
     private final String versionName;
 
@@ -33,7 +33,7 @@ public final class SecretManagerSecretResponse {
         return this.env;
     }
 /**
- * Resource name of the SecretVersion. In format: projects//{@literal /}secrets//{@literal /}versions/*
+ * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
  */
     public String getVersionName() {
         return this.versionName;

@@ -41,7 +41,7 @@ public final class GetConnectorResult {
  */
     private final Integer minThroughput;
 /**
- * The resource name in the format `projects//{@literal /}locations//{@literal /}connectors/*`.
+ * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
  */
     private final String name;
 /**
@@ -126,7 +126,7 @@ public final class GetConnectorResult {
         return this.minThroughput;
     }
 /**
- * The resource name in the format `projects//{@literal /}locations//{@literal /}connectors/*`.
+ * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
  */
     public String getName() {
         return this.name;

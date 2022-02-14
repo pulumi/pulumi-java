@@ -7,6 +7,7 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.googlenative.ProviderArgs;
 import io.pulumi.googlenative.Utilities;
 import java.lang.String;
 import javax.annotation.Nullable;

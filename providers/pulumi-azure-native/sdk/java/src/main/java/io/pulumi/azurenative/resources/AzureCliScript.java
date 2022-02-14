@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.AzureCliScriptArgs;
 import io.pulumi.azurenative.resources.outputs.ContainerConfigurationResponse;
 import io.pulumi.azurenative.resources.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.resources.outputs.ManagedServiceIdentityResponse;

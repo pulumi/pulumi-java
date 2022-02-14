@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.authorization.AccessReviewScheduleDefinitionByIdArgs;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
 import io.pulumi.core.Alias;

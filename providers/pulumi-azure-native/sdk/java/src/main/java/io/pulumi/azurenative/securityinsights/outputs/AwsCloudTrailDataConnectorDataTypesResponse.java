@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
+import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponseLogs;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;

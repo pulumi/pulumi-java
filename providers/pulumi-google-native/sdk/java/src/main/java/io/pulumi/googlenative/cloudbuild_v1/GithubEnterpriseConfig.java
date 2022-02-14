@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudbuild_v1.GithubEnterpriseConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.GitHubEnterpriseSecretsResponse;
 import java.lang.String;
 import javax.annotation.Nullable;

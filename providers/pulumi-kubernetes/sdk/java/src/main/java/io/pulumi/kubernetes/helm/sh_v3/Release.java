@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.RepositoryOpts;
 import java.lang.Boolean;

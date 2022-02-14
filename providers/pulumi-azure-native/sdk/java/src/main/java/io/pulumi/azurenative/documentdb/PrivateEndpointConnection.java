@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.documentdb.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.documentdb.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;

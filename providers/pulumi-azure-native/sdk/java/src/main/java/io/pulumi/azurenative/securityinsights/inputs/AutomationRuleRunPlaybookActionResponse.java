@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
+import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleRunPlaybookActionResponseActionConfiguration;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;

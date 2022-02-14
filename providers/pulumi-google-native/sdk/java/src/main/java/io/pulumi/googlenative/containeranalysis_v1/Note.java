@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.containeranalysis_v1.NoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AttestationNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceNoteResponse;

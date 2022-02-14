@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.testbase.PackageArgs;
 import io.pulumi.azurenative.testbase.outputs.PackageValidationResultResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TargetOSInfoResponse;

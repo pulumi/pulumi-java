@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datalakestore.AccountArgs;
 import io.pulumi.azurenative.datalakestore.outputs.EncryptionConfigResponse;
 import io.pulumi.azurenative.datalakestore.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.datalakestore.outputs.FirewallRuleResponse;

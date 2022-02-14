@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.databoxedge.KubernetesRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesClusterInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleResourcesResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.BlobInventoryPolicyArgs;
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicySchemaResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

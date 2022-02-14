@@ -28,7 +28,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * Resource name of the SecretVersion. In format: projects//{@literal /}secrets//{@literal /}versions/*
+     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      */
     @InputImport(name="versionName")
     private final @Nullable Input<String> versionName;

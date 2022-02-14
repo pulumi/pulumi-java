@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.billingbudgets_v1beta1.BudgetArgs;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1FilterResponse;

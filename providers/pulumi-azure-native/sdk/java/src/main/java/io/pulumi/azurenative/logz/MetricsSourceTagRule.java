@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.logz.MetricsSourceTagRuleArgs;
 import io.pulumi.azurenative.logz.outputs.MetricsTagRulesPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

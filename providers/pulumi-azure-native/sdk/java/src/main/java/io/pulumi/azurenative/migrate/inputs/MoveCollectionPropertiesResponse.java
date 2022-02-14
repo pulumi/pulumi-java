@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
+import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesResponseErrors;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;

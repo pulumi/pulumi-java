@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.documentdb.GraphResourceGraphArgs;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;

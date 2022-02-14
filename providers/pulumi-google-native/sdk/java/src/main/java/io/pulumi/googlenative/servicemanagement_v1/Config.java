@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.servicemanagement_v1.ConfigArgs;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.ApiResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.BackendResponse;

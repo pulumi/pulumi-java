@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppSourceControlSlotArgs;
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

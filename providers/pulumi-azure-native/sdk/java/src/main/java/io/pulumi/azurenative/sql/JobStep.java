@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.sql.JobStepArgs;
 import io.pulumi.azurenative.sql.outputs.JobStepActionResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepExecutionOptionsResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepOutputResponse;

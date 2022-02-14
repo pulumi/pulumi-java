@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.scheduler;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.scheduler.JobCollectionArgs;
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

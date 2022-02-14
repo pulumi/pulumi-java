@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.offazure;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.offazure.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.offazure.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.azurenative.offazure.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

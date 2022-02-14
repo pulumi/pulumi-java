@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.DatastoreArgs;
 import io.pulumi.azurenative.avs.outputs.DiskPoolVolumeResponse;
 import io.pulumi.azurenative.avs.outputs.NetAppVolumeResponse;
 import io.pulumi.core.Alias;

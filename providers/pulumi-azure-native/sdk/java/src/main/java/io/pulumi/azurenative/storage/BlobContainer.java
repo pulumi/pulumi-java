@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.BlobContainerArgs;
 import io.pulumi.azurenative.storage.outputs.ImmutabilityPolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.LegalHoldPropertiesResponse;
 import io.pulumi.core.Alias;

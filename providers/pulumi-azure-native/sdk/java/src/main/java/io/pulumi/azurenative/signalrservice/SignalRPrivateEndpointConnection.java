@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.signalrservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.signalrservice.SignalRPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

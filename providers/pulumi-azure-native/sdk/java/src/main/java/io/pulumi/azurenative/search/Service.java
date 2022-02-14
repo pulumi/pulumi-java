@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.search.ServiceArgs;
 import io.pulumi.azurenative.search.outputs.IdentityResponse;
 import io.pulumi.azurenative.search.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionResponse;

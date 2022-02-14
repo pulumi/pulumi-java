@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.compute_beta.DiskArgs;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;

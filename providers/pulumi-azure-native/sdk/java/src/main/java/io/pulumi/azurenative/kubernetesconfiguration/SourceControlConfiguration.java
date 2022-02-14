@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kubernetesconfiguration.SourceControlConfigurationArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ComplianceStatusResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.HelmOperatorPropertiesResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;

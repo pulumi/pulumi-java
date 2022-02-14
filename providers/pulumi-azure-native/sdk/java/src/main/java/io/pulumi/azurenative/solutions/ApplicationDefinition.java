@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.solutions;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.solutions.ApplicationDefinitionArgs;
 import io.pulumi.azurenative.solutions.outputs.ApplicationAuthorizationResponse;
 import io.pulumi.azurenative.solutions.outputs.ApplicationDefinitionArtifactResponse;
 import io.pulumi.azurenative.solutions.outputs.ApplicationDeploymentPolicyResponse;

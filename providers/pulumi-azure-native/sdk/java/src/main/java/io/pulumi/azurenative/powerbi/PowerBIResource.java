@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.powerbi.PowerBIResourceArgs;
 import io.pulumi.azurenative.powerbi.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.powerbi.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

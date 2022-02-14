@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kusto.ClusterArgs;
 import io.pulumi.azurenative.kusto.outputs.AzureSkuResponse;
 import io.pulumi.azurenative.kusto.outputs.IdentityResponse;
 import io.pulumi.azurenative.kusto.outputs.KeyVaultPropertiesResponse;

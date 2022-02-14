@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.importexport;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.importexport.JobArgs;
 import io.pulumi.azurenative.importexport.outputs.IdentityDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.JobDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.SystemDataResponse;

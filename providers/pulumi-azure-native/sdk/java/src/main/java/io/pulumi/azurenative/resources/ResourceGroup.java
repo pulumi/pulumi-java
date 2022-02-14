@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.ResourceGroupArgs;
 import io.pulumi.azurenative.resources.outputs.ResourceGroupPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

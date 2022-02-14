@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.webpubsub.WebPubSubSharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blueprint.RoleAssignmentArtifactArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;

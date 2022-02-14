@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.insights.DataCollectionRuleArgs;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDataSources;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDestinations;
 import io.pulumi.azurenative.insights.outputs.DataFlowResponse;

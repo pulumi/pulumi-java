@@ -11,7 +11,7 @@ import java.util.Objects;
 @OutputCustomType
 public final class SubordinateConfigResponse {
 /**
- * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities/*`.
+ * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
  */
     private final String certificateAuthority;
 /**
@@ -28,7 +28,7 @@ public final class SubordinateConfigResponse {
     }
 
 /**
- * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities/*`.
+ * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
  */
     public String getCertificateAuthority() {
         return this.certificateAuthority;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.MachineGroupArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.MachineReferenceWithHintsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

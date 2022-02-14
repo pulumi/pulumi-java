@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.m365securityandcompliance;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForM365ComplianceCenterArgs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;

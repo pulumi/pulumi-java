@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.peering.PeeringArgs;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesDirectResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesExchangeResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringSkuResponse;

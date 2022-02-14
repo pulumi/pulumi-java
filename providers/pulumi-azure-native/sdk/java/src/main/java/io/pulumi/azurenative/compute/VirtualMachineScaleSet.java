@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.VirtualMachineScaleSetArgs;
 import io.pulumi.azurenative.compute.outputs.AdditionalCapabilitiesResponse;
 import io.pulumi.azurenative.compute.outputs.AutomaticRepairsPolicyResponse;
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;

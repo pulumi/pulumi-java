@@ -9,6 +9,8 @@ import io.pulumi.azurenative.migrate.inputs.KeyVaultResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.LoadBalancerResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.MoveResourceDependencyOverrideResponse;
 import io.pulumi.azurenative.migrate.inputs.MoveResourceDependencyResponse;
+import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesResponseErrors;
+import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesResponseMoveStatus;
 import io.pulumi.azurenative.migrate.inputs.NetworkInterfaceResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.NetworkSecurityGroupResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.PublicIPAddressResourceSettingsResponse;

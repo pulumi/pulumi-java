@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.network.PrivateLinkServiceArgs;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.FrontendIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;

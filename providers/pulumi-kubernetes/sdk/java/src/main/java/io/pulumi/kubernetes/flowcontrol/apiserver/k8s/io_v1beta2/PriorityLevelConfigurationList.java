@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.PriorityLevelConfigurationListArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.PriorityLevelConfiguration;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import java.lang.String;

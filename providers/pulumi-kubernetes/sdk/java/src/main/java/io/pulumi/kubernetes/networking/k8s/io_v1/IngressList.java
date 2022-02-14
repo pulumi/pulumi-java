@@ -9,6 +9,7 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
+import io.pulumi.kubernetes.networking.k8s.io_v1.IngressListArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.Ingress;
 import java.lang.String;
 import java.util.List;

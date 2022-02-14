@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.resources.TagAtScopeArgs;
 import io.pulumi.azurenative.resources.outputs.TagsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

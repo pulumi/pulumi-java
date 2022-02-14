@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse;

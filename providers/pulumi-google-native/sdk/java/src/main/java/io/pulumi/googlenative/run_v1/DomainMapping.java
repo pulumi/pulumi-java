@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.run_v1.DomainMappingArgs;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingStatusResponse;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;

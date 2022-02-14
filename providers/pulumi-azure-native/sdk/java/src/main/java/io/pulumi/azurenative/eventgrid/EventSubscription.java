@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.eventgrid.EventSubscriptionArgs;
 import io.pulumi.azurenative.eventgrid.outputs.AzureFunctionEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventHubEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventSubscriptionFilterResponse;

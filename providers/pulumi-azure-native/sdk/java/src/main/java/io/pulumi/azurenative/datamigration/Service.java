@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.datamigration.ServiceArgs;
 import io.pulumi.azurenative.datamigration.outputs.ServiceSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

@@ -14,7 +14,7 @@ public final class SourceRepositoryResponse {
  */
     private final String deployedUrl;
 /**
- * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}revisions//{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}moveable-aliases//{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}fixed-aliases//{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
+ * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}revisions/*{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}moveable-aliases/*{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}fixed-aliases/*{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
  */
     private final String url;
 
@@ -33,7 +33,7 @@ public final class SourceRepositoryResponse {
         return this.deployedUrl;
     }
 /**
- * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}revisions//{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}moveable-aliases//{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects//{@literal /}repos//{@literal /}fixed-aliases//{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
+ * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}revisions/*{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}moveable-aliases/*{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}fixed-aliases/*{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
  */
     public String getUrl() {
         return this.url;

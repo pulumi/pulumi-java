@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
+import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseLatest;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Boolean;

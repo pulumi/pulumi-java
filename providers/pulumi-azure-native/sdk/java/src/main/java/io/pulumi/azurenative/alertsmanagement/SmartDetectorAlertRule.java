@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.alertsmanagement.SmartDetectorAlertRuleArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupsInformationResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DetectorResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ThrottlingInformationResponse;

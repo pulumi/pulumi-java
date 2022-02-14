@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppArgs;
 import io.pulumi.azurenative.web.outputs.HostNameSslStateResponse;
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;

@@ -39,7 +39,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of the reservation, e.g., `projects//{@literal /}locations//{@literal /}reservations/team1-prod`.
+     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

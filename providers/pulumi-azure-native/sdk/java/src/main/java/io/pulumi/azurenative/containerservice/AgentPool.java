@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerservice.AgentPoolArgs;
 import io.pulumi.azurenative.containerservice.outputs.AgentPoolUpgradeSettingsResponse;
 import io.pulumi.azurenative.containerservice.outputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;

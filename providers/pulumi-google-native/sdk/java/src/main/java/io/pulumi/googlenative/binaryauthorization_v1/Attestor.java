@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.binaryauthorization_v1.AttestorArgs;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.UserOwnedGrafeasNoteResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,13 +31,13 @@ public class Attestor extends io.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+     * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+     * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      */
     public Output<String> getName() {
         return this.name;

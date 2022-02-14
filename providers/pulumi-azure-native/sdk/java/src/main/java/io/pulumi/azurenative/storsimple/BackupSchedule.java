@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storsimple.BackupScheduleArgs;
 import io.pulumi.azurenative.storsimple.outputs.ScheduleRecurrenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

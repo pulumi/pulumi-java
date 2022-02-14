@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.deploymentmanager.StepArgs;
 import io.pulumi.azurenative.deploymentmanager.outputs.HealthCheckStepPropertiesResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.WaitStepPropertiesResponse;
 import io.pulumi.core.Alias;

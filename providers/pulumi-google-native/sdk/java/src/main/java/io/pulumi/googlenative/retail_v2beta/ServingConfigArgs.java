@@ -141,7 +141,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. Fully qualified name projects//{@literal /}locations/global/catalogs//{@literal /}servingConfig/*
+     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;

@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.cloudkms_v1.EkmConnectionArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
 import java.lang.String;
 import java.util.List;
@@ -46,13 +47,13 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
         return this.etag;
     }
     /**
-     * The resource name for the EkmConnection in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`.
+     * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for the EkmConnection in the format `projects//{@literal /}locations//{@literal /}ekmConnections/*`.
+     * @return The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      */
     public Output<String> getName() {
         return this.name;

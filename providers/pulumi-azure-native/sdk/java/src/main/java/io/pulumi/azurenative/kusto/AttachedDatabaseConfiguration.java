@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.kusto.AttachedDatabaseConfigurationArgs;
 import io.pulumi.azurenative.kusto.outputs.TableLevelSharingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

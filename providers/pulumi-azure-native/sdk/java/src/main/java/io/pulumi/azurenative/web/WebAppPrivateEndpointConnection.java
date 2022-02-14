@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.web.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.web.outputs.PrivateLinkConnectionStateResponse;
 import io.pulumi.core.Alias;

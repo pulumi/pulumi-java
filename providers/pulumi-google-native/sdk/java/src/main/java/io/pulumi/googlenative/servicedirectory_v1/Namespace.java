@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.servicedirectory_v1.NamespaceArgs;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -30,13 +31,13 @@ public class Namespace extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * Immutable. The resource name for the namespace in the format `projects//{@literal /}locations//{@literal /}namespaces/*`.
+     * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Immutable. The resource name for the namespace in the format `projects//{@literal /}locations//{@literal /}namespaces/*`.
+     * @return Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
      */
     public Output<String> getName() {
         return this.name;

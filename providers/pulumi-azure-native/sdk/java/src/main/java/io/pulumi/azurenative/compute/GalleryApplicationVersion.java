@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.compute.GalleryApplicationVersionArgs;
 import io.pulumi.azurenative.compute.outputs.GalleryApplicationVersionPublishingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
 import io.pulumi.core.Alias;

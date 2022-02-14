@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.keyvault.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.keyvault.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

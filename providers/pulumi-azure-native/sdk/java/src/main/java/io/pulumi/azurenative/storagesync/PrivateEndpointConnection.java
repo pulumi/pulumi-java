@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storagesync.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.storagesync.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.storagesync.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

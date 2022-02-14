@@ -9,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
+import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.Endpoint;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.EndpointPort;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

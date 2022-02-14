@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.botservice.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.botservice.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.botservice.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;

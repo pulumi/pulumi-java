@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
+import io.pulumi.azurenative.containerinstance.outputs.ContainerGroupIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;

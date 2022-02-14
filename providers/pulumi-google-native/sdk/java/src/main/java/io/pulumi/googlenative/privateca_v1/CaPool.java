@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.privateca_v1.CaPoolArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublishingOptionsResponse;
 import java.lang.String;
@@ -45,13 +46,13 @@ public class CaPool extends io.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+     * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+     * @return The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
      */
     public Output<String> getName() {
         return this.name;

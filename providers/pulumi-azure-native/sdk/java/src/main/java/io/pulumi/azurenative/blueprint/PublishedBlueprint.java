@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.blueprint.PublishedBlueprintArgs;
 import io.pulumi.azurenative.blueprint.outputs.BlueprintStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupDefinitionResponse;

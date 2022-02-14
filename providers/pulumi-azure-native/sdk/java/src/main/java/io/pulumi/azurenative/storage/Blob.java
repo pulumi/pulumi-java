@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.Input;

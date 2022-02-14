@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.QueryArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.LogAnalyticsQueryPackQueryPropertiesResponseRelated;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.aadiam.AzureADMetricArgs;
 import io.pulumi.azurenative.aadiam.outputs.AzureADMetricsPropertiesFormatResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;

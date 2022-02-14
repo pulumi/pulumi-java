@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.cdn.SecretArgs;
 import io.pulumi.azurenative.cdn.outputs.CustomerCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;

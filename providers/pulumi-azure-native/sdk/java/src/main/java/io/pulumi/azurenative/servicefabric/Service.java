@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.servicefabric.ServiceArgs;
 import io.pulumi.azurenative.servicefabric.outputs.NamedPartitionSchemeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ServiceCorrelationDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ServiceLoadMetricDescriptionResponse;

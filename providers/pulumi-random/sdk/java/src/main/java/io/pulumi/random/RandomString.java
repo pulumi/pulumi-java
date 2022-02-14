@@ -7,6 +7,7 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.random.RandomStringArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomStringState;
 import java.lang.Boolean;

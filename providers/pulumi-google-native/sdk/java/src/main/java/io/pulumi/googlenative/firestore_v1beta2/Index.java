@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.firestore_v1beta2.IndexArgs;
 import io.pulumi.googlenative.firestore_v1beta2.outputs.GoogleFirestoreAdminV1beta2IndexFieldResponse;
 import java.lang.String;
 import java.util.List;

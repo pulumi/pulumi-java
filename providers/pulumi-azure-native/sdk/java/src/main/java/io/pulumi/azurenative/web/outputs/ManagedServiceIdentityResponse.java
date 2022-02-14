@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
+import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;

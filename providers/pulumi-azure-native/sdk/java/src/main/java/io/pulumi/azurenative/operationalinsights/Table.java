@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.operationalinsights.TableArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.RestoredLogsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.ResultStatisticsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SchemaResponse;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.web.WebAppAuthSettingsV2SlotArgs;
 import io.pulumi.azurenative.web.outputs.AuthPlatformResponse;
 import io.pulumi.azurenative.web.outputs.GlobalValidationResponse;
 import io.pulumi.azurenative.web.outputs.HttpSettingsResponse;

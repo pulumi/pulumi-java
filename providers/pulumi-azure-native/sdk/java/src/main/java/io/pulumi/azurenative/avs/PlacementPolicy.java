@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.avs.PlacementPolicyArgs;
 import io.pulumi.azurenative.avs.outputs.VmHostPlacementPolicyPropertiesResponse;
 import io.pulumi.azurenative.avs.outputs.VmVmPlacementPolicyPropertiesResponse;
 import io.pulumi.core.Alias;

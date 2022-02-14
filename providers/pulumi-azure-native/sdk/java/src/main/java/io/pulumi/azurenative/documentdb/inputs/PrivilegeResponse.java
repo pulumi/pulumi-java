@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
+import io.pulumi.azurenative.documentdb.inputs.PrivilegeResponseResource;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;

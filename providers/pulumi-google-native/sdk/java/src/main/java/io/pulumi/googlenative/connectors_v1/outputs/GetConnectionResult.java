@@ -25,7 +25,7 @@ public final class GetConnectionResult {
  */
     private final List<ConfigVariableResponse> configVariables;
 /**
- * Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+ * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
  */
     private final String connectorVersion;
 /**
@@ -130,7 +130,7 @@ public final class GetConnectionResult {
         return this.configVariables;
     }
 /**
- * Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+ * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
  */
     public String getConnectorVersion() {
         return this.connectorVersion;

@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.dbformariadb;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.dbformariadb.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.dbformariadb.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformariadb.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;

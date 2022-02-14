@@ -178,7 +178,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A user-defined name of the function. Function names must be unique globally and match pattern `projects//{@literal /}locations//{@literal /}functions/*`
+     * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
@@ -298,7 +298,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects//{@literal /}locations//{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      */
     @InputImport(name="vpcConnector")
     private final @Nullable Input<String> vpcConnector;

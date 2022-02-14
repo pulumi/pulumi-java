@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
+import io.pulumi.googlenative.monitoring_v1.DashboardArgs;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.GridLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.MosaicLayoutResponse;

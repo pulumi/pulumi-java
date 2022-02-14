@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.containerregistry.PipelineRunArgs;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunRequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunResponseResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;

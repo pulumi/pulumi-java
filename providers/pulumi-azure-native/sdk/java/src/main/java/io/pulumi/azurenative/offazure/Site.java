@@ -4,6 +4,7 @@
 package io.pulumi.azurenative.offazure;
 
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.azurenative.offazure.SiteArgs;
 import io.pulumi.azurenative.offazure.outputs.SitePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
