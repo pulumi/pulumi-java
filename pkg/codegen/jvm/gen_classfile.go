@@ -33,12 +33,10 @@ func genClassFile(
 	var buf bytes.Buffer
 	ctx := &classFileContext{&buf, imports, pkg, className}
 	err := generator(ctx)
-	packageCode := imports.PackageCode()
-	importCode := imports.ImportCode()
 
 	code := fmt.Sprintf("%s\n\n%s\n\n%s",
-		packageCode,
-		importCode,
+		imports.PackageCode(),
+		imports.ImportCode(),
 		buf.String())
 
 	return code, err
