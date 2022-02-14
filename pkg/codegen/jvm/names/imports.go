@@ -70,10 +70,16 @@ func (i *Imports) PackageCode() string {
 func (i *Imports) ImportCode() string {
 	lines := []string{}
 	for _, fqn := range i.imports {
+		importFQN := fqn.String()
 		if fqn.Equal(i.pkg.Dot(i.pubClass)) {
 			continue // do not import self
 		}
-		lines = append(lines, fmt.Sprintf("import %s;", fqn.String()))
+		i.pubClass.String()
+		class := i.pkg.Dot(i.pubClass).String()
+		if strings.HasPrefix(importFQN, class) {
+			continue // do not import class variables
+		}
+		lines = append(lines, fmt.Sprintf("import %s;", importFQN))
 	}
 	sort.Strings(lines)
 	return strings.Join(lines, "\n")
