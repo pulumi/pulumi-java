@@ -427,8 +427,6 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 	}
 }
 
-// TODO: documentation comments
-
 type plainType struct {
 	mod                   *modContext
 	res                   *schema.Resource
@@ -481,7 +479,6 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	indent := strings.Repeat("    ", 1)
 
-	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "%s/**\n", indent)
 	_, _ = fmt.Fprintf(w, "%s * %s\n", indent, prop.Comment)
 
@@ -508,7 +505,6 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		false,               // inputless overload
 	)
 
-	// TODO: add docs comment
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
 	if opt, ok := prop.Type.(*schema.OptionalType); ok {
@@ -552,7 +548,10 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Open the class.
-	// TODO: add docs comment
+	_, _ = fmt.Fprintf(w, "/**\n")
+	_, _ = fmt.Fprintf(w, " * %s\n", pt.comment)
+	_, _ = fmt.Fprintf(w, " */\n")
+
 	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
 	_, _ = fmt.Fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
@@ -759,7 +758,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		// TODO: add docs comment
 		_, _ = fmt.Fprintf(w, "/**\n")
 		_, _ = fmt.Fprintf(w, " * %s\n", prop.Comment)
 
@@ -844,6 +842,15 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range pt.properties {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintf(w, " * %s\n", prop.Comment)
+
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, " * @deprecated\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", prop.DeprecationMessage)
+
+		}
+		_, _ = fmt.Fprintf(w, " */\n")
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
@@ -867,7 +874,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 
-		// TODO: add docs comment
 		returnStatement := fmt.Sprintf("this.%s", paramName)
 
 		switch propType := prop.Type.(type) {
@@ -1076,7 +1082,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
 
-	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "/**\n")
 	_, _ = fmt.Fprintf(w, " * %s\n", r.Comment)
 
@@ -1129,7 +1134,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			secretProps = append(secretProps, prop.Name)
 		}
 
-		// TODO: add docs comment
 		_, _ = fmt.Fprintf(w, "    /**\n")
 		_, _ = fmt.Fprintf(w, "     * %s\n", prop.Comment)
 
@@ -1207,7 +1211,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		argsOverride = "makeArgs(args)"
 	}
 
-	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "    /**\n")
 	_, _ = fmt.Fprintf(w, "     *\n")
 	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
@@ -1310,7 +1313,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", ""
 
-		// TODO: add docs comments
 		_, _ = fmt.Fprintf(w, "    /**\n")
 		_, _ = fmt.Fprintf(w, "     * Get an existing Host resource's state with the given name, ID, and optional extra\n")
 		_, _ = fmt.Fprintf(w, "     * properties used to qualify the lookup.\n")
@@ -1320,10 +1322,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		if r.StateInputs != nil {
 			stateParam = fmt.Sprintf("@%s %s state, ", ctx.ref(names.Nullable), ctx.ref(stateFQN))
 			stateRef = "state, "
-			// TODO: add docs param
 			_, _ = fmt.Fprintf(w, "     * @param state\n")
 		}
-		_, _ = fmt.Fprintf(w, "     * @param opts Optional settings to control the behavior of the CustomResource.\n")
+		_, _ = fmt.Fprintf(w, "     * @param options Optional settings to control the behavior of the CustomResource.\n")
 		_, _ = fmt.Fprintf(w, "     */\n")
 
 		_, _ = fmt.Fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
@@ -1372,7 +1373,6 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
-	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "/**\n")
 	_, _ = fmt.Fprintf(w, " * %s\n", fun.Comment)
 	if fun.Inputs != nil && fun.Inputs.Comment != "" {
@@ -1427,7 +1427,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		e.Name = safeName
 	}
 
-	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "/**\n")
 	_, _ = fmt.Fprintf(w, " * %s\n", enum.Comment)
 	_, _ = fmt.Fprintf(w, " */\n")
@@ -1451,7 +1450,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 
 		// Enum values
 		for i, e := range enum.Elements {
-			// TODO: add docs comment
 			_, _ = fmt.Fprintf(w, "/**\n")
 			_, _ = fmt.Fprintf(w, " * %s\n", e.Comment)
 
